@@ -10,7 +10,7 @@ From the repo root: `python3 -m http.server 8787`, then visit `http://localhost:
 ~/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell --headless --virtual-time-budget=8000 --dump-dom http://localhost:8787/tests/
 ```
 
-Check all four tabs, plant/picker sheets, quick notes, account status, keyboard use, offline behavior, and light/dark appearance at 320–430 px. `?theme=dark` and `?theme=light` override system appearance. No Python dependencies; use `uv` if adding any.
+Check all four tabs, plant/picker sheets, quick notes, account status, keyboard use, offline behavior, at 320–430 px. The app is light mode only (no dark theme), even when the phone is in dark mode. No Python dependencies; use `uv` if adding any.
 
 ## Sign-in and sync
 
