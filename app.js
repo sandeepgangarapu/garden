@@ -11,8 +11,6 @@ const TYPES = [['start','Start indoors'],['sow','Direct sow'],['plant','Plant ou
 const CODES = {indoor:'Indoor start',sow:'Direct sow',transplant:'Transplant',grow:'Growing',harvest:'Harvest',bloom:'Bloom / fruit',prune:'Prune',plant:'Plant bulbs',feed:'Feed'};
 const calendarIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v6m8-6v6m-4 5v6m-3-3h6"/></svg>';
 let library, guides, store, year, month = THIS_MONTH, tab = 'jobs', filter = 'all', sheetType = '', plantId = '', plantTab = 'notes', toastTimer;
-const theme = new URLSearchParams(location.search).get('theme');
-if (['light','dark'].includes(theme)) document.documentElement.dataset.theme = theme;
 function notify(message) { $('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,4000); }
 function plants() { return [...library.plants,...store.state.custom.filter(p=>!p.deleted).map(p=>({...p,kind:p.area==='ornamental'?'ornamental':'vegetable',localName:'',variety:'',category:'My own plants',timeline:Array(12).fill(''),care:[],traits:[],tip:''}))]; }
 function plant(id) { return plants().find(p=>p.id===id); }
