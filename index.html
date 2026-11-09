@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4eddb" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#1a1d16" media="(prefers-color-scheme:dark)">
+<meta name="description" content="Sandeep’s garden in Sammamish. Seasonal jobs, planting plans, and lessons for next year.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Garden">
+<title>Gangarapu Garden</title>
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+<link rel="stylesheet" href="app.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="app">
+<header class="top">
+<div class="brand">Gangarapu Garden<small>Sammamish · Zone 8b</small></div>
+<div class="top-actions"><button class="yearbtn" id="yearBtn" aria-label="Garden years" aria-haspopup="dialog">2026 ▾</button><button class="iconbtn menu-btn" id="menuBtn" aria-label="Garden menu" aria-haspopup="dialog">•••</button></div>
+</header>
+<div class="statusline" id="syncIndicator" role="status"></div>
+<div class="banner signin-banner" id="signinBanner" hidden role="status"><span>Your sign-in expired.</span><button class="linkbtn" data-action="signin">Sign in again</button></div>
+<div id="planningPrompt"></div>
+<main id="main"><p class="empty">Opening your garden…</p></main>
+<noscript><p>This garden planner needs JavaScript. <a href="classic/">Open the classic garden page</a>.</p></noscript>
+</div>
+<button class="fab" id="fab" aria-haspopup="dialog">＋ Note</button>
+<nav class="tabs" aria-label="Garden views"><div>
+<button data-tab="jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v6m8-6v6m-9 7 3 3 6-6"/></svg>Jobs</button>
+<button data-tab="garden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22v-7m0 0C12 10 8 8 4 8c0 5 3 7 8 7Zm0 0c0-5 4-7 8-7 0 5-3 7-8 7Z"/></svg>My garden</button>
+<button data-tab="year"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M9 3v6m5 0v6m-7 0v6"/></svg>Year view</button>
+<button data-tab="notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h11a3 3 0 0 1 3 3v15H8a3 3 0 0 1-3-3Zm4 5h6m-6 5h6"/></svg>Notes</button>
+</div></nav>
+<dialog class="sheet" tabindex="-1" id="sheet" aria-labelledby="sheet-title"></dialog>
+<dialog class="sheet" tabindex="-1" id="noteSheet" aria-labelledby="note-title"></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body></html>

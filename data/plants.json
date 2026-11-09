@@ -1,0 +1,6121 @@
+{
+  "version": 1,
+  "plants": [
+    {
+      "id": "bottlegourd",
+      "name": "Bottlegourd",
+      "localName": "lauki/doodhi",
+      "variety": "Doodhi/Lowki + Dhol (Lagenaria siceraria), 2 varieties",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Gourds & cucurbits",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "indoor",
+        "grow",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "mid-Apr to late Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "early Jun (after soil >65F)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug to early Oct"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~60-80 days from sow to tender edible gourd (120+ if left to mature/dry)"
+        },
+        {
+          "label": "Spacing",
+          "value": "2-3 ft apart, 1-2 plants on the arch"
+        },
+        {
+          "label": "Water",
+          "value": "Heavy and consistent in Jul-Aug fruiting (vine is thirsty); deep drip 2-3x/week, taper as nights cool in Sep."
+        },
+        {
+          "label": "Germination",
+          "value": "75-85F (target ~80F)"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Yes: seed germinates best in warm ~80-85F soil and the hard seed coat can rot in cool soil, so the heat mat is the most reliable way to start it here."
+        }
+      ],
+      "traits": [
+        "Needs trellis",
+        "Hand-pollinate",
+        "Frost-tender",
+        "frost-tender",
+        "needs trellis",
+        "hand-pollinate (night-blooming, low bee activity)",
+        "marginal in cool maritime summers",
+        "heavy feeder",
+        "soak/nick seed before sowing",
+        "sprawls 15ft"
+      ],
+      "ease": {
+        "start": 2,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Hand-pollinate in the evening: bottlegourd opens white flowers at dusk and our daytime bee traffic misses them, so transfer pollen from male to female flowers by hand to get fruit set in a short cool season."
+    },
+    {
+      "id": "ridgegourd",
+      "name": "Ridgegourd",
+      "localName": "turai",
+      "variety": "Madhuri (Luffa acutangula)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Gourds & cucurbits",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Apr to early May"
+        },
+        {
+          "label": "Plant out",
+          "value": "early Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Aug to Sep (marginal; often no usable fruit)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "60-75 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "18-24 in apart at base of arch"
+        },
+        {
+          "label": "Water",
+          "value": "Heavy consistent water through warm season via drip; never let dry while flowering/fruiting; taper in Oct."
+        },
+        {
+          "label": "Germination",
+          "value": "75-90F (optimal ~85F)"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Essential: seeds need 85-90F soil to germinate and rot at cool PNW indoor temps without bottom heat."
+        }
+      ],
+      "traits": [
+        "Needs trellis",
+        "Hand-pollinate",
+        "Frost-tender",
+        "frost-tender",
+        "needs trellis",
+        "needs strong heat to fruit",
+        "marginal in cool maritime summers",
+        "hand-pollinate for fruit set",
+        "soil-warmth dependent"
+      ],
+      "ease": {
+        "start": 2,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Pre-soak seeds 24h, start on heat mat, and pre-warm soil with black plastic for 2 weeks before transplant; even then Sammamish's 75-80F summer rarely gives enough heat units for reliable ridge gourd, so treat it as an experimental crop and hand-pollinate female flowers in the morning to maximize the few fruit you get."
+    },
+    {
+      "id": "bitter-gourd",
+      "name": "Bitter gourd",
+      "localName": "karela",
+      "variety": "Seeds of India (generic Indian karela type)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Gourds & cucurbits",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "indoor",
+        "grow",
+        "transplant",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "mid Apr to late Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "early Jun to mid Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Aug to early Oct (light, weather-dependent)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "60-75 days from transplant (often longer/marginal in cool summers)"
+        },
+        {
+          "label": "Spacing",
+          "value": "18-24 in apart at base of arch, single vine trained up trellis"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent drip through warm season; keep evenly moist Jul-Sep, never let dry during fruit set. Taper in Oct."
+        },
+        {
+          "label": "Germination",
+          "value": "80-90F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Heat mat is mandatory: karela needs 80-90F soil to germinate and will rot in cool PNW potting mix without bottom heat."
+        }
+      ],
+      "traits": [
+        "Needs trellis",
+        "Hand-pollinate",
+        "Frost-tender",
+        "frost-tender",
+        "needs heat mat to germinate",
+        "hard seed coat - soak/nick before sowing",
+        "slowest gourd in PNW - marginal yield",
+        "needs warmest full-sun microclimate",
+        "hand-pollinate to ensure fruit set",
+        "needs strong trellis/arch"
+      ],
+      "ease": {
+        "start": 2,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Karela is the most marginal gourd here; maximize heat by holding seedlings indoors until soil is reliably >65F (early-mid Jun), give it the hottest front-yard spot against a south wall/arch, and hand-pollinate (transfer male to female flowers each morning) since cool dull mornings suppress bee activity and fruit set."
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "localName": "",
+      "variety": "Raider (slicing) + Homemade Pickles (pickling)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Gourds & cucurbits",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Apr to early May"
+        },
+        {
+          "label": "Plant out",
+          "value": "late May to early Jun"
+        },
+        {
+          "label": "Direct sow",
+          "value": "early to mid Jun (soil >65F)"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Jul through Sep"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-60 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "12 in apart on trellis, single row"
+        },
+        {
+          "label": "Water",
+          "value": "Heavy, even water (1-2 in/wk) once fruiting; drip daily in dry Jul-Aug. Inconsistent water causes bitter, misshapen fruit."
+        },
+        {
+          "label": "Germination",
+          "value": "75-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Heat mat helps but is not essential: cucumber germinates from ~60F up, though warm media (70-85F) speeds it and avoids rot in cool PNW spring indoor temps."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Needs trellis",
+        "Pest-prone",
+        "Frost-tender",
+        "needs trellis",
+        "frost-tender",
+        "slug-prone on seedlings",
+        "cucumber beetle watch",
+        "warm soil only",
+        "even moisture critical"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": true,
+      "tip": "Do not rush transplanting; wait until nights stay above 50F (late May/early Jun) since cold-stunted cucumbers sulk all season and never recover vigor."
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "localName": "brinjal",
+      "variety": "Rhim Jhim",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Fruiting (heat-lover)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "grow",
+        "grow",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "early-mid Mar"
+        },
+        {
+          "label": "Plant out",
+          "value": "early-mid Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug-Sep (Oct if warm)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "70-85 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "18-24 in apart"
+        },
+        {
+          "label": "Water",
+          "value": "Steady, even moisture through summer via drip; deep 1-2x/wk in dry Jul-Aug. Avoid drought stress which drops blossoms; taper as nights cool in fall."
+        },
+        {
+          "label": "Germination",
+          "value": "75-90F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Yes, the heat mat is mandatory: eggplant germinates poorly below 75F, and bottom heat at 80-85F is the difference between a good stand and rotted seed in a cool March windowsill."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "Frost-tender",
+        "frost-tender",
+        "heat-loving / marginal in cool PNW summers",
+        "flea-beetle-prone",
+        "needs black mulch or wall-o-water for heat",
+        "slow to start - sow early",
+        "drops blossoms in cool weather"
+      ],
+      "ease": {
+        "start": 3,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Eggplant is the most heat-demanding crop here and a real gamble in cool maritime summers; full sun in the front yard plus black plastic mulch and an early wall-o-water to bank soil heat is the only way Rhim Jhim ripens before fall chill stalls it. Cover with floating row cover at transplant to block flea beetles."
+    },
+    {
+      "id": "okra",
+      "name": "Okra",
+      "localName": "bhindi",
+      "variety": "Hybrid Sheetal",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Fruiting (heat-lover)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "indoor",
+        "grow",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "mid-Apr to late Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "early Jun (after soil >65F, nights >55F)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug to mid-Sep (sparse, weather-dependent)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-60 days from transplant (in heat); often 70+ here"
+        },
+        {
+          "label": "Spacing",
+          "value": "12-18 in apart, single back row"
+        },
+        {
+          "label": "Water",
+          "value": "Steady deep drip 1 in/wk through warm dry Jul-Aug; never let dry out while flowering. Taper in Sep."
+        },
+        {
+          "label": "Germination",
+          "value": "80-90F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Yes, mandatory; okra needs 80-90F soil to germinate and will rot in cool damp seed flats without bottom heat."
+        }
+      ],
+      "traits": [
+        "Frost-tender",
+        "heat-loving",
+        "borderline crop in maritime PNW",
+        "needs hottest spot",
+        "frost-tender",
+        "soak seed before sowing",
+        "needs heat mat to germinate",
+        "low/erratic yield in cool summers"
+      ],
+      "ease": {
+        "start": 3,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Maximize heat: transplant against a south wall or use black plastic mulch plus a clear cloche/low tunnel early to bank soil warmth, or yield will be minimal."
+    },
+    {
+      "id": "peppers",
+      "name": "Peppers",
+      "localName": "",
+      "variety": "Bell (California Wonder 300), Italian Sweet, Jalapeno (Early), Hot Bhaji",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Fruiting (heat-lover)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "indoor",
+        "indoor",
+        "grow",
+        "grow",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Feb to early Mar"
+        },
+        {
+          "label": "Plant out",
+          "value": "late May to early Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug to Oct"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "65-75 days green to first fruit from transplant; 90+ for red/ripe"
+        },
+        {
+          "label": "Spacing",
+          "value": "15-18 in apart, 18-24 in between rows"
+        },
+        {
+          "label": "Water",
+          "value": "Steady, even moisture via drip through summer (~1 in/week); avoid drought stress that causes blossom drop and bitter fruit. Taper in Oct."
+        },
+        {
+          "label": "Germination",
+          "value": "65-85F (80-85F = fastest)"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Essential: pepper seed germinates slowly and erratically below 75F, so the heat mat at 80-85F soil temp is the difference between 7-day and 3-week germination."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "Frost-tender",
+        "frost-tender",
+        "slow germ - needs heat mat",
+        "blossom drop in cool nights",
+        "aphid-prone indoors",
+        "needs warmest microclimate",
+        "use black mulch/wall heat"
+      ],
+      "ease": {
+        "start": 2,
+        "grow": 3
+      },
+      "heatMat": true,
+      "tip": "In cool maritime summers peppers underperform without help: plant in the hottest front-yard spot, use black plastic/landscape fabric mulch to warm soil, and prioritize the small fast varieties (Jalapeno Early, Italian Sweet) over slow big bells, which may only ripen green."
+    },
+    {
+      "id": "tomatillo",
+      "name": "Tomatillo",
+      "localName": "",
+      "variety": "Miltomate",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Fruiting (heat-lover)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Mar to early Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "late May to early Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug to Oct"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "75-90 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "24-36 in apart"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent moisture in summer via drip (1-1.5 in/wk) during the dry Jul-Aug stretch; ease off as fall rains return."
+        },
+        {
+          "label": "Germination",
+          "value": "75-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat - tomatillos germinate best at 75-85F and our April-May indoor temps are too cool for reliable, fast sprouting."
+        }
+      ],
+      "traits": [
+        "Needs cage/support",
+        "Plant 2+ (insect-pollinated)",
+        "Frost-tender",
+        "needs cage/stake",
+        "needs 2 plants for pollination (insect-pollinated)",
+        "self-incompatible",
+        "frost-tender",
+        "sprawls - cage it",
+        "vigorous/productive"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": true,
+      "tip": "Plant at least 2 plants - tomatillos are self-incompatible and a lone plant sets empty husks; harvest when fruit fills and splits the papery husk."
+    },
+    {
+      "id": "roselle",
+      "name": "Roselle / Gongura",
+      "localName": "",
+      "variety": "Hibiscus sabdariffa, red-stemmed",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Leafy greens",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Mar to early Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "late May to early Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul-Oct (leaves)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~60 days to leaf harvest; 120+ for calyces (rarely reached here)"
+        },
+        {
+          "label": "Spacing",
+          "value": "2-3 ft apart"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent moisture in summer via drip, 1-2x/week deep; tolerates dry Jul-Aug once established but grows lusher with steady water. Reduce in fall."
+        },
+        {
+          "label": "Germination",
+          "value": "75-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Yes, heat mat is essential; seeds need 75-85F soil to germinate reliably and our spring soils are far too cold."
+        }
+      ],
+      "traits": [
+        "Frost-tender",
+        "frost-tender",
+        "heat-lover",
+        "day-length sensitive",
+        "calyces rarely set before frost",
+        "grow for leaves",
+        "marginal in cool PNW summers"
+      ],
+      "ease": {
+        "start": 3,
+        "grow": 3
+      },
+      "heatMat": true,
+      "tip": "Grow this purely for the tart Gongura leaves, not calyces: roselle is short-day flowering and our first frost (~Nov 15) arrives long before the late-fall calyx set, so harvest leaves through summer instead - though cool maritime nights keep growth slow and yields modest."
+    },
+    {
+      "id": "sunflowers",
+      "name": "Sunflowers",
+      "localName": "",
+      "variety": "Mixed (likely a blend of branching multi-head types like Autumn Beauty/Velvet Queen and single-stem giants like Mammoth/Russian Giant)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Flowers",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "sow",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "mid May to late Jun (soil >60F)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug to Oct (blooms); Sep-Oct for mature seed heads"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "70-95 days (flowering); +30-45 days more for dry seed heads"
+        },
+        {
+          "label": "Spacing",
+          "value": "6 in for cut-flower density; 12-18 in for branching types; 18-24 in for giants"
+        },
+        {
+          "label": "Water",
+          "value": "Keep soil moist through germination and early growth; drip 1-2x/week deeply through dry Jul-Aug. Drought-tolerant once established but blooms bigger with steady water."
+        },
+        {
+          "label": "Germination",
+          "value": "70-85F (germinates down to ~55-60F)"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Skip the heat mat; sunflowers are direct-sown and germinate fast once soil hits 60F+ in late May/June, so indoor starting adds no value and risks transplant-shocking their taproot."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Succession-sow",
+        "slug-prone seedlings",
+        "tall types need staking in wind",
+        "birds raid maturing seed heads",
+        "succession-sow single-stem types every 2-3 wks; branching types rebloom on their own"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Protect emerging seedlings from slugs (Sluggo/bait) the first 2 weeks—they are the only real threat in cool maritime springs; sunflowers thrive in your full-sun front border and reliably bloom by August."
+    },
+    {
+      "id": "basil",
+      "name": "Basil",
+      "localName": "sweet",
+      "variety": "Sweet Basil (Genovese-type)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Herbs",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "early to mid Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "early to mid Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul-Sep"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "60-75 days from seed"
+        },
+        {
+          "label": "Spacing",
+          "value": "8-10 in apart"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent moisture all summer; drip 2-3x/week in dry Jul-Aug, water at base to keep foliage dry and avoid downy mildew. Ease off as fall cools."
+        },
+        {
+          "label": "Germination",
+          "value": "70-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat; basil germinates poorly below 70F and the mat holds soil at 75-85F for fast, even sprouting."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Bolts in heat",
+        "Frost-tender",
+        "frost-tender",
+        "slug-prone when small",
+        "needs soil >60F to thrive",
+        "cold-sensitive (sulks below 50F)",
+        "downy-mildew-prone in damp",
+        "pinch to prevent bolting"
+      ],
+      "ease": {
+        "start": 3,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Do not rush transplanting; wait until nights stay above 50F (mid-June here) or cold-shocked plants stall and blacken. Pinch tops weekly to delay flowering and keep leaves coming."
+    },
+    {
+      "id": "marigold",
+      "name": "Marigold",
+      "localName": "",
+      "variety": "Brocade Mix (French marigold, Tagetes patula)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Flowers",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Either (direct or transplant)"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Mar to early Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "mid to late May"
+        },
+        {
+          "label": "Direct sow",
+          "value": "late May to early Jun"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul through Oct (bloom/deadhead)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-60 days to first bloom from sow"
+        },
+        {
+          "label": "Spacing",
+          "value": "8-10 in apart, tucked between heat-lovers"
+        },
+        {
+          "label": "Water",
+          "value": "Moderate, even moisture while establishing; drought-tolerant once set. Drip 1-2x/week summer, keep foliage dry to limit fungal issues."
+        },
+        {
+          "label": "Germination",
+          "value": "70-75F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat for indoor starts: marigold germinates best at 70-75F soil, which an unheated PNW windowsill won't hit in March."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Frost-tender",
+        "slug-prone as seedlings",
+        "frost-tender",
+        "deadhead for continuous bloom",
+        "powdery mildew in damp shade"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": true,
+      "tip": "Don't rush them outside; marigolds sulk and rot in cold wet soil, so wait until late May when soil tops 60F, then they bloom nonstop until first frost."
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "localName": "",
+      "variety": "Olympia (slow-bolt savoy, good for spring/fall/overwinter)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Leafy greens",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "grow",
+        "grow"
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "Spring: late Feb-early Apr; Fall: late Aug-mid Sep; Overwinter: late Aug-late Sep"
+        },
+        {
+          "label": "Harvest",
+          "value": "Apr-Jun (spring), Oct-Nov, then Feb-Mar from overwintered"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "40-50 days (baby leaf ~25-30)"
+        },
+        {
+          "label": "Spacing",
+          "value": "3-4 in apart, rows 8-12 in; thin seedlings to stand"
+        },
+        {
+          "label": "Water",
+          "value": "Keep soil consistently moist on drip spring/fall; dry spells trigger bolting. Minimal water for overwintering plants."
+        },
+        {
+          "label": "Germination",
+          "value": "45-68F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Skip the heat mat; spinach germinates best in cool 45-65F soil and direct sows outdoors, while warm soil suppresses germination."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Pest-prone",
+        "Bolts in heat",
+        "Overwinters",
+        "bolts in heat",
+        "cool-season",
+        "slug-prone",
+        "overwinters in 8b",
+        "shade helps in summer",
+        "leaf miner-prone"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Olympia is a slow-bolt variety, but PNW spinach still bolts fast once June heat/long days hit; sow a fall crop late Aug-Sep and an overwinter crop early Oct for the easiest, sweetest harvests and Feb-Mar regrowth."
+    },
+    {
+      "id": "arugula",
+      "name": "Arugula",
+      "localName": "",
+      "variety": "Rocket Salad (Gourmet Greens) - standard salad/wild-type rocket",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Leafy greens",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "early Mar through late Apr (spring), then late Aug through late Sep (fall); skip hot Jul-early Aug"
+        },
+        {
+          "label": "Harvest",
+          "value": "mid-Apr through Jun, then Oct through Nov (add 1-2 wks for backyard shade)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "21-40 days (baby leaf ~3 wks, full ~5-6 wks)"
+        },
+        {
+          "label": "Spacing",
+          "value": "1 in apart in rows 4-6 in apart; thin to 2-3 in for full leaves, or broadcast for baby-leaf cut-and-come"
+        },
+        {
+          "label": "Water",
+          "value": "Keep evenly moist on drip; consistent water prevents bolting and bitterness. Increase frequency in dry Jul-Aug, light in cool spring/fall."
+        },
+        {
+          "label": "Germination",
+          "value": "45-65F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat needed; arugula germinates fine in cool soil (40-55F) and is direct-sown outdoors, so the mat offers no benefit."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "Bolts in heat",
+        "Succession-sow",
+        "flea-beetle-prone",
+        "bolts in heat",
+        "succession every 2-3 wks",
+        "cut-and-come-again",
+        "cold-hardy"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Float a row cover over seedlings at sowing to block flea beetles, which shotgun-hole the leaves in this region; the partial shade also slows bolting, letting spring sowings run later than full sun."
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "localName": "",
+      "variety": "Buttercrunch (butterhead)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Leafy greens",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "harvest",
+        "harvest",
+        "grow",
+        "sow",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Either (direct or transplant)"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "early Mar - early Apr (optional for first flush)"
+        },
+        {
+          "label": "Plant out",
+          "value": "mid Apr - early May"
+        },
+        {
+          "label": "Direct sow",
+          "value": "mid Apr - late Aug (succession every 2-3 wks)"
+        },
+        {
+          "label": "Harvest",
+          "value": "late May - Oct (gaps in peak Jul-Aug heat)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-65 days (baby leaf 30-40)"
+        },
+        {
+          "label": "Spacing",
+          "value": "8-10 in apart for full heads; 2-4 in for cut-and-come-again"
+        },
+        {
+          "label": "Water",
+          "value": "Even, consistent moisture year-round; never let dry out or it turns bitter/bolts. Drip 2-3x/wk spring/fall, daily in dry Jul-Aug."
+        },
+        {
+          "label": "Germination",
+          "value": "60-70F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Skip the heat mat; lettuce germinates fine at room temp and goes dormant above ~80F soil, so cool starts are better."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Bolts in heat",
+        "Succession-sow",
+        "slug-prone",
+        "bolts in heat",
+        "succession-sow",
+        "shade extends season",
+        "frost-tolerant to ~28F (lower if hardened)"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "The backyard partial shade is the asset here, it slows bolting through dry Jul-Aug, but slugs are the real threat here; ring seedlings with Sluggo (iron phosphate) at transplant and reapply after rain."
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander / Cilantro",
+      "localName": "",
+      "variety": "Cruiser (slow-bolt)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Herbs",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "sow",
+        "sow",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "mid-Apr through Sep, succession every 2-3 wks"
+        },
+        {
+          "label": "Harvest",
+          "value": "May-Oct (best Sep-Oct)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-75 days leaf; 100+ days seed"
+        },
+        {
+          "label": "Spacing",
+          "value": "2-3 in apart, rows 6 in; thin lightly"
+        },
+        {
+          "label": "Water",
+          "value": "Steady moisture spring-fall; drip keeps soil evenly damp, which delays bolting. Never let it dry out in summer."
+        },
+        {
+          "label": "Germination",
+          "value": "55-68F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat needed; cilantro is direct-sown only (taproot resents transplant) and germinates fine in cool 50-65F maritime soil."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Bolts in heat",
+        "Succession-sow",
+        "bolts in heat",
+        "direct-sow only (taproot)",
+        "succession sow",
+        "slug-prone seedlings",
+        "shade prolongs leaf"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "In Sammamish the partial-shade backyard is ideal: shade plus the cool maritime climate and a fall sowing (Aug-Sep) give the longest leaf harvest before bolting; spring sowings bolt fast once dry July heat arrives."
+    },
+    {
+      "id": "dill",
+      "name": "Dill",
+      "localName": "",
+      "variety": "Hera",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Herbs",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "sow",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "April to mid-Jul (succession every 3 wks)"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Jun to Sep"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "40-50 days to leaf; 90+ to seed head"
+        },
+        {
+          "label": "Spacing",
+          "value": "8-10 in apart, thin seedlings; rows 12 in"
+        },
+        {
+          "label": "Water",
+          "value": "Even, moderate moisture via drip through summer; dry soil triggers early bolting. Less water needed in shaded backyard."
+        },
+        {
+          "label": "Germination",
+          "value": "60-70F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Skip the heat mat; dill resents transplanting and is direct sown, and it germinates fine in the 60-70F soil of late spring."
+        }
+      ],
+      "traits": [
+        "Bolts in heat",
+        "Frost-hardy",
+        "Succession-sow",
+        "bolts in heat",
+        "frost-hardy (mature plants to ~25F)",
+        "direct-sow only (taproot, resents transplant)",
+        "self-sows readily",
+        "beneficial-insect attractor"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Sow in succession every 3 weeks (mid-May through mid-Jul) since dill bolts fast; partial shade in the backyard actually slows bolting and extends the leaf-harvest window. Let one final plant flower to feed beneficials and self-sow."
+    },
+    {
+      "id": "sorrel",
+      "name": "Sorrel",
+      "localName": "red-veined",
+      "variety": "Red Veined",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Leafy greens",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "grow",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Either (direct or transplant)"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Mar - early Apr"
+        },
+        {
+          "label": "Plant out",
+          "value": "late Apr - mid May"
+        },
+        {
+          "label": "Direct sow",
+          "value": "late Apr - May"
+        },
+        {
+          "label": "Harvest",
+          "value": "May through Oct (mild spells into winter)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "50-60 days from sow; light cutting sooner"
+        },
+        {
+          "label": "Spacing",
+          "value": "8-12 in apart"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture spring-fall keeps leaves tender; drip 1-2x/week, more in dry Jul-Aug. Drought makes leaves tough and bitter."
+        },
+        {
+          "label": "Germination",
+          "value": "60-70F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Skip the mat; sorrel germinates fine at cool room temps and is sown outdoors once frost risk passes."
+        }
+      ],
+      "traits": [
+        "Bolts in heat",
+        "perennial",
+        "cut-and-come-again",
+        "bolts in heat - pinch flower stalks",
+        "partial shade ideal",
+        "frost-hardy"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Cut off flower stalks as soon as they appear to keep leaves tender and the plant productive; partial shade in the backyard actually slows bolting versus full sun."
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "localName": "",
+      "variety": "Bolero (Nantes-type, sweet, stores well)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Roots",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "sow",
+        "grow",
+        "sow",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "late Apr - mid Jul (succession every 3 wks)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul - Nov (storage roots from fall sowings)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~75 days (longer in shade/fall)"
+        },
+        {
+          "label": "Spacing",
+          "value": "2 in apart, rows 6 in; 1/4-1/2 in deep"
+        },
+        {
+          "label": "Water",
+          "value": "Keep top 1 in constantly moist for 2-3 wks until germination; then steady drip 1 in/wk. Even moisture prevents splitting; avoid drought-then-soak."
+        },
+        {
+          "label": "Germination",
+          "value": "45-85F (optimum ~70-80F)"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat: carrots are direct-sown only, and the mat is irrelevant for outdoor germination."
+        }
+      ],
+      "traits": [
+        "slow germination",
+        "needs constant surface moisture to germinate",
+        "thin to 2in or roots fork",
+        "partial shade slows growth",
+        "carrot rust fly - use row cover"
+      ],
+      "ease": {
+        "start": 3,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Germination is the make-or-break step: cover the seeded row with a board or burlap and keep it damp until sprouts show (10-21 days), then remove. Bolero left in ground past first frost gets sweeter; mulch and harvest into Nov."
+    },
+    {
+      "id": "beet",
+      "name": "Beet",
+      "localName": "",
+      "variety": "Early Wonder Tall Top",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Roots",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "early Apr to late Jul (succession every 3 wks)"
+        },
+        {
+          "label": "Harvest",
+          "value": "June through November"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "45-55 days roots; 30 days for tops"
+        },
+        {
+          "label": "Spacing",
+          "value": "3-4 in apart after thinning, rows 10-12 in"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent 1 in/wk via drip spring-fall; even moisture prevents woody, cracked roots and bolting. Less in cool wet shoulders."
+        },
+        {
+          "label": "Germination",
+          "value": "50-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat needed; beets are direct-sown outdoors and germinate fine in cool 50-65F maritime soil."
+        }
+      ],
+      "traits": [
+        "each seed is a cluster - thin to 1 seedling",
+        "even moisture prevents woody roots",
+        "dual-purpose: eat thinnings as greens",
+        "tolerates partial shade well"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Each \"seed\" is a multi-seed cluster, so thin ruthlessly to one seedling per spot at 2-3 in tall (eat the thinnings as baby greens) or roots will stay marble-sized. Beets thrive in the 4-5 hr dappled backyard."
+    },
+    {
+      "id": "radish",
+      "name": "Radish",
+      "localName": "",
+      "variety": "Easter Egg II, Cherry Belle",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Roots",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "sow",
+        "sow",
+        "sow",
+        "harvest",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "mid-Mar to early May, then late Aug to mid-Sep"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Apr through Jun, and late Sep through early Nov (allow ~1-2 wks extra for shade/cool)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "25-30 days"
+        },
+        {
+          "label": "Spacing",
+          "value": "1 in apart, rows 4-6 in; thin promptly"
+        },
+        {
+          "label": "Water",
+          "value": "Even, consistent moisture is critical; drip daily in dry Jul-Aug heat to prevent cracking and pithy/hot roots. Steady spring/fall moisture otherwise."
+        },
+        {
+          "label": "Germination",
+          "value": "45-75F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat; radishes are direct-sown and germinate readily in cool 45-75F soil, so the mat is unnecessary."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "Bolts in heat",
+        "Succession-sow",
+        "flea-beetle-prone",
+        "root-maggot-prone",
+        "bolts/gets-hot in summer heat",
+        "succession sow every 2-3 wks",
+        "thin promptly or roots won't form"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Float row cover over seedlings from sowing until harvest to block flea beetles and cabbage root maggot fly; skip the heat of Jul-Aug (roots turn pithy and bolt) and resume succession sowing in late summer for a fall crop."
+    },
+    {
+      "id": "kohlrabi",
+      "name": "Kohlrabi",
+      "localName": "",
+      "variety": "Konan",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Brassicas",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "harvest",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Either (direct or transplant)"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Feb - mid Mar (spring); not needed for fall"
+        },
+        {
+          "label": "Plant out",
+          "value": "mid Apr - early May"
+        },
+        {
+          "label": "Direct sow",
+          "value": "early May - mid Jul (best as Jul-Aug fall crop)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jun-Jul (spring) and Sep-Oct (fall), +1-2 wks slower in shade"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~45 days (50-55 in shade/fall)"
+        },
+        {
+          "label": "Spacing",
+          "value": "6 in apart, rows 10-12 in"
+        },
+        {
+          "label": "Water",
+          "value": "Even, consistent moisture via drip; dry spells cause woody, cracked bulbs. Steady water Jul-Aug critical."
+        },
+        {
+          "label": "Germination",
+          "value": "60-75F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat for early indoor starts in Feb-Mar to get reliable germination while soil is cold; not needed for summer/fall direct sowing."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "cabbage worm-prone (use floating row cover)",
+        "needs steady water or bulbs turn woody",
+        "harvest at tennis-ball size before bulbs split",
+        "frost-tolerant once established"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": true,
+      "tip": "Harvest Konan at 2-3 in (tennis-ball size); leaving it longer in shade gives woody, pithy bulbs. A summer-sown fall crop is the most reliable here."
+    },
+    {
+      "id": "bunching-onion",
+      "name": "Bunching onion / scallion",
+      "localName": "",
+      "variety": "Guardsman",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Alliums",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        "sow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "grow"
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "mid-Apr through Aug (succession every 3-4 wks)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jun through Nov (overwinters mild years)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "55-65 days"
+        },
+        {
+          "label": "Spacing",
+          "value": "1/2 in apart, rows 4-6 in; no thinning needed"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture spring-fall; shallow roots dislike drying out. Drip 2-3x/wk in dry Jul-Aug, minimal in winter."
+        },
+        {
+          "label": "Germination",
+          "value": "50-75F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat needed; scallions are direct-sown outdoors and germinate fine in cool maritime soil without bottom heat."
+        }
+      ],
+      "traits": [
+        "Overwinters",
+        "Succession-sow",
+        "slow germination in cold soil",
+        "shade-tolerant",
+        "overwinters in mild PNW winters",
+        "cut-and-come-again"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Sow in succession every 3-4 weeks and harvest by cutting outer stalks 1 in above soil; Guardsman regrows for repeated cut-and-come-again pickings."
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "localName": "",
+      "variety": "Hardneck (German Red, Chesnok Red) — best for PNW; softneck Inchelium Red keeps longer",
+      "kind": "vegetable",
+      "life": "overwinter",
+      "area": "front",
+      "category": "Alliums",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        "sow",
+        "sow"
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Plant cloves in fall (not seed)"
+        },
+        {
+          "label": "Direct sow",
+          "value": "plant cloves Oct to early Nov, 2-3 in deep, pointed tip up, 6 in apart"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jun-Jul (scapes Jun; bulbs when lower leaves brown)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~240 days from fall planting to midsummer bulbs"
+        },
+        {
+          "label": "Spacing",
+          "value": "6 in apart, rows 10-12 in"
+        },
+        {
+          "label": "Water",
+          "value": "Winter rain is enough; water regularly Mar-Jun as bulbs swell (drip 2-3x/wk), then stop watering ~2 wks before harvest so skins dry down."
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat — garlic is grown from cloves planted directly in the soil once fall soil cools below ~60F."
+        }
+      ],
+      "traits": [
+        "Overwinters",
+        "Low effort",
+        "plant in fall — needs winter chill",
+        "hardneck = harvest scapes in Jun",
+        "mulch 2-3 in straw over winter",
+        "rot risk in soggy soil — keep drainage open",
+        "buy disease-free seed garlic (not grocery store)"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 5
+      },
+      "heatMat": false,
+      "tip": "Fall planting is the trick: get cloves in Oct-early Nov so they root before winter, then they need our winter chill to bulb up. Hardnecks suit the PNW best — snap off the curly scapes in June (pesto!) so the plant puts energy into the bulb. Harvest when the bottom 2-3 leaves brown (Jun-Jul), lift gently with a fork, and cure 2-3 wks in a dry airy spot out of sun. Full sun gives the biggest bulbs here. Rotate — don't follow any allium."
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots",
+      "localName": "",
+      "variety": "Dutch Yellow / Dutch Red (fall-hardy); French hybrid Ambition or Pikant",
+      "kind": "vegetable",
+      "life": "overwinter",
+      "area": "front",
+      "category": "Alliums",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "sow",
+        "sow",
+        "",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        "",
+        "sow",
+        "sow"
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Plant sets/cloves — fall or early spring"
+        },
+        {
+          "label": "Direct sow",
+          "value": "plant sets Oct-Nov (fall, like garlic) or Feb-Mar (spring); top of bulb 1 in below surface, point up"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul-Aug (when tops brown and fall over)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~90 days spring planting; ~200+ fall planting"
+        },
+        {
+          "label": "Spacing",
+          "value": "4-6 in apart, rows 15-18 in"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture while growing (drip 2x/wk in dry spells); STOP watering as bulbs mature and pull back mulch so bulbs sit on the surface and dry down."
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat — shallots go in as sets (small bulbs) either in fall with the garlic or as soon as the soil is workable in Feb-Mar."
+        }
+      ],
+      "traits": [
+        "Overwinters",
+        "Low effort",
+        "each bulb makes a cluster of 6-10",
+        "fall OR early-spring planting",
+        "stop watering as bulbs size up",
+        "cure 2-3 wks before storing",
+        "keep weeded — shallow roots hate competition"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Puget Sound allows both windows: plant with the garlic in Oct-Nov for the biggest bulbs (they need the winter chill), or in Feb-Mar if you miss fall. Each set splits into a cluster of 6-10 shallots, so space them generously. Full sun = fatter bulbs. Keep the soil weed-free, stop watering as tops flop, lift when most tops have browned (Jul-Aug), then cure 2-3 weeks with tops attached before trimming to 1 in and storing cool and dry. Early finish means they're out before the ridgegourd vines fill the space."
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "localName": "sugar snap",
+      "variety": "Super Sugar Snap",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Legumes",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "sow",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "late Feb-late Mar (spring); mid Jul-mid Aug (fall)"
+        },
+        {
+          "label": "Harvest",
+          "value": "May-Jun (spring); Sep-Oct (fall)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "60-70 days"
+        },
+        {
+          "label": "Spacing",
+          "value": "2 in apart, rows 3-4 in along trellis"
+        },
+        {
+          "label": "Water",
+          "value": "Keep evenly moist spring through harvest; drip 1 in/wk, more during dry Jul-Aug for fall crop establishment."
+        },
+        {
+          "label": "Germination",
+          "value": "45-70F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat; peas are direct-sown outdoors and germinate fine in cool 45-55F soil."
+        }
+      ],
+      "traits": [
+        "Needs trellis",
+        "Bolts in heat",
+        "needs tall trellis (~5-6ft)",
+        "birds eat seedlings",
+        "poor pod set in heat",
+        "powdery mildew late season"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Cover seedlings with netting or floating row cover until 4-6 in tall; birds will strip emerging pea sprouts in the partial-shade backyard."
+    },
+    {
+      "id": "pole-beans",
+      "name": "Pole beans",
+      "localName": "",
+      "variety": "Blue Lake Pole",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Legumes",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "sow",
+        "sow",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "June (early-mid June safest; late May only in a warm year)"
+        },
+        {
+          "label": "Harvest",
+          "value": "Aug-Oct"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "60-70 days"
+        },
+        {
+          "label": "Spacing",
+          "value": "3-4 in apart, rows/poles 18-24 in apart"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent moisture once flowering/podding; drip 2-3x/week through dry Jul-Aug, ease off as fall rains return."
+        },
+        {
+          "label": "Germination",
+          "value": "70-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No heat mat needed; pole beans are direct-sown, and seeds rot in cold soil regardless of indoor starting, so just wait for warm ground."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Needs trellis",
+        "Frost-tender",
+        "slug-prone seedlings",
+        "needs tall trellis (6-8 ft)",
+        "frost-tender",
+        "wait for warm soil (>60F)",
+        "partial shade slows yield"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Don't sow until soil is reliably above 60F (late May/June here) or seeds rot; protect emerging seedlings from slugs with bait or copper, as one wet night can wipe a whole row."
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "localName": "",
+      "variety": "Charmant F1 (savoy type)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Brassicas",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "indoor",
+        "transplant",
+        "grow",
+        "grow",
+        "harvest",
+        "harvest",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "early-mid Jun (fall crop); Feb-early Mar (optional spring crop)"
+        },
+        {
+          "label": "Plant out",
+          "value": "mid-late Jul (fall); late Apr-early May (spring)"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Sep-Nov (fall crop); holds in field through light frosts"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~65-75 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "12-18 in apart, 18 in between rows"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent 1-1.5 in/week via drip all season; steady moisture prevents splitting. Dry Jul-Aug needs reliable irrigation; ease off as fall rains start."
+        },
+        {
+          "label": "Germination",
+          "value": "70-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat briefly to hit 75-80F for fast, even germination, then remove it once sprouted so seedlings stay stocky in cool light."
+        }
+      ],
+      "traits": [
+        "Slug-prone",
+        "Pest-prone",
+        "slug-prone",
+        "cabbage worm/looper magnet",
+        "needs insect netting/row cover",
+        "splits if watering uneven",
+        "heavy feeder"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 3
+      },
+      "heatMat": true,
+      "tip": "Cover with fine insect netting from transplant day onward; this is the single most effective control for cabbage worms/loopers and slugs, which are relentless on brassicas in the shaded maritime backyard."
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "localName": "",
+      "variety": "Snow Crown (F1, ~50-60 days from transplant, reliable and relatively heat-forgiving for a cauliflower)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Brassicas",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "grow",
+        "indoor",
+        "grow",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "late Jun to mid Jul (fall crop); optional early Mar for a spring crop"
+        },
+        {
+          "label": "Plant out",
+          "value": "late Jul to early Aug (fall); mid-late Apr (spring)"
+        },
+        {
+          "label": "Harvest",
+          "value": "late Sep to Nov (fall crop); partial shade adds ~1-2 wks"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~55-65 days from transplant"
+        },
+        {
+          "label": "Spacing",
+          "value": "18 in apart, 24 in between rows"
+        },
+        {
+          "label": "Water",
+          "value": "Constant even moisture is critical; 1-1.5 in/wk on drip, more in dry Jul-Aug. Any check in moisture causes buttoning or ricey heads."
+        },
+        {
+          "label": "Germination",
+          "value": "70-80F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Use the heat mat to hit 70-75F for fast, even germination, then move seedlings off it immediately to cool, bright conditions so they don't stretch."
+        }
+      ],
+      "traits": [
+        "Pest-prone",
+        "fussiest brassica",
+        "needs steady moisture or buttons",
+        "cabbage worm magnet (use floating row cover)",
+        "heavy feeder",
+        "fall crop best",
+        "may need blanching for white heads"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 2
+      },
+      "heatMat": true,
+      "tip": "Grow it as a fall crop timed to mature in the cooling weather of Oct-Nov: heads set in cool, moist conditions, while summer-maturing heads button or go ricey. Keep under row cover from transplant to block cabbage worms."
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "localName": "",
+      "variety": "'Sungold' (early indeterminate cherry, reliably ripens), 'Stupice' (cold-tolerant, ~55 days), 'Oregon Spring' or 'Legend' (early determinate slicers; Legend has late-blight resistance)",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Fruiting (heat-lover)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "indoor",
+        "indoor",
+        "transplant",
+        "grow",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Start indoors then transplant"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "Late March to mid-April (about 6-8 weeks before transplant)"
+        },
+        {
+          "label": "Plant out",
+          "value": "Mid-May to early June, once soil hits 50-60F and nights hold above ~55F (the threshold for fruit set—below 55F pollen fails and blossoms drop). Use wall-o-water or black plastic to bank heat and push 2-4 weeks earlier."
+        },
+        {
+          "label": "Harvest",
+          "value": "Late July through October (cherries first; bring green fruit indoors before cold/blight in Oct)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "55-72 days from transplant (pick early/short-season types; in our cool summers anything over ~72 days rarely ripens before fall rain/blight)"
+        },
+        {
+          "label": "Spacing",
+          "value": "18-24 in apart in-row, 36 in between rows; cherries/indeterminates need the wider end"
+        },
+        {
+          "label": "Water",
+          "value": "Water deeply and consistently at the soil line (never overhead) 1+ in/week through the dry July-August stretch to prevent blossom-end rot and cracking; water early in the day and keep foliage dry to slow late blight."
+        },
+        {
+          "label": "Germination",
+          "value": "70-85F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Tomato seed germinates fast and evenly only in warm soil (70-85F, ideally 75-85F); on a cool indoor windowsill germination stalls below 65F and seed can rot, so the heat mat is the single biggest difference-maker for strong, even starts. Pull seedlings off the mat once sprouted."
+        }
+      ],
+      "traits": [
+        "Frost-tender",
+        "Needs trellis",
+        "Pest-prone",
+        "frost-tender",
+        "needs trellis",
+        "blossom drop in cool nights",
+        "late blight in wet weather",
+        "needs warmest microclimate"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 3
+      },
+      "heatMat": true,
+      "tip": "In our cool maritime summers, variety choice is make-or-break: stick to early/short-season cherry and determinate types (Sungold, Stupice, Oregon Spring, Legend) that ripen in ~72 days or less, and give them the hottest full-sun front yard with black plastic mulch or a wall-o-water to bank heat. Nights below 55F cause blossom drop, so don't rush transplants out before mid-May and protect young plants. Sungold and other cherries are indeterminate and need 6-ft+ stakes/cages; even determinate slicers should be staked. Late blight is the big killer here in our wet shoulder seasons, so water only at the soil line early in the day, prune for airflow, stake to keep foliage off the ground, and pick remaining fruit before the October rains set in."
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek",
+      "localName": "methi",
+      "variety": "Common methi (Trigonella foenum-graecum) bulk seed sown thickly for saag; Kasuri methi for a finer, more aromatic small-leaf type. Plain culinary/spice fenugreek seed from West Coast Seeds or Territorial works fine and is far cheaper than packet quantities.",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "back",
+      "category": "Leafy greens",
+      "sun": "Partial shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "sow",
+        "sow",
+        "harvest",
+        "harvest",
+        "sow",
+        "sow",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Direct sow"
+        },
+        {
+          "label": "Direct sow",
+          "value": "Mid-Apr through mid-Sep; succession sow a fresh patch every 2-3 weeks. First sowing germinates slowly in cold maritime soil (50-55F), so the first reliable flush is late Apr-May. Spring (Apr-May) and fall (late Aug-Sep) sowings give the mildest, slowest-bolting leaves; skip mid-summer sowings or expect fast bolting and bitter foliage."
+        },
+        {
+          "label": "Harvest",
+          "value": "May through October (peak in spring and again in fall)"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "25-40 days from sowing to first leaf cut (~25 in warm spells, 35-40 in cool spring)"
+        },
+        {
+          "label": "Spacing",
+          "value": "Broadcast or sow ~1/2-1 in apart in bands; thin to 2-4 in for leafy clumps, rows 4-6 in apart. For saag, grow it thick like a baby-green carpet."
+        },
+        {
+          "label": "Water",
+          "value": "Keep the seedbed evenly moist for fast germination and tender leaves; it needs steady water through the dry July-August stretch or it bolts and toughens early."
+        },
+        {
+          "label": "Germination",
+          "value": "60-75F ideal; sprouts slowly at 50-55F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "No mat needed: fenugreek is a cool-tolerant legume that germinates at 50-65F soil and is direct-sown anyway, so the heat mat brings no real advantage."
+        }
+      ],
+      "traits": [
+        "Bolts in heat",
+        "Slug-prone",
+        "Succession-sow",
+        "bolts in heat",
+        "slug-prone",
+        "succession sow",
+        "direct sow only (taproot)",
+        "cut-and-come-again"
+      ],
+      "ease": {
+        "start": 5,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Direct sow only and never transplant: the taproot resents disturbance, so scatter seed thickly right in the partial-shade backyard alongside spinach, coriander, and arugula. Fast and easy (leaves in ~4-5 weeks) and cool-tolerant into the 40sF and through light frost, but cold maritime soil germinates it slowly, so the first April sowing is your slowest. Bolts quickly and turns bitter in the hot, dry July-August heat, so favor spring and late-summer/fall sowings and keep succession-sowing every 2-3 weeks. The biggest threat here is slugs mowing down the tender seedlings overnight, so bait or trap from the day you sow."
+    },
+    {
+      "id": "amaranth",
+      "name": "Amaranth",
+      "localName": "thotakura/chaulai",
+      "variety": "Leafy vegetable amaranth (Amaranthus tricolor), green or red-leaf types; cultivar not specified",
+      "kind": "vegetable",
+      "life": "annual",
+      "area": "front",
+      "category": "Leafy greens",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "",
+        "indoor",
+        "transplant",
+        "harvest",
+        "harvest",
+        "harvest",
+        "harvest",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Start method",
+          "value": "Either (direct sow or young transplants)"
+        },
+        {
+          "label": "Sow indoors",
+          "value": "early to mid May, about 4-5 weeks before June planting"
+        },
+        {
+          "label": "Plant out",
+          "value": "early to mid Jun after hardening off; soil at least 65F and nights consistently above 50F"
+        },
+        {
+          "label": "Direct sow",
+          "value": "Jun through late Jul once soil is warm; cover tiny seeds only 1/8-1/4 in deep and succession sow every 2-3 weeks"
+        },
+        {
+          "label": "Harvest",
+          "value": "Jul-Sep; early Oct only while weather stays mild, before frost"
+        },
+        {
+          "label": "Time to harvest",
+          "value": "~30 days from transplant or 40-50 days from direct sowing; slower in cool weather"
+        },
+        {
+          "label": "Spacing",
+          "value": "Thin to 6 in apart for leafy harvests, rows 12-18 in apart; keep a sunny strip clear of vines and sunflower shade"
+        },
+        {
+          "label": "Water",
+          "value": "Keep the shallow seedbed evenly moist until emergence. Water at soil level through dry summer spells; drought brings earlier flowering and fewer tender leaves, but avoid waterlogging."
+        },
+        {
+          "label": "Germination",
+          "value": "70-80F ideal; wait for outdoor soil at least 65F, preferably near 70F"
+        },
+        {
+          "label": "Heat mat",
+          "value": "Optional for indoor starts: aim for 75-80F soil if the room is cool, then remove bottom heat after emergence. No mat needed for direct sowing into warm soil."
+        }
+      ],
+      "traits": [
+        "Frost-tender",
+        "Slug-prone",
+        "Succession-sow",
+        "warm-season leafy green",
+        "frost-tender",
+        "tiny seed - sow shallowly",
+        "succession sow",
+        "cut-and-come-again",
+        "slug-prone seedlings",
+        "pinch flowering tips",
+        "can self-seed"
+      ],
+      "ease": {
+        "start": 4,
+        "grow": 4
+      },
+      "heatMat": false,
+      "tip": "Use a sunny front-yard patch, outside the shade of the cucumber arch and sunflowers. Start with a small patch and keep it regularly cut so it does not crowd nearby crops. This is a summer green: wait for warm soil rather than following the spring spinach schedule. Pick tender leaves and shoot tips, leaving lower leaves for regrowth; pinch developing flower spikes to prolong leaf harvest and prevent unwanted self-seeding. October harvest is weather-dependent; finish before frost. Growing references: Johnny's growing guide (https://www.johnnyseeds.com/growers-library/vegetables/greens/vegetable-amaranth-key-growing-information.html) and Connecticut growing guide (https://portal.ct.gov/-/media/caes/documents/publications/fact_sheets/forestry_and_horticulture/howtogrowvegetableamaranthinconnecticutpdf.pdf)."
+    },
+    {
+      "id": "rhododendron",
+      "name": "Rhododendron",
+      "localName": "",
+      "variety": "Broadleaf evergreen shrub",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Woodland Shade",
+      "sun": "Part shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "prune",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Part shade"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Acidic 4.5–6.0, organic, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture; deep-water in summer dry spells (shallow roots); mulch 2–3 in"
+        },
+        {
+          "label": "Size",
+          "value": "3–8 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Apr–May"
+        },
+        {
+          "label": "Prune",
+          "value": "Right after bloom (May–Jun); deadhead spent trusses"
+        },
+        {
+          "label": "Feed",
+          "value": "Light, after bloom, with acid (rhododendron) fertilizer; stop by mid-July"
+        }
+      ],
+      "traits": [
+        "acid-loving",
+        "shallow roots — don't plant deep",
+        "even moisture",
+        "watch root weevil"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Don't plant too deep — keep the root ball at or slightly above grade. Shallow roots hate drying out and heavy clay, so mulch and water deeply in summer. Deadhead spent flower trusses by snapping them off above the new buds."
+    },
+    {
+      "id": "azalea",
+      "name": "Azalea",
+      "localName": "",
+      "variety": "Shrub (a small Rhododendron)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Woodland Shade",
+      "sun": "Part shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "prune",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Part shade"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Acidic, organic, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture; mulch"
+        },
+        {
+          "label": "Size",
+          "value": "2–4 ft (evergreen); deciduous types 4–8 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Apr–May"
+        },
+        {
+          "label": "Prune",
+          "value": "Lightly right after bloom"
+        },
+        {
+          "label": "Feed",
+          "value": "After bloom, acid fertilizer; stop by mid-July"
+        }
+      ],
+      "traits": [
+        "acid-loving",
+        "shallow roots",
+        "watch lacebug & petal blight"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Care is the same as rhododendron, just smaller. Deciduous types add fall color. Prune lightly right after flowering, before it sets next year's buds."
+    },
+    {
+      "id": "camellia",
+      "name": "Camellia",
+      "localName": "",
+      "variety": "Broadleaf evergreen shrub",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Woodland Shade",
+      "sun": "Part shade (sasanqua takes more sun)",
+      "timeline": [
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "prune",
+        "",
+        "",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "bloom"
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Part shade (sasanqua takes more sun)"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Acidic, rich, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Even moisture; mulch. Buds set in summer — water through the dry summer or buds drop next spring"
+        },
+        {
+          "label": "Size",
+          "value": "6–12 ft (can be hedged)"
+        },
+        {
+          "label": "Bloom",
+          "value": "Japonica Feb–Apr; Sasanqua Oct–Dec"
+        },
+        {
+          "label": "Prune",
+          "value": "After bloom"
+        },
+        {
+          "label": "Feed",
+          "value": "After bloom, acid (ericaceous) fertilizer — stop by the end of July to avoid bud drop"
+        }
+      ],
+      "traits": [
+        "acid-loving",
+        "rake fallen blooms (petal blight)",
+        "bud drop if dry"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Two types extend the season — japonica blooms late winter to spring, sasanqua blooms in fall. Rake up and bin fallen flowers (don't compost) to prevent petal blight. Keep it watered through our dry summers, when next year's buds form, or buds drop the following spring."
+    },
+    {
+      "id": "hydrangea",
+      "name": "Hydrangea",
+      "localName": "",
+      "variety": "Deciduous shrub",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Woodland Shade",
+      "sun": "Morning sun / afternoon shade",
+      "timeline": [
+        "",
+        "prune",
+        "",
+        "",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Morning sun / afternoon shade"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Rich, moist; bigleaf color shifts with pH (acidic = blue)"
+        },
+        {
+          "label": "Water",
+          "value": "Thirsty — deep-water in summer; wilts midday in heat"
+        },
+        {
+          "label": "Size",
+          "value": "3–6 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Jul–Sep (bigleaf peaks midsummer)"
+        },
+        {
+          "label": "Prune",
+          "value": "Bigleaf/oakleaf: right after bloom (old wood). Panicle/smooth: late winter (new wood)"
+        },
+        {
+          "label": "Feed",
+          "value": "Light, early spring; low-nitrogen"
+        }
+      ],
+      "traits": [
+        "thirsty",
+        "prune-timing is critical",
+        "blooms on old vs new wood"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "The #1 mistake is spring-pruning a bigleaf (mophead/lacecap) and cutting off all the flower buds. Know your type: mophead/lacecap = prune just after summer bloom; panicle/Annabelle = prune in late winter. Soil pH tints bigleaf flowers — acidic soil = blue."
+    },
+    {
+      "id": "hosta",
+      "name": "Hosta",
+      "localName": "",
+      "variety": "Herbaceous perennial (foliage)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Woodland Shade",
+      "sun": "Shade / part shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "feed",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        "prune",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Shade / part shade"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Rich, moist"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent moisture"
+        },
+        {
+          "label": "Size",
+          "value": "1–3 ft mounds"
+        },
+        {
+          "label": "Bloom",
+          "value": "Jul–Aug (grown mainly for foliage)"
+        },
+        {
+          "label": "Prune",
+          "value": "Cut back dead foliage in late fall; divide spring or fall"
+        },
+        {
+          "label": "Feed",
+          "value": "Spring"
+        }
+      ],
+      "traits": [
+        "SLUG MAGNET — use the slug strategy",
+        "dies back in winter",
+        "divide to propagate"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Slugs love hosta — start Sluggo at the very first spring shoots (the same slug strategy you use on the vegetables). It dies back fully in winter and returns in spring. Divide clumps in spring or fall to make more."
+    },
+    {
+      "id": "roses",
+      "name": "Roses",
+      "localName": "",
+      "variety": "Shrub (repeat-blooming)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Cottage Border",
+      "sun": "Full sun 6+ hrs",
+      "timeline": [
+        "",
+        "prune",
+        "",
+        "feed",
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "bloom",
+        "bloom",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun 6+ hrs"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Rich, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Deep, at the base — not overhead"
+        },
+        {
+          "label": "Size",
+          "value": "3–6 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Jun–Oct (repeat)"
+        },
+        {
+          "label": "Prune",
+          "value": "Main prune late winter (Feb–Mar); deadhead through the season"
+        },
+        {
+          "label": "Feed",
+          "value": "Spring + early summer (stop by late Aug)"
+        }
+      ],
+      "traits": [
+        "blackspot & powdery mildew in damp PNW",
+        "prune late winter",
+        "deadhead",
+        "water at the base"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Our damp climate brings blackspot and powdery mildew pressure. Give full sun and air circulation, water at the base (not the leaves), clean up fallen leaves, and deadhead spent blooms to keep flowers coming. Main prune in late winter."
+    },
+    {
+      "id": "peony",
+      "name": "Peony",
+      "localName": "",
+      "variety": "Herbaceous perennial (long-lived)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Cottage Border",
+      "sun": "Full sun 6+ hrs",
+      "timeline": [
+        "",
+        "",
+        "",
+        "feed",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        "",
+        "prune",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun 6+ hrs"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Rich, well-drained, near-neutral to slightly alkaline (lime acidic PNW soil)"
+        },
+        {
+          "label": "Water",
+          "value": "Moderate, even"
+        },
+        {
+          "label": "Size",
+          "value": "2–3 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "May–Jun"
+        },
+        {
+          "label": "Prune",
+          "value": "Cut stems to the ground in fall"
+        },
+        {
+          "label": "Feed",
+          "value": "Spring (low-nitrogen)"
+        }
+      ],
+      "traits": [
+        "don't plant eyes too deep (1–2 in max)",
+        "support heavy blooms",
+        "cut back in fall",
+        "ants are harmless"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Plant the buds (\"eyes\") only 1–2 inches deep — planting too deep is the classic reason peonies never bloom. Support the heavy flowers with a peony ring. Cut the foliage to the ground in fall to prevent botrytis. Ants on the buds are harmless. Don't move it once it's settled."
+    },
+    {
+      "id": "shasta-daisy",
+      "name": "Shasta daisy",
+      "localName": "",
+      "variety": "Perennial",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Cottage Border",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "feed",
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "bloom",
+        "prune",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Average, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Moderate"
+        },
+        {
+          "label": "Size",
+          "value": "2–3 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Jun–Sep (with deadheading)"
+        },
+        {
+          "label": "Prune",
+          "value": "Deadhead; cut back in fall; divide every 2–3 yrs"
+        },
+        {
+          "label": "Feed",
+          "value": "Light, spring"
+        }
+      ],
+      "traits": [
+        "deadhead for rebloom",
+        "tall types flop — support",
+        "divide to keep vigorous"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Deadhead spent flowers for more blooms. Tall types flop, so give support or grow compact varieties. Divide every 2–3 years to keep the clump vigorous."
+    },
+    {
+      "id": "hollyhock",
+      "name": "Hollyhock",
+      "localName": "",
+      "variety": "Biennial / short-lived perennial",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Cottage Border (back row)",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "feed",
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "prune",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Rich, well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Moderate; water at the base"
+        },
+        {
+          "label": "Size",
+          "value": "5–8 ft (back of border)"
+        },
+        {
+          "label": "Bloom",
+          "value": "Jun–Sep (often year 2 from seed)"
+        },
+        {
+          "label": "Prune",
+          "value": "Cut spent spikes; let some self-seed"
+        },
+        {
+          "label": "Feed",
+          "value": "Spring"
+        }
+      ],
+      "traits": [
+        "rust-prone in damp PNW",
+        "stake only in wind-exposed sites",
+        "self-seeds",
+        "biennial"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Hollyhock rust is common in our damp climate — space plants for airflow, water at the base, and strip infected lower leaves. Clear away old foliage in fall (rust overwinters in debris). Stake only in windy, exposed spots. It self-seeds, so expect volunteers. Often blooms in its second year from seed."
+    },
+    {
+      "id": "tulips",
+      "name": "Tulips",
+      "localName": "",
+      "variety": "Spring bulb",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Spring Bulbs",
+      "sun": "Full sun",
+      "timeline": [
+        "",
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        "",
+        "",
+        "plant",
+        "plant",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Sharp drainage; prefers neutral–slightly alkaline (~pH 6–7)"
+        },
+        {
+          "label": "Water",
+          "value": "Natural rainfall; needs sharp drainage"
+        },
+        {
+          "label": "Size",
+          "value": "1–2 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Apr–May"
+        },
+        {
+          "label": "Prune",
+          "value": "Deadhead after bloom; let foliage die back naturally"
+        },
+        {
+          "label": "Feed",
+          "value": "Bulb food at planting; light feed in early spring as shoots emerge"
+        }
+      ],
+      "traits": [
+        "plant in fall, 6–8 in deep",
+        "hybrid types naturally short-lived",
+        "rots in soggy winter soil — needs sharp drainage",
+        "squirrels may dig bulbs"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Plant bulbs in October–November, 6–8 inches deep, in the sharpest-draining, sunniest spot. Hybrid tulips rarely rebloom well after their first spring, so many gardeners treat them as annuals or replant fresh bulbs each fall. The real risk here is wet, cold winter soil rotting the bulbs — our dry summers are ideal for their dormancy. Species/botanical tulips perennialize more reliably. Let the foliage yellow before removing it."
+    },
+    {
+      "id": "hyacinth",
+      "name": "Hyacinth",
+      "localName": "",
+      "variety": "Spring bulb (fragrant)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Spring Bulbs",
+      "sun": "Full / part sun",
+      "timeline": [
+        "",
+        "",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "plant",
+        "plant",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full / part sun"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Well-drained"
+        },
+        {
+          "label": "Water",
+          "value": "Natural rainfall; good drainage"
+        },
+        {
+          "label": "Size",
+          "value": "8–12 in"
+        },
+        {
+          "label": "Bloom",
+          "value": "Mar–Apr (very fragrant)"
+        },
+        {
+          "label": "Prune",
+          "value": "Deadhead; let foliage die back"
+        },
+        {
+          "label": "Feed",
+          "value": "At planting, plus a feed as shoots emerge in spring"
+        }
+      ],
+      "traits": [
+        "plant in fall, 4–6 in deep",
+        "fragrant",
+        "first-year spike loosens later (replace every 2–3 yrs)",
+        "wear gloves (bulbs irritate skin)"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Plant in fall, 4–6 inches deep, in full sun and well-drained soil. It blooms very early (March–April) and is intensely fragrant. The bulb persists for several years, but the big first-year spike gets smaller and looser over time, so plan to replace bulbs every few years for the best show. Wear gloves — the bulbs contain calcium oxalate that can irritate skin."
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "localName": "",
+      "variety": "Edible deciduous shrub (great fall color)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Edible Accent",
+      "sun": "Full sun 6+ hrs (for fruit)",
+      "timeline": [
+        "",
+        "prune",
+        "feed",
+        "bloom",
+        "bloom",
+        "",
+        "bloom",
+        "bloom",
+        "bloom",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun 6+ hrs (for fruit)"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Very acidic 4.5–5.5 (the key requirement)"
+        },
+        {
+          "label": "Water",
+          "value": "Consistent, especially while fruiting; shallow roots — mulch"
+        },
+        {
+          "label": "Size",
+          "value": "5–8 ft (highbush; ~4–7 ft if pruned). Half-high types ~3–4 ft"
+        },
+        {
+          "label": "Bloom",
+          "value": "Apr–May bloom; mid-Jul–Sep fruit"
+        },
+        {
+          "label": "Prune",
+          "value": "Late winter, from year 3 — remove old/weak canes"
+        },
+        {
+          "label": "Feed",
+          "value": "Acidic (rhododendron/azalea) fertilizer in spring"
+        }
+      ],
+      "traits": [
+        "self-fertile; 2+ varieties boost yield & berry size",
+        "very acidic soil",
+        "net from birds",
+        "shallow roots — mulch"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "The PNW is prime blueberry country. Give very acidic soil; blueberries are self-fertile, but planting two or more varieties (early + mid + late) gives bigger, earlier crops and a longer harvest — roughly mid-July into September. Net the bushes from birds. Mulch to protect the shallow roots; prune lightly in late winter from about year 3."
+    },
+    {
+      "id": "japanese-barberry",
+      "name": "Japanese barberry",
+      "localName": "",
+      "variety": "Deciduous shrub (colorful, thorny foliage)",
+      "kind": "ornamental",
+      "life": "perennial",
+      "area": "ornamental",
+      "category": "Foliage Accent",
+      "sun": "Full sun (best color) to part shade",
+      "timeline": [
+        "",
+        "",
+        "",
+        "bloom",
+        "",
+        "",
+        "prune",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "care": [
+        {
+          "label": "Sun",
+          "value": "Full sun (best color) to part shade"
+        },
+        {
+          "label": "Soil / pH",
+          "value": "Adaptable, well-drained; drought-tolerant once established"
+        },
+        {
+          "label": "Water",
+          "value": "Low once established"
+        },
+        {
+          "label": "Size",
+          "value": "2–6 ft (dwarf to full)"
+        },
+        {
+          "label": "Bloom",
+          "value": "Minor yellow flowers Apr; grown for red/gold foliage"
+        },
+        {
+          "label": "Prune",
+          "value": "Anytime; shears well as a hedge (wear gloves — thorns)"
+        },
+        {
+          "label": "Feed",
+          "value": "Minimal"
+        }
+      ],
+      "traits": [
+        "thorny — good barrier hedge",
+        "invasive in some states (not WA)",
+        "drought-tolerant",
+        "best color in full sun"
+      ],
+      "ease": null,
+      "heatMat": null,
+      "tip": "Extremely low-maintenance — tough, drought-tolerant, and thorny (makes a good barrier hedge). Note it's considered invasive in parts of the US (banned in some eastern states; not in Washington) because birds spread the berries — choose a low-seed / near-sterile cultivar (none is fully sterile) and remove berries if that's a concern. Best foliage color in full sun."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "jan-soil-backyard",
+      "month": 0,
+      "type": "soil",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard",
+      "text": "plan fall crop rotation (Brassicas->Legumes->Roots->Greens); order row cover, Sluggo, seeds"
+    },
+    {
+      "id": "jan-soil-front-arches",
+      "month": 0,
+      "type": "soil",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front arches",
+      "text": "inspect/repair cattle-panel arches and T-posts before spring"
+    },
+    {
+      "id": "jan-harvest-spinach",
+      "month": 0,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "pick overwintered Olympia leaves on mild spells"
+    },
+    {
+      "id": "feb-start-peppers",
+      "month": 1,
+      "type": "start",
+      "plants": [
+        "peppers"
+      ],
+      "lead": "Peppers",
+      "text": "sow on heat mat, 80-85F (slow germ, start early)"
+    },
+    {
+      "id": "feb-start-kohlrabi",
+      "month": 1,
+      "type": "start",
+      "plants": [
+        "kohlrabi"
+      ],
+      "lead": "Kohlrabi",
+      "text": "sow spring crop on heat mat 70-75F, move off mat once sprouted"
+    },
+    {
+      "id": "feb-sow-spinach",
+      "month": 1,
+      "type": "sow",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "direct sow spring crop, cool soil 45-65F"
+    },
+    {
+      "id": "feb-sow-peas",
+      "month": 1,
+      "type": "sow",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "direct sow spring Super Sugar Snap along trellis"
+    },
+    {
+      "id": "feb-harvest-spinach",
+      "month": 1,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "continue picking overwintered leaves"
+    },
+    {
+      "id": "feb-pests-spinach-peas",
+      "month": 1,
+      "type": "pests",
+      "plants": [
+        "spinach",
+        "peas"
+      ],
+      "lead": "Spinach, peas",
+      "text": "Sluggo at emergence; net peas from birds"
+    },
+    {
+      "id": "mar-start-peppers",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "peppers"
+      ],
+      "lead": "Peppers",
+      "text": "continue on heat mat, 80-85F"
+    },
+    {
+      "id": "mar-start-eggplant",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "eggplant"
+      ],
+      "lead": "Eggplant",
+      "text": "sow on heat mat, 80-85F (slowest, sow early)"
+    },
+    {
+      "id": "mar-start-tomatillo",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "tomatillo"
+      ],
+      "lead": "Tomatillo",
+      "text": "sow on heat mat, 75-85F (plant 2+ for pollination)"
+    },
+    {
+      "id": "mar-start-roselle",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "sow on heat mat, 75-85F"
+    },
+    {
+      "id": "mar-start-marigold",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "sow on heat mat, 70-75F"
+    },
+    {
+      "id": "mar-start-lettuce",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "lettuce"
+      ],
+      "lead": "Lettuce",
+      "text": "optional first flush, cool room temp (no mat)"
+    },
+    {
+      "id": "mar-start-sorrel",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "sorrel"
+      ],
+      "lead": "Sorrel",
+      "text": "start indoors, cool room temp"
+    },
+    {
+      "id": "mar-start-cabbage",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "cabbage"
+      ],
+      "lead": "Cabbage",
+      "text": "optional spring crop on heat mat, off once sprouted"
+    },
+    {
+      "id": "mar-start-cauliflower",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "cauliflower"
+      ],
+      "lead": "Cauliflower",
+      "text": "optional spring crop on heat mat, off once sprouted"
+    },
+    {
+      "id": "mar-start-kohlrabi",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "kohlrabi"
+      ],
+      "lead": "Kohlrabi",
+      "text": "continue spring starts on heat mat"
+    },
+    {
+      "id": "mar-start-tomato",
+      "month": 2,
+      "type": "start",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "sow on heat mat, 70-85F; pick early/short-season types (Sungold, Stupice, Oregon Spring, Legend)"
+    },
+    {
+      "id": "mar-sow-spinach",
+      "month": 2,
+      "type": "sow",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "continue spring sowings"
+    },
+    {
+      "id": "mar-sow-arugula",
+      "month": 2,
+      "type": "sow",
+      "plants": [
+        "arugula"
+      ],
+      "lead": "Arugula",
+      "text": "direct sow, float row cover for flea beetles"
+    },
+    {
+      "id": "mar-sow-radish",
+      "month": 2,
+      "type": "sow",
+      "plants": [
+        "radish"
+      ],
+      "lead": "Radish",
+      "text": "direct sow Cherry Belle/Easter Egg, succession every 2-3 wks"
+    },
+    {
+      "id": "mar-sow-peas",
+      "month": 2,
+      "type": "sow",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "finish spring sowing late Mar"
+    },
+    {
+      "id": "mar-plant-peppers-eggplant",
+      "month": 2,
+      "type": "plant",
+      "plants": [
+        "peppers",
+        "eggplant"
+      ],
+      "lead": "Peppers, eggplant",
+      "text": "pot up before rootbound, fertilize lightly at true leaves"
+    },
+    {
+      "id": "mar-harvest-spinach",
+      "month": 2,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "peak spring picking"
+    },
+    {
+      "id": "mar-pests-arugula-radish",
+      "month": 2,
+      "type": "pests",
+      "plants": [
+        "arugula",
+        "radish"
+      ],
+      "lead": "Arugula, radish",
+      "text": "row cover at sowing vs flea beetles/root maggot"
+    },
+    {
+      "id": "mar-pests-lettuce-spinach",
+      "month": 2,
+      "type": "pests",
+      "plants": [
+        "lettuce",
+        "spinach"
+      ],
+      "lead": "Lettuce, spinach",
+      "text": "Sluggo around seedlings, reapply after rain"
+    },
+    {
+      "id": "mar-pests-peppers",
+      "month": 2,
+      "type": "pests",
+      "plants": [
+        "peppers"
+      ],
+      "lead": "Peppers",
+      "text": "watch aphids on indoor starts, blast with water/soap"
+    },
+    {
+      "id": "apr-start-bottlegourd",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "bottlegourd"
+      ],
+      "lead": "Bottlegourd",
+      "text": "soak/nick seed, sow on heat mat 85-90F"
+    },
+    {
+      "id": "apr-start-bitter-gourd",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "bitter-gourd"
+      ],
+      "lead": "Bitter gourd",
+      "text": "soak/nick seed, sow on heat mat 80-90F"
+    },
+    {
+      "id": "apr-start-okra",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "okra"
+      ],
+      "lead": "Okra",
+      "text": "soak seed, sow on heat mat 80-90F"
+    },
+    {
+      "id": "apr-start-basil",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "sow on heat mat 75-80F"
+    },
+    {
+      "id": "apr-start-tomatillo",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "tomatillo"
+      ],
+      "lead": "Tomatillo",
+      "text": "continue indoors 75-85F"
+    },
+    {
+      "id": "apr-start-roselle",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "continue indoors 75-85F"
+    },
+    {
+      "id": "apr-start-marigold",
+      "month": 3,
+      "type": "start",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "continue indoors 70-75F"
+    },
+    {
+      "id": "apr-sow-arugula",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "arugula"
+      ],
+      "lead": "Arugula",
+      "text": "continue spring succession"
+    },
+    {
+      "id": "apr-sow-radish",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "radish"
+      ],
+      "lead": "Radish",
+      "text": "succession sow every 2-3 wks"
+    },
+    {
+      "id": "apr-sow-cilantro",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "direct sow only (taproot), succession every 2-3 wks"
+    },
+    {
+      "id": "apr-sow-beet",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "beet"
+      ],
+      "lead": "Beet",
+      "text": "direct sow, succession every 3 wks"
+    },
+    {
+      "id": "apr-sow-scallion",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "direct sow Guardsman, succession"
+    },
+    {
+      "id": "apr-sow-carrot",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "carrot"
+      ],
+      "lead": "Carrot",
+      "text": "direct sow, keep surface constantly moist; cover row with board/burlap"
+    },
+    {
+      "id": "apr-sow-fenugreek-methi",
+      "month": 3,
+      "type": "sow",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "direct sow only (taproot); sow thick for saag, succession every 2-3 wks"
+    },
+    {
+      "id": "apr-plant-lettuce",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "lettuce"
+      ],
+      "lead": "Lettuce",
+      "text": "transplant out (skips slug-prone seedling stage)"
+    },
+    {
+      "id": "apr-plant-sorrel",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "sorrel"
+      ],
+      "lead": "Sorrel",
+      "text": "transplant out / direct sow"
+    },
+    {
+      "id": "apr-plant-marigold",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "harden off for mid-late May set"
+    },
+    {
+      "id": "apr-plant-cabbage-cauliflower-kohlrabi",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Cabbage, cauliflower, kohlrabi",
+      "text": "transplant spring crop late Apr-May"
+    },
+    {
+      "id": "apr-plant-eggplant-peppers",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "eggplant",
+        "peppers"
+      ],
+      "lead": "Eggplant, peppers",
+      "text": "harden off 7-10 days (do NOT plant out yet, soil too cold)"
+    },
+    {
+      "id": "apr-plant-tomato",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "pot up before rootbound; harden off late Apr but do NOT plant out yet (nights too cold)"
+    },
+    {
+      "id": "apr-water-front-drip",
+      "month": 3,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "light ~1x/week as soil warms, rain still falling"
+    },
+    {
+      "id": "apr-water-backyard-drip",
+      "month": 3,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "1-2x/week; keep carrot/beet surface moist to germinate"
+    },
+    {
+      "id": "apr-feed-front-heavy-feeders-gourds-eggplant-pepper",
+      "month": 3,
+      "type": "feed",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd",
+        "eggplant",
+        "peppers"
+      ],
+      "lead": "Front heavy feeders (gourds, eggplant, pepper)",
+      "text": "work compost into the soil"
+    },
+    {
+      "id": "apr-feed-brassicas",
+      "month": 3,
+      "type": "feed",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Brassicas",
+      "text": "amend with compost (heavy feeders)"
+    },
+    {
+      "id": "apr-pests-lettuce-sorrel",
+      "month": 3,
+      "type": "pests",
+      "plants": [
+        "lettuce",
+        "sorrel"
+      ],
+      "lead": "Lettuce, sorrel",
+      "text": "Sluggo at transplant, copper tape on individual cloches, reapply after rain"
+    },
+    {
+      "id": "apr-pests-arugula-radish-carrot",
+      "month": 3,
+      "type": "pests",
+      "plants": [
+        "arugula",
+        "radish",
+        "carrot"
+      ],
+      "lead": "Arugula, radish, carrot",
+      "text": "row cover vs flea beetles/rust fly/root maggot"
+    },
+    {
+      "id": "apr-pests-spinach-beet",
+      "month": 3,
+      "type": "pests",
+      "plants": [
+        "spinach",
+        "beet"
+      ],
+      "lead": "Spinach, beet",
+      "text": "remove leaf-miner-mined leaves"
+    },
+    {
+      "id": "apr-pests-fenugreek-methi",
+      "month": 3,
+      "type": "pests",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "Sluggo from the day seedlings emerge (slugs love the tender shoots)"
+    },
+    {
+      "id": "apr-harvest-spinach",
+      "month": 3,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "finishing spring crop"
+    },
+    {
+      "id": "apr-harvest-lettuce-sorrel",
+      "month": 3,
+      "type": "harvest",
+      "plants": [
+        "lettuce",
+        "sorrel"
+      ],
+      "lead": "Lettuce, sorrel",
+      "text": "first cuttings"
+    },
+    {
+      "id": "apr-harvest-radish",
+      "month": 3,
+      "type": "harvest",
+      "plants": [
+        "radish"
+      ],
+      "lead": "Radish",
+      "text": "earliest pulls late Apr"
+    },
+    {
+      "id": "apr-harvest-arugula",
+      "month": 3,
+      "type": "harvest",
+      "plants": [
+        "arugula"
+      ],
+      "lead": "Arugula",
+      "text": "baby-leaf cutting"
+    },
+    {
+      "id": "may-start-ridgegourd",
+      "month": 4,
+      "type": "start",
+      "plants": [
+        "ridgegourd"
+      ],
+      "lead": "Ridgegourd",
+      "text": "soak seed, sow on heat mat 85-95F"
+    },
+    {
+      "id": "may-start-cucumber",
+      "month": 4,
+      "type": "start",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "sow on heat mat 75-85F (peat pots, resents root disturbance)"
+    },
+    {
+      "id": "may-start-amaranth-thotakura-chaulai",
+      "month": 4,
+      "type": "start",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "optional indoor start early-mid May, 75-80F soil; heat mat only if needed, off after emergence"
+    },
+    {
+      "id": "may-sow-sunflowers",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "begin direct sowing, succession every 2-3 wks"
+    },
+    {
+      "id": "may-sow-carrot",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "carrot"
+      ],
+      "lead": "Carrot",
+      "text": "sow, keep surface moist; succession every 3 wks"
+    },
+    {
+      "id": "may-sow-dill",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "dill"
+      ],
+      "lead": "Dill",
+      "text": "direct sow only (taproot), succession every 3 wks"
+    },
+    {
+      "id": "may-sow-scallion",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "continue succession"
+    },
+    {
+      "id": "may-sow-pole-beans",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "direct sow late May once soil >60F"
+    },
+    {
+      "id": "may-sow-peas",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "last spring sowing; cilantro, radish, beet, arugula, spinach continue succession"
+    },
+    {
+      "id": "may-sow-fenugreek-methi",
+      "month": 4,
+      "type": "sow",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "continue spring succession sowing"
+    },
+    {
+      "id": "may-plant-tomatillo",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "tomatillo"
+      ],
+      "lead": "Tomatillo",
+      "text": "transplant out, cage it (2+ plants)"
+    },
+    {
+      "id": "may-plant-roselle",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "transplant out late May"
+    },
+    {
+      "id": "may-plant-marigold",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "transplant out among heat-lovers"
+    },
+    {
+      "id": "may-plant-peppers-cucumber",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "peppers",
+        "cucumber"
+      ],
+      "lead": "Peppers, cucumber",
+      "text": "transplant late May once nights >50F"
+    },
+    {
+      "id": "may-plant-cabbage-cauliflower",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "cabbage",
+        "cauliflower"
+      ],
+      "lead": "Cabbage, cauliflower",
+      "text": "finish spring transplants"
+    },
+    {
+      "id": "may-plant-tomato",
+      "month": 4,
+      "type": "plant",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "transplant out mid-late May once nights hold >55F; cage/stake and lay black plastic mulch to bank heat"
+    },
+    {
+      "id": "may-water-front-drip",
+      "month": 4,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "light ~1x/week, increasing as plants set"
+    },
+    {
+      "id": "may-water-backyard-drip",
+      "month": 4,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "1-2x/week, even moisture for greens and roots"
+    },
+    {
+      "id": "may-feed-front-heat-lovers",
+      "month": 4,
+      "type": "feed",
+      "plants": [
+        "eggplant",
+        "okra",
+        "peppers",
+        "tomatillo",
+        "tomato"
+      ],
+      "lead": "Front heat-lovers",
+      "text": "lay black plastic/landscape fabric mulch to bank soil heat"
+    },
+    {
+      "id": "may-feed-eggplant",
+      "month": 4,
+      "type": "feed",
+      "plants": [
+        "eggplant"
+      ],
+      "lead": "Eggplant",
+      "text": "deploy wall-o-water for heat"
+    },
+    {
+      "id": "may-train-tomatillo",
+      "month": 4,
+      "type": "train",
+      "plants": [
+        "tomatillo"
+      ],
+      "lead": "Tomatillo",
+      "text": "cage (not a climber)"
+    },
+    {
+      "id": "may-train-peas",
+      "month": 4,
+      "type": "train",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "train onto 4-6 ft net trellis on north side"
+    },
+    {
+      "id": "may-train-sorrel",
+      "month": 4,
+      "type": "train",
+      "plants": [
+        "sorrel"
+      ],
+      "lead": "Sorrel",
+      "text": "pinch flower stalks"
+    },
+    {
+      "id": "may-train-tomato",
+      "month": 4,
+      "type": "train",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "set 6 ft stakes/cages at transplant (Sungold and the cherries are indeterminate)"
+    },
+    {
+      "id": "may-pests-sunflower-cucumber-marigold-seedlings",
+      "month": 4,
+      "type": "pests",
+      "plants": [
+        "sunflowers",
+        "cucumber",
+        "marigold"
+      ],
+      "lead": "Sunflower, cucumber, marigold seedlings",
+      "text": "Sluggo, hand-pick at night first 2-3 wks"
+    },
+    {
+      "id": "may-pests-pole-bean-seedlings",
+      "month": 4,
+      "type": "pests",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole bean seedlings",
+      "text": "Sluggo/copper, net from birds"
+    },
+    {
+      "id": "may-pests-eggplant",
+      "month": 4,
+      "type": "pests",
+      "plants": [
+        "eggplant"
+      ],
+      "lead": "Eggplant",
+      "text": "row cover at transplant vs flea beetles"
+    },
+    {
+      "id": "may-pests-brassicas",
+      "month": 4,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Brassicas",
+      "text": "insect netting from transplant day; Bt if worms appear"
+    },
+    {
+      "id": "may-harvest-lettuce-spinach-sorrel-arugula",
+      "month": 4,
+      "type": "harvest",
+      "plants": [
+        "lettuce",
+        "spinach",
+        "sorrel",
+        "arugula"
+      ],
+      "lead": "Lettuce, spinach, sorrel, arugula",
+      "text": "steady spring picking"
+    },
+    {
+      "id": "may-harvest-radish-beet",
+      "month": 4,
+      "type": "harvest",
+      "plants": [
+        "radish",
+        "beet"
+      ],
+      "lead": "Radish, beet",
+      "text": "pulling"
+    },
+    {
+      "id": "may-harvest-scallion",
+      "month": 4,
+      "type": "harvest",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "first cuttings"
+    },
+    {
+      "id": "may-harvest-fenugreek-methi",
+      "month": 4,
+      "type": "harvest",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "first leaf cuttings from the April sowing"
+    },
+    {
+      "id": "jun-start-cabbage",
+      "month": 5,
+      "type": "start",
+      "plants": [
+        "cabbage"
+      ],
+      "lead": "Cabbage",
+      "text": "sow fall crop on heat mat early-mid Jun, off mat once sprouted"
+    },
+    {
+      "id": "jun-start-cauliflower",
+      "month": 5,
+      "type": "start",
+      "plants": [
+        "cauliflower"
+      ],
+      "lead": "Cauliflower",
+      "text": "sow fall crop on heat mat late Jun, off mat once sprouted"
+    },
+    {
+      "id": "jun-sow-sunflowers",
+      "month": 5,
+      "type": "sow",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "continue succession sowing"
+    },
+    {
+      "id": "jun-sow-dill",
+      "month": 5,
+      "type": "sow",
+      "plants": [
+        "dill"
+      ],
+      "lead": "Dill",
+      "text": "succession sow every 3 wks"
+    },
+    {
+      "id": "jun-sow-pole-beans",
+      "month": 5,
+      "type": "sow",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "sow through mid Jun"
+    },
+    {
+      "id": "jun-sow-carrot-beet-scallion-cilantro-radish",
+      "month": 5,
+      "type": "sow",
+      "plants": [
+        "carrot",
+        "beet",
+        "bunching-onion",
+        "coriander",
+        "radish"
+      ],
+      "lead": "Carrot, beet, scallion, cilantro, radish",
+      "text": "continue succession (heat-tolerant only)"
+    },
+    {
+      "id": "jun-sow-amaranth-thotakura-chaulai",
+      "month": 5,
+      "type": "sow",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "direct sow a sunny front-yard patch once soil is at least 65F (ideally near 70F); cover seed 1/8-1/4 in and keep moist"
+    },
+    {
+      "id": "jun-plant-bottlegourd-ridgegourd-bitter-gourd",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Bottlegourd, ridgegourd, bitter gourd",
+      "text": "transplant to front arches after soil >65F"
+    },
+    {
+      "id": "jun-plant-okra",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "okra"
+      ],
+      "lead": "Okra",
+      "text": "transplant against south wall, soil >65F, nights >55F"
+    },
+    {
+      "id": "jun-plant-eggplant",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "eggplant"
+      ],
+      "lead": "Eggplant",
+      "text": "transplant out with black mulch/wall-o-water"
+    },
+    {
+      "id": "jun-plant-basil",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "transplant out, nights >50F"
+    },
+    {
+      "id": "jun-plant-peppers-cucumber-tomatillo-roselle-marigold",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "peppers",
+        "cucumber",
+        "tomatillo",
+        "roselle",
+        "marigold"
+      ],
+      "lead": "Peppers, cucumber, tomatillo, roselle, marigold",
+      "text": "finish transplanting"
+    },
+    {
+      "id": "jun-plant-tomato",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "finish transplanting by early Jun; mulch with black plastic and water at the soil line"
+    },
+    {
+      "id": "jun-plant-amaranth-thotakura-chaulai",
+      "month": 5,
+      "type": "plant",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "harden off May starts for 7-10 days, then transplant young plants into warm front-yard soil; thin/space to 6 in"
+    },
+    {
+      "id": "jun-water-front-drip",
+      "month": 5,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "~2x/week, 30-45 min, deeper as plants size up"
+    },
+    {
+      "id": "jun-water-backyard-drip",
+      "month": 5,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "1-2x/week, even moisture"
+    },
+    {
+      "id": "jun-feed-gourds-eggplant-pepper",
+      "month": 5,
+      "type": "feed",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd",
+        "eggplant",
+        "peppers"
+      ],
+      "lead": "Gourds, eggplant, pepper",
+      "text": "finalize black plastic mulch this week before dry stretch"
+    },
+    {
+      "id": "jun-feed-cabbage",
+      "month": 5,
+      "type": "feed",
+      "plants": [
+        "cabbage"
+      ],
+      "lead": "Cabbage",
+      "text": "side-dress (heavy feeder)"
+    },
+    {
+      "id": "jun-train-gourds",
+      "month": 5,
+      "type": "train",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Gourds",
+      "text": "train vines up arches with soft ties, lauki on strongest arch"
+    },
+    {
+      "id": "jun-train-cucumber-ridgegourd",
+      "month": 5,
+      "type": "train",
+      "plants": [
+        "cucumber",
+        "ridgegourd"
+      ],
+      "lead": "Cucumber, ridgegourd",
+      "text": "train up second arch"
+    },
+    {
+      "id": "jun-train-pole-beans",
+      "month": 5,
+      "type": "train",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "set 6-8 ft trellis/teepee"
+    },
+    {
+      "id": "jun-train-basil",
+      "month": 5,
+      "type": "train",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "pinch tops weekly; sorrel — pinch flower stalks"
+    },
+    {
+      "id": "jun-train-marigold",
+      "month": 5,
+      "type": "train",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "deadhead for continuous bloom"
+    },
+    {
+      "id": "jun-pests-pole-bean-basil-marigold-seedlings",
+      "month": 5,
+      "type": "pests",
+      "plants": [
+        "pole-beans",
+        "basil",
+        "marigold"
+      ],
+      "lead": "Pole bean, basil, marigold seedlings",
+      "text": "Sluggo, hand-pick at night"
+    },
+    {
+      "id": "jun-pests-brassicas",
+      "month": 5,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Brassicas",
+      "text": "keep under insect netting, Bt for cabbage worms"
+    },
+    {
+      "id": "jun-pests-cucumber",
+      "month": 5,
+      "type": "pests",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "watch cucumber beetles, hand-pick"
+    },
+    {
+      "id": "jun-pests-amaranth-thotakura-chaulai",
+      "month": 5,
+      "type": "pests",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "inspect tender seedlings for slugs and leaf-chewing pests; protect from emergence"
+    },
+    {
+      "id": "jun-harvest-lettuce-spinach-sorrel-arugula",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "lettuce",
+        "spinach",
+        "sorrel",
+        "arugula"
+      ],
+      "lead": "Lettuce, spinach, sorrel, arugula",
+      "text": "last before summer heat"
+    },
+    {
+      "id": "jun-harvest-peas",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "spring pods peak"
+    },
+    {
+      "id": "jun-harvest-beet-radish-scallion",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "beet",
+        "radish",
+        "bunching-onion"
+      ],
+      "lead": "Beet, radish, scallion",
+      "text": "pulling"
+    },
+    {
+      "id": "jun-harvest-cilantro",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "leaf harvest"
+    },
+    {
+      "id": "jun-harvest-kohlrabi",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "kohlrabi"
+      ],
+      "lead": "Kohlrabi",
+      "text": "first spring bulbs at tennis-ball size"
+    },
+    {
+      "id": "jun-harvest-fenugreek-methi",
+      "month": 5,
+      "type": "harvest",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "cut the spring flushes before July heat bolts them"
+    },
+    {
+      "id": "jul-sow-sunflowers",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "finish succession through mid-Jul"
+    },
+    {
+      "id": "jul-sow-carrot",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "carrot"
+      ],
+      "lead": "Carrot",
+      "text": "sow fall storage crop"
+    },
+    {
+      "id": "jul-sow-kohlrabi",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "kohlrabi"
+      ],
+      "lead": "Kohlrabi",
+      "text": "direct sow reliable fall crop"
+    },
+    {
+      "id": "jul-sow-dill",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "dill"
+      ],
+      "lead": "Dill",
+      "text": "last succession mid-Jul"
+    },
+    {
+      "id": "jul-sow-cilantro",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "hold for late-Jul fall sowing"
+    },
+    {
+      "id": "jul-sow-peas",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "sow fall crop mid-Jul-mid-Aug"
+    },
+    {
+      "id": "jul-sow-cabbage",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "cabbage"
+      ],
+      "lead": "Cabbage",
+      "text": "direct/transplant timing; scallion, beet continue"
+    },
+    {
+      "id": "jul-sow-amaranth-thotakura-chaulai",
+      "month": 6,
+      "type": "sow",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "succession sow every 2-3 weeks through late Jul in warm soil; keep the seedbed evenly moist"
+    },
+    {
+      "id": "jul-plant-cabbage",
+      "month": 6,
+      "type": "plant",
+      "plants": [
+        "cabbage"
+      ],
+      "lead": "Cabbage",
+      "text": "transplant fall crop mid-late Jul under netting"
+    },
+    {
+      "id": "jul-plant-cauliflower",
+      "month": 6,
+      "type": "plant",
+      "plants": [
+        "cauliflower"
+      ],
+      "lead": "Cauliflower",
+      "text": "transplant fall crop late Jul"
+    },
+    {
+      "id": "jul-water-front-drip",
+      "month": 6,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "CRITICAL dry stretch: 3-4x/week or daily short cycles for cucurbits, ~1.5 in/wk, early morning"
+    },
+    {
+      "id": "jul-water-backyard-drip",
+      "month": 6,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "2-3x/week, watch shallow-rooted greens, keep carrot/beet/brassica moisture steady"
+    },
+    {
+      "id": "jul-feed-gourds-eggplant-pepper-cabbage-cauliflower",
+      "month": 6,
+      "type": "feed",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd",
+        "eggplant",
+        "peppers",
+        "cabbage",
+        "cauliflower"
+      ],
+      "lead": "Gourds, eggplant, pepper, cabbage, cauliflower",
+      "text": "feed heavy feeders; mulch heavily for moisture retention"
+    },
+    {
+      "id": "jul-train-gourds",
+      "month": 6,
+      "type": "train",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Gourds",
+      "text": "hand-pollinate female flowers (lauki at dusk, karela/turai AM); pinch growing tips at arch top"
+    },
+    {
+      "id": "jul-train-cucumber",
+      "month": 6,
+      "type": "train",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "hand-pollinate if bee activity low"
+    },
+    {
+      "id": "jul-train-basil",
+      "month": 6,
+      "type": "train",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "pinch to prevent bolting; sorrel — pinch flower stalks"
+    },
+    {
+      "id": "jul-train-marigold",
+      "month": 6,
+      "type": "train",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "deadhead; pole beans — keep training up trellis"
+    },
+    {
+      "id": "jul-train-tomato",
+      "month": 6,
+      "type": "train",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "tie up weekly, remove lower leaves and suckers for airflow (late-blight defense)"
+    },
+    {
+      "id": "jul-pests-fall-brassica-transplants",
+      "month": 6,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Fall brassica transplants",
+      "text": "insect netting from day one, Bt for worms"
+    },
+    {
+      "id": "jul-pests-eggplant",
+      "month": 6,
+      "type": "pests",
+      "plants": [
+        "eggplant"
+      ],
+      "lead": "Eggplant",
+      "text": "flea beetle watch under cover"
+    },
+    {
+      "id": "jul-pests-cucumber",
+      "month": 6,
+      "type": "pests",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "cucumber beetle and aphid watch"
+    },
+    {
+      "id": "jul-pests-new-seedlings",
+      "month": 6,
+      "type": "pests",
+      "plants": [
+        "area:vegetables"
+      ],
+      "lead": "New seedlings",
+      "text": "Sluggo, reapply after watering"
+    },
+    {
+      "id": "jul-pests-tomato",
+      "month": 6,
+      "type": "pests",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "water at the soil line only; scout for late blight in damp spells and strip affected leaves"
+    },
+    {
+      "id": "jul-harvest-cucumber",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "first slicers/picklers"
+    },
+    {
+      "id": "jul-harvest-eggplant-peppers",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "eggplant",
+        "peppers"
+      ],
+      "lead": "Eggplant, peppers",
+      "text": "first fruit"
+    },
+    {
+      "id": "jul-harvest-roselle",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "Gongura leaf harvest begins"
+    },
+    {
+      "id": "jul-harvest-basil",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "pinch-harvesting"
+    },
+    {
+      "id": "jul-harvest-dill-cilantro",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "dill",
+        "coriander"
+      ],
+      "lead": "Dill, cilantro",
+      "text": "leaf/seed harvest"
+    },
+    {
+      "id": "jul-harvest-scallion-carrot",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "bunching-onion",
+        "carrot"
+      ],
+      "lead": "Scallion, carrot",
+      "text": "pulling"
+    },
+    {
+      "id": "jul-harvest-sunflowers",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "earliest blooms"
+    },
+    {
+      "id": "jul-harvest-tomato",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "first cherries (Sungold) ripen late Jul"
+    },
+    {
+      "id": "jul-harvest-fenugreek-methi",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "last spring leaves; let a patch bolt for seed if wanted, then pause sowing through midsummer"
+    },
+    {
+      "id": "jul-harvest-garlic-scapes",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "garlic"
+      ],
+      "lead": "Garlic scapes",
+      "text": "snap curly scapes so heads size up (pesto!)"
+    },
+    {
+      "id": "jul-harvest-amaranth-thotakura-chaulai",
+      "month": 6,
+      "type": "harvest",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "begin picking tender leaves and shoot tips; leave lower leaves to regrow"
+    },
+    {
+      "id": "aug-sow-spinach",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "sow fall crop late Aug"
+    },
+    {
+      "id": "aug-sow-arugula",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "arugula"
+      ],
+      "lead": "Arugula",
+      "text": "sow fall crop late Aug"
+    },
+    {
+      "id": "aug-sow-cilantro",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "sow fall crop (longest leaf window)"
+    },
+    {
+      "id": "aug-sow-lettuce",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "lettuce"
+      ],
+      "lead": "Lettuce",
+      "text": "final succession sowing"
+    },
+    {
+      "id": "aug-sow-beet",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "beet"
+      ],
+      "lead": "Beet",
+      "text": "sow fall crop"
+    },
+    {
+      "id": "aug-sow-radish",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "radish"
+      ],
+      "lead": "Radish",
+      "text": "sow fall crop late Aug"
+    },
+    {
+      "id": "aug-sow-scallion",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "last succession sow"
+    },
+    {
+      "id": "aug-sow-peas",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "peas"
+      ],
+      "lead": "Peas",
+      "text": "finish fall sowing mid-Aug"
+    },
+    {
+      "id": "aug-sow-fenugreek-methi",
+      "month": 7,
+      "type": "sow",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "resume sowing late Aug for mild fall saag"
+    },
+    {
+      "id": "aug-water-front-drip",
+      "month": 7,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "peak dry stretch: 3-4x/week or daily for cucurbits, ~1.5 in/wk, early morning"
+    },
+    {
+      "id": "aug-water-backyard-drip",
+      "month": 7,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "2-3x/week; keep fall-sown greens surface moist"
+    },
+    {
+      "id": "aug-feed-gourds-peppers-eggplant",
+      "month": 7,
+      "type": "feed",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd",
+        "peppers",
+        "eggplant"
+      ],
+      "lead": "Gourds, peppers, eggplant",
+      "text": "continue feeding heavy feeders; maintain mulch"
+    },
+    {
+      "id": "aug-train-gourds",
+      "month": 7,
+      "type": "train",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Gourds",
+      "text": "keep hand-pollinating, support heavy lauki fruit with slings"
+    },
+    {
+      "id": "aug-train-cucumber",
+      "month": 7,
+      "type": "train",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "hand-pollinate, keep picking to extend set"
+    },
+    {
+      "id": "aug-train-basil",
+      "month": 7,
+      "type": "train",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "pinch to delay bolting; marigold — deadhead"
+    },
+    {
+      "id": "aug-train-sunflowers",
+      "month": 7,
+      "type": "train",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "stake tall types in wind"
+    },
+    {
+      "id": "aug-pests-fall-greens-seedlings",
+      "month": 7,
+      "type": "pests",
+      "plants": [
+        "lettuce",
+        "spinach",
+        "arugula",
+        "sorrel",
+        "coriander",
+        "fenugreek"
+      ],
+      "lead": "Fall greens seedlings",
+      "text": "Sluggo at sowing, hand-pick at night, copper tape on individual cloches"
+    },
+    {
+      "id": "aug-pests-arugula-radish",
+      "month": 7,
+      "type": "pests",
+      "plants": [
+        "arugula",
+        "radish"
+      ],
+      "lead": "Arugula, radish",
+      "text": "row cover vs flea beetles"
+    },
+    {
+      "id": "aug-pests-brassicas",
+      "month": 7,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Brassicas",
+      "text": "netting on, Bt for worms; net pea/bean seedlings from birds"
+    },
+    {
+      "id": "aug-pests-basil-peas",
+      "month": 7,
+      "type": "pests",
+      "plants": [
+        "basil",
+        "peas"
+      ],
+      "lead": "Basil, peas",
+      "text": "watch downy/powdery mildew, remove affected leaves"
+    },
+    {
+      "id": "aug-harvest-bottlegourd-ridgegourd-bitter-gourd",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Bottlegourd, ridgegourd, bitter gourd",
+      "text": "first gourds late Aug"
+    },
+    {
+      "id": "aug-harvest-cucumber-eggplant-peppers-tomatillo",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "cucumber",
+        "eggplant",
+        "peppers",
+        "tomatillo"
+      ],
+      "lead": "Cucumber, eggplant, peppers, tomatillo",
+      "text": "full production"
+    },
+    {
+      "id": "aug-harvest-okra",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "okra"
+      ],
+      "lead": "Okra",
+      "text": "sparse picking"
+    },
+    {
+      "id": "aug-harvest-roselle",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "Gongura leaves"
+    },
+    {
+      "id": "aug-harvest-pole-beans",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "first beans"
+    },
+    {
+      "id": "aug-harvest-sunflowers",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "blooms"
+    },
+    {
+      "id": "aug-harvest-basil",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "basil"
+      ],
+      "lead": "Basil",
+      "text": "harvest"
+    },
+    {
+      "id": "aug-harvest-spinach-lettuce-arugula-beet-scallion-carrot",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "spinach",
+        "lettuce",
+        "arugula",
+        "beet",
+        "bunching-onion",
+        "carrot"
+      ],
+      "lead": "Spinach, lettuce, arugula, beet, scallion, carrot",
+      "text": "earlier sowings"
+    },
+    {
+      "id": "aug-harvest-tomato",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "full production (cherries and early slicers)"
+    },
+    {
+      "id": "aug-harvest-shallots",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "shallots"
+      ],
+      "lead": "Shallots",
+      "text": "lift when tops brown & flop; cure 2-3 wks before storing"
+    },
+    {
+      "id": "aug-harvest-amaranth-thotakura-chaulai",
+      "month": 7,
+      "type": "harvest",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "repeat leaf/tip harvests, pinch flower spikes, and keep watered for tender regrowth"
+    },
+    {
+      "id": "sep-sow-spinach",
+      "month": 8,
+      "type": "sow",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "sow fall + overwinter crop"
+    },
+    {
+      "id": "sep-sow-arugula",
+      "month": 8,
+      "type": "sow",
+      "plants": [
+        "arugula"
+      ],
+      "lead": "Arugula",
+      "text": "finish fall sowing"
+    },
+    {
+      "id": "sep-sow-cilantro",
+      "month": 8,
+      "type": "sow",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "finish fall sowing"
+    },
+    {
+      "id": "sep-sow-fenugreek-methi",
+      "month": 8,
+      "type": "sow",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "finish fall sowing early-mid Sep"
+    },
+    {
+      "id": "sep-water-front-drip",
+      "month": 8,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "taper to 2x/week as nights cool and rain returns"
+    },
+    {
+      "id": "sep-water-backyard-drip",
+      "month": 8,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "~1x/week as cool season resumes"
+    },
+    {
+      "id": "sep-train-gourds",
+      "month": 8,
+      "type": "train",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Gourds",
+      "text": "last hand-pollinations; pinch tips to push remaining female flowers"
+    },
+    {
+      "id": "sep-train-cucumber",
+      "month": 8,
+      "type": "train",
+      "plants": [
+        "cucumber"
+      ],
+      "lead": "Cucumber",
+      "text": "keep picking"
+    },
+    {
+      "id": "sep-train-marigold",
+      "month": 8,
+      "type": "train",
+      "plants": [
+        "marigold"
+      ],
+      "lead": "Marigold",
+      "text": "deadhead; sunflowers — net heads as seeds fill vs birds"
+    },
+    {
+      "id": "sep-pests-fall-greens",
+      "month": 8,
+      "type": "pests",
+      "plants": [
+        "lettuce",
+        "spinach",
+        "arugula",
+        "sorrel",
+        "coriander",
+        "fenugreek"
+      ],
+      "lead": "Fall greens",
+      "text": "Sluggo, reapply after rain, hand-pick at night"
+    },
+    {
+      "id": "sep-pests-brassicas",
+      "month": 8,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Brassicas",
+      "text": "keep netting on, Bt as needed"
+    },
+    {
+      "id": "sep-pests-sunflower-heads",
+      "month": 8,
+      "type": "pests",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflower heads",
+      "text": "net/paper-bag vs birds"
+    },
+    {
+      "id": "sep-harvest-bottlegourd-ridgegourd-bitter-gourd",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "bottlegourd",
+        "ridgegourd",
+        "bitter-gourd"
+      ],
+      "lead": "Bottlegourd, ridgegourd, bitter gourd",
+      "text": "peak gourd harvest"
+    },
+    {
+      "id": "sep-harvest-cucumber-eggplant-peppers-tomatillo",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "cucumber",
+        "eggplant",
+        "peppers",
+        "tomatillo"
+      ],
+      "lead": "Cucumber, eggplant, peppers, tomatillo",
+      "text": "continuing"
+    },
+    {
+      "id": "sep-harvest-okra",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "okra"
+      ],
+      "lead": "Okra",
+      "text": "last sparse picking"
+    },
+    {
+      "id": "sep-harvest-roselle",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "Gongura leaves"
+    },
+    {
+      "id": "sep-harvest-sunflowers",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "blooms and maturing seed heads"
+    },
+    {
+      "id": "sep-harvest-pole-beans",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "picking"
+    },
+    {
+      "id": "sep-harvest-basil-lettuce-arugula-scallion",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "basil",
+        "lettuce",
+        "arugula",
+        "bunching-onion"
+      ],
+      "lead": "Basil, lettuce, arugula, scallion",
+      "text": "picking"
+    },
+    {
+      "id": "sep-harvest-kohlrabi-cabbage-cauliflower",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "kohlrabi",
+        "cabbage",
+        "cauliflower"
+      ],
+      "lead": "Kohlrabi, cabbage, cauliflower",
+      "text": "first fall heads/bulbs"
+    },
+    {
+      "id": "sep-harvest-carrot-beet",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "carrot",
+        "beet"
+      ],
+      "lead": "Carrot, beet",
+      "text": "pulling"
+    },
+    {
+      "id": "sep-harvest-tomato",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "keep picking; pinch growing tips to push ripening before cold"
+    },
+    {
+      "id": "sep-harvest-amaranth-thotakura-chaulai",
+      "month": 8,
+      "type": "harvest",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "continue picking tender leaves while warm; remove flower spikes before seed sets"
+    },
+    {
+      "id": "oct-sow-garlic-shallots",
+      "month": 9,
+      "type": "sow",
+      "plants": [
+        "garlic",
+        "shallots"
+      ],
+      "lead": "Garlic & shallots",
+      "text": "plant cloves/sets Oct to early Nov (soil <60F), tip up, mulch 2-3 in straw"
+    },
+    {
+      "id": "oct-sow-spinach",
+      "month": 9,
+      "type": "sow",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "finish overwinter sowing early Oct"
+    },
+    {
+      "id": "oct-water-front-drip",
+      "month": 9,
+      "type": "water",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front drip",
+      "text": "OFF, rely on rain"
+    },
+    {
+      "id": "oct-water-backyard-drip",
+      "month": 9,
+      "type": "water",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard drip",
+      "text": "taper to off as fall rains take over"
+    },
+    {
+      "id": "oct-train-sunflowers",
+      "month": 9,
+      "type": "train",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "net/bag maturing seed heads vs birds"
+    },
+    {
+      "id": "oct-train-dill",
+      "month": 9,
+      "type": "train",
+      "plants": [
+        "dill"
+      ],
+      "lead": "Dill",
+      "text": "let a final plant flower to feed beneficials and self-sow"
+    },
+    {
+      "id": "oct-pests-fall-greens-and-brassicas",
+      "month": 9,
+      "type": "pests",
+      "plants": [
+        "cabbage",
+        "cauliflower",
+        "kohlrabi"
+      ],
+      "lead": "Fall greens and brassicas",
+      "text": "continue Sluggo and netting through harvest"
+    },
+    {
+      "id": "oct-harvest-eggplant-peppers-tomatillo",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "eggplant",
+        "peppers",
+        "tomatillo"
+      ],
+      "lead": "Eggplant, peppers, tomatillo",
+      "text": "last warm fruit if mild"
+    },
+    {
+      "id": "oct-harvest-roselle",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "roselle"
+      ],
+      "lead": "Roselle",
+      "text": "final Gongura leaves before frost"
+    },
+    {
+      "id": "oct-harvest-sunflowers",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "sunflowers"
+      ],
+      "lead": "Sunflowers",
+      "text": "mature seed heads"
+    },
+    {
+      "id": "oct-harvest-pole-beans",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "pole-beans"
+      ],
+      "lead": "Pole beans",
+      "text": "last beans"
+    },
+    {
+      "id": "oct-harvest-spinach-arugula-lettuce-scallion",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "spinach",
+        "arugula",
+        "lettuce",
+        "bunching-onion"
+      ],
+      "lead": "Spinach, arugula, lettuce, scallion",
+      "text": "fall greens"
+    },
+    {
+      "id": "oct-harvest-cilantro",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "coriander"
+      ],
+      "lead": "Cilantro",
+      "text": "fall leaf"
+    },
+    {
+      "id": "oct-harvest-carrot-beet",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "carrot",
+        "beet"
+      ],
+      "lead": "Carrot, beet",
+      "text": "storage roots; radish — fall pulls"
+    },
+    {
+      "id": "oct-harvest-cabbage-cauliflower",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "cabbage",
+        "cauliflower"
+      ],
+      "lead": "Cabbage, cauliflower",
+      "text": "fall heads"
+    },
+    {
+      "id": "oct-harvest-kohlrabi",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "kohlrabi"
+      ],
+      "lead": "Kohlrabi",
+      "text": "fall bulbs"
+    },
+    {
+      "id": "oct-harvest-tomato",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "tomato"
+      ],
+      "lead": "Tomato",
+      "text": "pick all fruit (ripe and green) before the October rains/blight; ripen green ones indoors"
+    },
+    {
+      "id": "oct-harvest-fenugreek-methi",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "fenugreek"
+      ],
+      "lead": "Fenugreek (methi)",
+      "text": "fall leaf harvest before hard frost"
+    },
+    {
+      "id": "oct-harvest-amaranth-thotakura-chaulai",
+      "month": 9,
+      "type": "harvest",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "take final tender leaves in mild early-Oct weather, before frost"
+    },
+    {
+      "id": "oct-soil-front-yard-cucurbits-nightshades",
+      "month": 9,
+      "type": "soil",
+      "plants": [
+        "area:front"
+      ],
+      "lead": "Front-yard cucurbits/nightshades",
+      "text": "pull spent frost-tender vines after first frost, rotate cucurbits<->nightshades for next year"
+    },
+    {
+      "id": "oct-soil-carrot",
+      "month": 9,
+      "type": "soil",
+      "plants": [
+        "carrot"
+      ],
+      "lead": "Carrot",
+      "text": "mulch to hold in ground for sweeter Nov roots"
+    },
+    {
+      "id": "oct-soil-amaranth-thotakura-chaulai",
+      "month": 9,
+      "type": "soil",
+      "plants": [
+        "amaranth"
+      ],
+      "lead": "Amaranth (thotakura/chaulai)",
+      "text": "remove spent plants after cold weather ends growth; collect seed heads before they shed"
+    },
+    {
+      "id": "nov-water-both-yards",
+      "month": 10,
+      "type": "water",
+      "plants": [
+        "area:vegetables"
+      ],
+      "lead": "Both yards",
+      "text": "drip off, rely on rain"
+    },
+    {
+      "id": "nov-harvest-carrot",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "carrot"
+      ],
+      "lead": "Carrot",
+      "text": "sweetened storage roots into Nov"
+    },
+    {
+      "id": "nov-harvest-cabbage-cauliflower",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "cabbage",
+        "cauliflower"
+      ],
+      "lead": "Cabbage, cauliflower",
+      "text": "holding in field through light frosts"
+    },
+    {
+      "id": "nov-harvest-scallion",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "picking"
+    },
+    {
+      "id": "nov-harvest-beet",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "beet"
+      ],
+      "lead": "Beet",
+      "text": "last roots"
+    },
+    {
+      "id": "nov-harvest-spinach",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "overwinter crop establishing (light picks)"
+    },
+    {
+      "id": "nov-harvest-sorrel",
+      "month": 10,
+      "type": "harvest",
+      "plants": [
+        "sorrel"
+      ],
+      "lead": "Sorrel",
+      "text": "last tender leaves on mild spells"
+    },
+    {
+      "id": "nov-soil-backyard",
+      "month": 10,
+      "type": "soil",
+      "plants": [
+        "area:back"
+      ],
+      "lead": "Backyard",
+      "text": "clean spent crops, plan 3-year family rotation"
+    },
+    {
+      "id": "nov-soil-overwinter-crops",
+      "month": 10,
+      "type": "soil",
+      "plants": [
+        "spinach",
+        "bunching-onion",
+        "sorrel"
+      ],
+      "lead": "Overwinter crops",
+      "text": "cloche spinach/scallions/sorrel for winter harvest"
+    },
+    {
+      "id": "dec-harvest-spinach",
+      "month": 11,
+      "type": "harvest",
+      "plants": [
+        "spinach"
+      ],
+      "lead": "Spinach",
+      "text": "overwintered Olympia under cloche on mild spells"
+    },
+    {
+      "id": "dec-harvest-scallion",
+      "month": 11,
+      "type": "harvest",
+      "plants": [
+        "bunching-onion"
+      ],
+      "lead": "Scallion",
+      "text": "overwintering, light cuts"
+    },
+    {
+      "id": "dec-soil-both-yards",
+      "month": 11,
+      "type": "soil",
+      "plants": [
+        "area:vegetables"
+      ],
+      "lead": "Both yards",
+      "text": "winter rest; tidy debris (cuts slug habitat), order next-year seeds and plan rotations"
+    },
+    {
+      "id": "jan-care-plan-order-roses-shrubs-bulbs-for-the-year-protect-container-ornamentals-durin",
+      "month": 0,
+      "type": "care",
+      "plants": [
+        "tulips",
+        "hyacinth",
+        "roses"
+      ],
+      "lead": "",
+      "text": "Plan & order roses, shrubs & bulbs for the year; protect container ornamentals during hard freezes."
+    },
+    {
+      "id": "feb-prune-prune-roses-the-main-prune-and-prune-panicle-smooth-hydrangeas-blueberries-whi",
+      "month": 1,
+      "type": "prune",
+      "plants": [
+        "roses",
+        "hydrangea",
+        "blueberry"
+      ],
+      "lead": "",
+      "text": "Prune roses (the main prune), and prune panicle/smooth hydrangeas & blueberries while dormant. (Timing varies — late Feb into Mar, often around President's Day; wait out hard frosts.)"
+    },
+    {
+      "id": "feb-care-cut-back-any-remaining-dead-perennial-foliage",
+      "month": 1,
+      "type": "care",
+      "plants": [
+        "area:ornamental"
+      ],
+      "lead": "",
+      "text": "Cut back any remaining dead perennial foliage."
+    },
+    {
+      "id": "mar-feed-feed-the-acid-lovers-rhododendron-azalea-camellia-blueberry-as-new-growth-star",
+      "month": 2,
+      "type": "feed",
+      "plants": [
+        "rhododendron",
+        "azalea",
+        "camellia",
+        "blueberry"
+      ],
+      "lead": "",
+      "text": "Feed the acid-lovers — rhododendron, azalea, camellia & blueberry — as new growth starts."
+    },
+    {
+      "id": "mar-care-start-sluggo-at-the-first-hosta-peony-shoots",
+      "month": 2,
+      "type": "care",
+      "plants": [
+        "hosta",
+        "peony"
+      ],
+      "lead": "",
+      "text": "Start Sluggo at the first hosta & peony shoots."
+    },
+    {
+      "id": "mar-feed-mulch-around-ornamentals",
+      "month": 2,
+      "type": "feed",
+      "plants": [
+        "area:ornamental"
+      ],
+      "lead": "",
+      "text": "Mulch around ornamentals."
+    },
+    {
+      "id": "apr-feed-feed-roses",
+      "month": 3,
+      "type": "feed",
+      "plants": [
+        "roses"
+      ],
+      "lead": "",
+      "text": "Feed roses."
+    },
+    {
+      "id": "apr-plant-put-peony-rings-hollyhock-stakes-in-early-before-the-plants-get-tall",
+      "month": 3,
+      "type": "plant",
+      "plants": [
+        "peony",
+        "hollyhock"
+      ],
+      "lead": "",
+      "text": "Put peony rings & hollyhock stakes in early, before the plants get tall."
+    },
+    {
+      "id": "may-care-deadhead-spent-tulip-hyacinth-flowers-but-leave-the-foliage-to-die-back-natura",
+      "month": 4,
+      "type": "care",
+      "plants": [
+        "tulips",
+        "hyacinth"
+      ],
+      "lead": "",
+      "text": "Deadhead spent tulip & hyacinth flowers, but leave the foliage to die back naturally."
+    },
+    {
+      "id": "jun-prune-right-after-each-one-finishes-blooming-prune-rhododendron-azalea-camellia-bigl",
+      "month": 5,
+      "type": "prune",
+      "plants": [
+        "roses",
+        "hydrangea",
+        "rhododendron",
+        "azalea",
+        "camellia"
+      ],
+      "lead": "",
+      "text": "Right after each one finishes blooming, prune rhododendron, azalea, camellia & bigleaf hydrangea, and deadhead spent rhododendron trusses & roses. (Timing varies — prune each shrub as soon as its own flowers fade, anywhere from May into Jun.)"
+    },
+    {
+      "id": "jul-care-summer-care-deep-water-hydrangea-blueberry-deadhead-roses-shasta-daisy-and-net",
+      "month": 6,
+      "type": "care",
+      "plants": [
+        "roses",
+        "hydrangea",
+        "blueberry",
+        "shasta-daisy"
+      ],
+      "lead": "",
+      "text": "Summer care: deep-water hydrangea & blueberry, deadhead roses & shasta daisy, and net blueberries from birds. Watch for blackspot, rust & mildew — keep good airflow."
+    },
+    {
+      "id": "aug-feed-stop-feeding-roses-by-late-august-so-new-growth-hardens-off-before-winter",
+      "month": 7,
+      "type": "feed",
+      "plants": [
+        "roses"
+      ],
+      "lead": "",
+      "text": "Stop feeding roses by late August so new growth hardens off before winter."
+    },
+    {
+      "id": "sep-care-divide-overgrown-hosta-shasta-daisy-clumps-timing-varies-sep-into-oct-both-wor",
+      "month": 8,
+      "type": "care",
+      "plants": [
+        "hosta",
+        "shasta-daisy"
+      ],
+      "lead": "",
+      "text": "Divide overgrown hosta & shasta daisy clumps. (Timing varies — Sep into Oct both work.)"
+    },
+    {
+      "id": "oct-plant-plant-tulip-hyacinth-bulbs-timing-varies-oct-into-nov-once-the-soil-cools",
+      "month": 9,
+      "type": "plant",
+      "plants": [
+        "tulips",
+        "hyacinth"
+      ],
+      "lead": "",
+      "text": "Plant tulip & hyacinth bulbs. (Timing varies — Oct into Nov, once the soil cools.)"
+    },
+    {
+      "id": "oct-care-cut-peony-shasta-daisy-foliage-to-the-ground-to-head-off-disease",
+      "month": 9,
+      "type": "care",
+      "plants": [
+        "peony",
+        "shasta-daisy"
+      ],
+      "lead": "",
+      "text": "Cut peony & shasta daisy foliage to the ground to head off disease."
+    },
+    {
+      "id": "oct-feed-best-window-to-plant-or-move-shrubs-in-the-pnw-then-mulch",
+      "month": 9,
+      "type": "feed",
+      "plants": [
+        "area:ornamental"
+      ],
+      "lead": "",
+      "text": "Best window to plant or move shrubs in the PNW — then mulch."
+    },
+    {
+      "id": "nov-plant-finish-planting-spring-bulbs-and-any-new-shrubs-before-the-ground-turns-cold-a",
+      "month": 10,
+      "type": "plant",
+      "plants": [
+        "tulips",
+        "hyacinth"
+      ],
+      "lead": "",
+      "text": "Finish planting spring bulbs and any new shrubs before the ground turns cold and soggy."
+    },
+    {
+      "id": "dec-care-ornamentals-are-mostly-dormant-camellia-sasanqua-may-still-be-blooming-and-jap",
+      "month": 11,
+      "type": "care",
+      "plants": [
+        "camellia"
+      ],
+      "lead": "",
+      "text": "Ornamentals are mostly dormant — camellia (sasanqua) may still be blooming and japonica buds are forming. Little to do."
+    }
+  ]
+}

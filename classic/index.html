@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gangarapu Garden — Zone 8b Plan</title>
+<meta name="theme-color" content="#f4eddb">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Garden">
+<style>
+:root{
+  --paper:#f4eddb; --paper2:#efe6cf; --card:#fffef8; --ink:#33402c; --muted:#6c6a50;
+  --line:#e2d8bb; --green:#4a7c3f; --green-d:#34562b; --terra:#c2683f; --sage:#8aa178;
+  --indoor:#8b5cf6; --sow:#4a9d4a; --transplant:#3b82f6; --grow:#bcdcab; --harvest:#d97534;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;
+  background-image:radial-gradient(rgba(120,140,90,.05) 1px,transparent 1px);background-size:18px 18px;}
+h1,h2,h3,.serif{font-family:ui-serif,"New York","Hoefler Text",Georgia,"Times New Roman",serif;font-weight:600}
+a{color:var(--green-d)}
+a,button,label,input,[role="button"]{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px calc(80px + env(safe-area-inset-bottom))}
+section{padding-top:26px;scroll-margin-top:calc(var(--bar-height,90px) + 14px)}
+/* hero */
+.hero{padding:48px 0 30px;text-align:center;border-bottom:2px solid var(--line);position:relative}
+.hero h1{font-size:clamp(24px,7vw,46px);margin:.18em 0 .12em;color:var(--green-d);letter-spacing:.3px;line-height:1.15}
+.hero p{color:var(--muted);margin:.3em auto;font-size:15px;max-width:640px;overflow-wrap:break-word;hyphens:auto}
+.leaf{font-size:34px;opacity:.9;letter-spacing:2px;margin-bottom:6px}
+.sprig{width:96px;height:auto;display:block;margin:0 auto 4px}
+.sprig .stem{fill:none;stroke:#4a7c3f;stroke-width:2.4;stroke-linecap:round}
+.sprig .blade{fill:#6f9e5f}
+.sprig .blade.alt{fill:#86ab6f}
+/* nav */
+.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:22px 0 0}
+.nav a{font-size:14px;text-decoration:none;background:rgba(74,124,63,.08);border:1.5px solid var(--green);
+  padding:8px 16px;border-radius:24px;color:var(--green-d);font-weight:600;transition:.2s;cursor:pointer}
+@media(hover:hover){
+.nav a:hover{background:var(--green);color:#fff;box-shadow:0 4px 12px rgba(74,124,63,.25)}
+.chip:hover{border-color:var(--sage)}
+.pc{transition:.25s cubic-bezier(.4,0,.2,1)}
+.pc:hover{box-shadow:0 12px 24px rgba(80,70,30,.16);transform:translateY(-4px)}
+}
+/* sticky filter bar */
+.bar{position:sticky;top:0;z-index:50;background:rgba(244,237,219,.96);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);padding:10px 0;margin-top:10px}
+.bar .wrap{padding-top:0;padding-bottom:0}
+.searchrow{display:flex;gap:8px;align-items:center}
+.search{flex:1;min-width:0;width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:24px;background:#fffef8;
+  font-size:16px;color:var(--ink)}
+.search:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(74,124,63,.18)}
+.fbtn{padding:11px 16px;border:1.5px solid var(--green);background:var(--green);color:#fff;border-radius:24px;
+  font-weight:700;cursor:pointer;font-size:14px;white-space:nowrap}
+.count{font-size:13px;color:var(--muted);white-space:nowrap}
+.clear{background:none;border:none;color:var(--terra);font-weight:700;cursor:pointer;font-size:13px;padding:8px 10px;min-height:40px}
+:focus-visible{outline:2.5px solid var(--green);outline-offset:2px;border-radius:6px}
+/* filter panel */
+.panel{margin-top:10px;display:none;scroll-margin-top:calc(var(--bar-height,90px) + 14px)}
+.panel.open{display:block}
+.fgroup{margin:8px 0;border-bottom:1px solid var(--line);padding-bottom:6px}
+.fgroup:last-child{border-bottom:none}
+.fgroup .flbl{display:flex;width:100%;justify-content:space-between;align-items:center;gap:8px;
+  background:none;border:none;padding:7px 0;font-size:11px;text-transform:uppercase;letter-spacing:1px;
+  color:var(--muted);font-weight:700;margin-bottom:2px;cursor:pointer;font-family:inherit;text-align:left}
+.fgroup .flbl .fa{font-style:normal;font-size:10px;transition:transform .15s;color:var(--sage)}
+.fgroup:not(.closed) .flbl .fa{transform:rotate(90deg)}
+.fgroup.closed .chips{display:none}
+.fgroup .fcnt{font-size:10px;background:rgba(74,124,63,.15);color:var(--green-d);
+  border-radius:9px;padding:1px 7px;font-weight:700;display:none}
+.fgroup.has-sel .fcnt{display:inline-block}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:8px 13px;min-height:40px;display:inline-flex;align-items:center;border:1.5px solid var(--line);background:#fffef8;border-radius:18px;cursor:pointer;
+  font-size:13px;color:var(--ink);user-select:none;transition:.12s;font-family:inherit}
+.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.chip.mon.on{background:var(--terra);border-color:var(--terra)}
+/* sections */
+h2.sec{font-size:24px;color:var(--green-d);padding-bottom:8px;margin:0 0 16px;
+  border-bottom:1px solid var(--line);
+  border-image:linear-gradient(to right,rgba(58,91,42,.45) 0%,rgba(122,165,120,.5) 45%,transparent 100%) 0 0 1 0}
+.sub{color:var(--muted);margin:-8px 0 14px;font-size:14px}
+/* yard and ornamental groups */
+.zones{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.zones{grid-template-columns:1fr 1fr}}
+.zone-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.zone-card h3{margin:.1em 0 .4em;font-size:18px}
+.zone-card .z{font-size:12px;font-weight:700;padding:2px 9px;border-radius:12px;display:inline-block;margin-bottom:8px}
+.z.sun{background:#fbe9c8;color:#9a6512} .z.shade{background:#d7e6ef;color:#1d4e89}
+.zone-row{display:flex;gap:8px;margin:7px 0;align-items:flex-start}
+.zone-tag{font-weight:700;background:#eef3e6;border:1px solid #d4e0c5;border-radius:8px;padding:3px 8px;font-size:13px;min-width:54px;text-align:center}
+.zone-row small{color:var(--muted)}
+/* cards */
+.gallery{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:560px){.gallery{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.gallery{grid-template-columns:1fr 1fr 1fr}}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 2px 6px rgba(80,70,30,.06);cursor:pointer}
+.pc .top{padding:12px 14px 8px}
+.pc h3{margin:0;font-size:18px;color:var(--green-d)}
+.pc .var{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:1px}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.b{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:11px}
+.b.yard{background:#eef3e6;color:#3d6b34}
+.b.cat{background:#e3eef6;color:#2c5d7a}
+.b.heat{background:#fde6b0;color:#92590e}
+.b.start{background:#ece3f5;color:#6b3fa0}
+.ease{font-size:12px;color:var(--muted);letter-spacing:.2px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ease .elbl{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:10px;letter-spacing:.4px;text-transform:uppercase}
+.ease .elbl.easy{background:#e6f3e6;color:#2e6b2a}
+.ease .elbl.medium{background:#fef3cc;color:#7a5a00}
+.ease .elbl.hard{background:#fde8e0;color:#9a3420}
+.ease .edim{font-size:10.5px;color:var(--muted)}
+.strip{display:flex;height:9px;margin-top:2px}
+.strip span{flex:1;border-right:1px solid #fff}
+.strip span:last-child{border:none}
+.mlabels{display:flex;font-size:7.5px;color:#aaa;margin-top:1px}
+.mlabels span{flex:1;text-align:center}
+.tip{font-size:12px;color:#555;background:#fffbe9;border-top:1px solid #f0e6c2;padding:8px 14px}
+.detail{display:none;padding:0 14px 12px;font-size:12.5px}
+.pc.exp .detail{display:block}
+.detail table{width:100%;border-collapse:collapse;margin-top:6px}
+.detail td{padding:2px 0;vertical-align:top}
+.detail td:first-child{color:var(--muted);width:84px;padding-right:6px}
+.flags{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0}
+.flag{font-size:9.5px;background:#eef3e8;border:1px solid #cdddc0;color:#3a5a2a;padding:1px 7px;border-radius:9px}
+.note{font-size:11.5px;color:#444;background:#fffbe9;border-left:3px solid #f5c542;padding:5px 8px;margin-top:6px;border-radius:3px}
+.empty{text-align:center;color:var(--muted);padding:30px;font-style:italic}
+/* planting calendar */
+.calhint{display:none}
+.calwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table.cal{border-collapse:collapse;width:100%;min-width:620px;font-size:12px}
+.cal th,.cal td{border:1px solid #ece3c8;padding:4px;text-align:center}
+.cal th{background:linear-gradient(to bottom,var(--green-d),#3f6a34);color:#fff;position:sticky;top:0;z-index:2;text-transform:uppercase;letter-spacing:.5px;font-size:11px}
+.cal th.cn{text-align:left;font-weight:600;white-space:nowrap;background:#fdfaf0;color:var(--ink);position:sticky;top:auto;left:0;z-index:1;text-transform:none;letter-spacing:normal;box-shadow:2px 0 4px rgba(80,70,30,.08);max-width:150px;overflow:hidden;text-overflow:ellipsis}
+.cal thead th:first-child{left:0;z-index:3}
+.cal td.cell{padding:0;height:22px}
+.cal .mhi{outline:3px solid var(--terra);outline-offset:-3px}
+.cal td.cell{font-size:10px;color:#000;min-width:66px}
+.cal td.cell.dark{color:#fff}
+.annual{margin-top:22px}
+.month-controls{display:flex;gap:8px;align-items:center;flex-wrap:nowrap;margin-bottom:16px}
+.month-controls select{flex:1;min-width:0;max-width:260px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;min-height:44px}
+.month-controls button,.calendar-action{border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--green-d);font:inherit;font-weight:600;padding:10px 12px;min-height:44px;cursor:pointer}
+.month-controls button{min-width:44px;flex-shrink:0}
+.month-controls button:disabled{opacity:.4;cursor:default}
+.agenda-plants{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.agenda-plants .guide ul{list-style:none;margin-left:0}
+.agenda-plants .activity{display:inline-block;font-weight:700;padding:2px 7px;border:1px solid var(--line);border-radius:8px;margin-right:5px}
+.agenda-plants li{margin-bottom:10px}
+.dashboard{padding-bottom:18px}
+.chore-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px;margin:8px 0 4px;column-span:all}
+.chore-actions button:disabled{opacity:.5;cursor:default}
+.reset-status{font-size:13px;color:var(--muted)}
+.task-progress{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-size:13px;color:var(--muted)}
+.task-progress progress{width:160px;height:9px;accent-color:var(--green)}
+.chore-group{break-inside:avoid;margin-bottom:12px}
+@media(min-width:900px){.dashboard .cm.open .body{columns:2;column-gap:32px}}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0;font-size:12px}
+.legend span{display:flex;align-items:center;gap:5px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+/* chores */
+.chgrid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:680px){.chgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.chgrid{grid-template-columns:1fr 1fr 1fr}}
+.cm{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cm > .h{background:#eef3e6;padding:9px 13px;font-weight:700;font-family:ui-serif,Georgia,serif;font-size:16px;
+  color:var(--green-d);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.cm .body{padding:6px 13px 11px;display:none}
+.cm.open .body{display:block}
+.cm.open .h .ar{transform:rotate(90deg)}
+.ar{transition:.15s}
+.chcat{font-size:11.5px;font-weight:700;color:#3a2d12;margin-top:8px}
+.cm ul{margin:3px 0 4px 16px;padding:0}
+.cm li{font-size:14px;margin:2px 0;color:#3a3a30}
+/* checkable to-do rows */
+.cm ul:has(li.chk),#orntasks .guide ul,#tstasks .guide ul{margin-left:0;list-style:none}
+li.chk{list-style:none;margin:1px 0;display:flex;align-items:flex-start;gap:6px}
+li.chk>label{display:flex;flex:1;min-width:0;align-items:flex-start;gap:8px;cursor:pointer;padding:7px 2px;min-height:44px;line-height:1.4}
+li.chk input{margin:2px 0 0;flex:0 0 auto;width:16px;height:16px;accent-color:var(--green);cursor:pointer}
+li.chk span{flex:1}
+li.chk.done>label span{text-decoration:line-through;color:var(--muted);opacity:.7}
+li.chk.syncerr>label{color:var(--terra)}
+li.chk.syncerr input{outline:2px solid var(--terra);outline-offset:1px}
+.addcal{flex:0 0 auto;display:flex;align-items:center;gap:4px;min-height:44px;border:0;background:none;color:var(--green-d);font:inherit;font-size:12px;padding:7px 5px;border-radius:8px;cursor:pointer}
+.addcal:hover{background:#eef3e6}
+.addcal svg{width:16px;height:16px}
+.h .hr{display:flex;align-items:center;gap:8px}
+.h .cnt,h3 .cnt{font-size:11px;font-weight:600;color:var(--muted);font-family:ui-sans-serif,-apple-system,sans-serif;letter-spacing:.3px}
+h3 .cnt{margin-left:8px}
+a.clearchk{display:inline-block;margin-top:8px;font-size:11.5px;color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--muted)}
+a.clearchk:hover{color:var(--terra);border-bottom-color:var(--terra)}
+/* guides */
+.guides{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.guides{grid-template-columns:1fr 1fr}}
+.dashboard .guides{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+.guide h3{margin:.1em 0 .4em;font-size:16px;color:var(--green-d)}
+.guide p{font-size:13px;margin:0;color:#444}
+.guide ul{margin:6px 0 0 18px;padding:0;font-size:13px;line-height:1.55;color:#3c4436}
+.guide li{margin:0 0 7px}
+.guide li::marker{color:var(--sage)}
+.guide li b{color:#33402c}
+.osub{font-family:ui-serif,Georgia,serif;font-size:18px;color:var(--green-d);margin:24px 0 10px}
+.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+/* ============================================
+   APP-LIKE MOBILE UI
+   ============================================ */
+.tabbar{display:none}
+dialog{color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;width:calc(100% - 24px);max-width:480px;max-height:calc(100dvh - 32px);overflow:auto}
+dialog::backdrop{background:rgba(30,40,24,.42)}
+.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dialog-head h2{margin:0;font-size:22px}
+.dialog-close{background:none;border:1px solid var(--line);border-radius:50%;min-width:44px;min-height:44px;cursor:pointer;font-size:24px;color:var(--ink)}
+.sheet{position:fixed;inset:auto 0 0;margin:0 auto;width:100%;max-width:520px;border-radius:20px 20px 0 0;padding-bottom:calc(22px + env(safe-area-inset-bottom))}
+.more-links{display:grid;gap:8px;margin-top:16px}
+.more-links a{padding:12px 14px;min-height:48px;text-decoration:none;background:var(--paper);border-radius:10px;font-weight:600}
+.calendar-form{display:grid;gap:14px;margin-top:16px}
+.calendar-form label{display:grid;gap:5px;font-weight:600}
+.calendar-form input[type=date],.calendar-form input[type=time]{width:100%;min-width:0;min-height:44px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:inherit;font-size:16px}
+.calendar-form .all-day{display:flex;align-items:center;gap:8px;min-height:44px}
+.calendar-form .all-day input{width:20px;height:20px;accent-color:var(--green)}
+.calendar-form .calendar-action{background:var(--green);color:#fff;border-color:var(--green)}
+.calendar-form .calendar-share{background:var(--paper);color:var(--green-d);border-color:var(--line)}
+.calendar-help,.calendar-status{font-size:13px;color:var(--muted);margin:0}
+#calendar-chore{line-height:1.5;margin:14px 0 0}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.pc.exp .detail,.cm.open .body{animation:slidein .18s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.tabbar,.nav,.cm>.h,.pc,.chip,.fbtn{-webkit-user-select:none;user-select:none}
+.nav a:active,.chip:active,.fbtn:active{opacity:.6}
+.pc:active{transform:scale(.985)}
+@media(max-width:860px){
+  /* hide top pill nav & hero flourish on phones — bottom tabs replace them */
+  .nav{display:none}
+  .leaf{display:none}
+  .hero{padding:22px 0 14px}
+  .sprig{width:56px;margin-bottom:0}
+  .hero h1{margin:.1em 0 0}
+  /* fixed bottom tab bar */
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;
+    background:rgba(255,254,248,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+    padding:5px 2px calc(5px + env(safe-area-inset-bottom))}
+  .tabbar a,.tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+    min-width:0;min-height:52px;padding:5px 0;border:0;background:none;border-radius:10px;text-decoration:none;color:var(--muted);font-family:inherit;
+    font-size:11.5px;font-weight:600;letter-spacing:.1px;transition:color .15s,transform .1s;cursor:pointer}
+  .tabbar svg{width:21px;height:21px;flex:0 0 auto}
+  .tabbar span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .tabbar .on{color:var(--green-d);background:rgba(74,124,63,.08)}
+  .tabbar .on svg{transform:translateY(-1px)}
+  .tabbar a:active,.tabbar button:active{transform:scale(.96);background:rgba(74,124,63,.08)}
+  /* keep content clear of the tab bar */
+  .wrap{padding-bottom:calc(86px + env(safe-area-inset-bottom))}
+}
+@media(max-width:560px){
+  .bar{padding:7px 0}
+  .fbtn{min-height:44px;padding:10px 12px}
+  /* tighter hero so content starts higher */
+  .hero{padding:18px 0 14px}
+  .sprig{width:48px}
+  .hero p{font-size:14px}
+  .nav{gap:7px;margin-top:16px}
+  .nav a{padding:8px 13px;font-size:13px}
+  section{padding-top:18px}
+  h2.sec{font-size:21px;margin-bottom:12px}
+  .wrap{padding-left:12px;padding-right:12px}
+  /* readable details, bigger tap targets */
+  .detail{font-size:13.5px;line-height:1.55}
+  li.chk>label{min-height:40px;padding:7px 2px}
+  li.chk input{width:18px;height:18px}
+  .cm>.h{padding:12px 13px}
+  .tip{font-size:12.5px}
+  /* calendar swipe hint */
+  .calhint{display:block;text-align:center;font-size:11.5px;color:var(--muted);margin:4px 0 2px}
+}
+</style></head>
+<body>
+<div class="hero">
+  <svg class="sprig" viewBox="0 0 140 116" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g class="stem">
+      <path d="M70 114 C70 86 70 54 70 14"/>
+      <path d="M70 92 C53 89 42 79 37 64"/>
+      <path d="M70 92 C87 89 98 79 103 64"/>
+      <path d="M70 66 C55 63 46 53 42 40"/>
+      <path d="M70 66 C85 63 94 53 98 40"/>
+      <path d="M70 42 C59 40 52 32 49 22"/>
+      <path d="M70 42 C81 40 88 32 91 22"/>
+    </g>
+    <g>
+      <ellipse class="blade" cx="33" cy="62" rx="13" ry="5.5" transform="rotate(-28 33 62)"/>
+      <ellipse class="blade" cx="107" cy="62" rx="13" ry="5.5" transform="rotate(28 107 62)"/>
+      <ellipse class="blade alt" cx="38" cy="38" rx="11.5" ry="5" transform="rotate(-32 38 38)"/>
+      <ellipse class="blade alt" cx="102" cy="38" rx="11.5" ry="5" transform="rotate(32 102 38)"/>
+      <ellipse class="blade" cx="46" cy="19" rx="9.5" ry="4.3" transform="rotate(-38 46 19)"/>
+      <ellipse class="blade" cx="94" cy="19" rx="9.5" ry="4.3" transform="rotate(38 94 19)"/>
+      <ellipse class="blade alt" cx="70" cy="9" rx="6" ry="10"/>
+    </g>
+  </svg>
+  <h1>Gangarapu Garden</h1>
+  <nav class="nav">
+    <a data-go="thismonth" tabindex="0" role="button">This Month</a><a data-go="thisseason" tabindex="0" role="button">This Season</a><a data-go="plants" tabindex="0" role="button">Plants</a><a data-go="yards" tabindex="0" role="button">Yards</a><a data-go="calendar" tabindex="0" role="button">Calendar</a><a data-go="chores" tabindex="0" role="button">Monthly Chores</a><a data-go="guides" tabindex="0" role="button">Care Guides</a><a data-go="ornamentals" tabindex="0" role="button">Ornamentals</a>
+  </nav>
+</div>
+
+<div class="wrap dashboard">
+  <section id="thismonth"><h2 class="sec">&#128197; This Month &mdash; <span id="tmname"></span></h2>
+    <div class="sub">Your garden jobs for this month. Check off a task or add it to your calendar for a day that suits you.</div>
+    <div class="task-progress"><progress id="tmprogress" value="0" max="1" aria-label="Completed chores this month"></progress><span id="tmprogresslabel" aria-live="polite"></span></div>
+    <div class="cm open" id="tmcard"></div>
+  </section>
+  <section id="thisseason"><h2 class="sec">&#127811; This Season &mdash; <span id="tsname"></span></h2>
+    <div class="sub" id="tssummary"></div>
+    <div class="task-progress"><progress id="tsprogress" value="0" max="1" aria-label="Completed seasonal tasks"></progress><span id="tsprogresslabel" aria-live="polite"></span></div>
+    <div class="guides" id="tstasks"></div>
+  </section>
+</div>
+
+<div class="bar" id="plant-toolbar"><div class="wrap">
+  <div class="searchrow">
+    <input id="q" class="search" aria-label="Search plants" placeholder="&#128269;  Search plants, e.g. tomatillo, slug, gourd&hellip;">
+    <button class="fbtn" id="ftoggle" aria-label="Toggle plant filters" aria-controls="panel" aria-expanded="false">Filters</button>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+    <span class="count" id="count"></span>
+    <button class="clear" id="clear">Clear all filters</button>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <div class="panel" id="panel"></div>
+  <section id="plants"><h2 class="sec">Plants</h2>
+    <div class="sub">Tap any card for full care details. The search &amp; month filters above apply to vegetables <em>and</em> ornamentals.</div>
+    <h3 class="osub">Vegetables, Herbs &amp; Cucurbits</h3>
+    <div class="gallery" id="gallery"></div>
+    <div class="empty" id="empty" style="display:none">No plants match these filters. <a id="resetlink" tabindex="0" role="button" style="cursor:pointer;text-decoration:underline">Clear filters</a></div>
+    <h3 class="osub">Ornamentals &amp; Shrubs</h3>
+    <div class="gallery" id="orngallery"></div>
+  </section>
+
+  <section id="yards"><h2 class="sec">Front Yard &amp; Backyard</h2>
+    <div class="sub">Plants grouped by yard and sunlight.</div>
+    <div class="zones" id="yardmap"></div>
+  </section>
+
+  <section id="calendar"><h2 class="sec">Garden Calendar</h2>
+    <div class="sub">Plants are rows and months are columns. Choose a month to highlight its activities and see its tasks below.</div>
+    <div class="annual">
+    <h3 class="osub">Vegetable Planting Calendar</h3>
+    <div class="legend" id="legend"></div>
+    <span class="calhint">&#8592; swipe the table sideways to see all months &#8594;</span>
+    <div class="calwrap"><table class="cal" id="caltable"></table></div>
+    <h3 class="osub">Ornamental Bloom &amp; Care Calendar</h3>
+    <div class="legend" id="ornlegend"></div>
+    <span class="calhint">&#8592; swipe the table sideways to see all months &#8594;</span>
+    <div class="calwrap"><table class="cal" id="orncaltable"></table></div>
+    </div>
+    <h3 class="osub">Monthly Tasks &amp; Activities</h3>
+    <div class="month-controls">
+      <button id="month-prev" type="button" aria-label="Previous month">&#8592;</button>
+      <select id="agenda-month" aria-label="Calendar month"></select>
+      <button id="month-next" type="button" aria-label="Next month">&#8594;</button>
+    </div>
+    <p id="agenda-summary" class="sub" role="status"></p>
+    <div id="monthly-agenda">
+      <div id="agenda-tasks"></div>
+      <div class="agenda-plants" id="agenda-plants"></div>
+    </div>
+  </section>
+
+  <section id="chores"><h2 class="sec">Monthly Chores &mdash; Grouped by Task</h2>
+    <div class="sub">Tap a month to expand. Only active chores show per month.</div>
+    <div class="chgrid" id="choregrid"></div>
+  </section>
+
+  <section id="guides"><h2 class="sec">Care Guides</h2>
+    <div class="guides" id="guidewrap"></div>
+  </section>
+
+  <section id="ornamentals"><h2 class="sec">Ornamental Grouping &amp; Seasonal Care</h2>
+    <div class="sub">How to group your shrubs, perennials &amp; bulbs by what each one needs &mdash; plus a season-by-season care rundown (also folded into Monthly Chores above).</div>
+    <h3 class="osub">Best Grouping &mdash; 4 Zones</h3>
+    <div class="zones" id="ornzonemap"></div>
+    <h3 class="osub">Seasonal Care Tasks</h3>
+    <div class="guides" id="orntasks"></div>
+  </section>
+
+  <div class="foot">&#127793; Built for the Gangarapu garden, Sammamish &middot; offline-ready, mobile-friendly</div>
+</div>
+
+<nav class="tabbar" aria-label="Garden navigation">
+  <a href="#thismonth" data-go="thismonth"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><line x1="3" y1="9.5" x2="21" y2="9.5"/><line x1="8" y1="2.5" x2="8" y2="6"/><line x1="16" y1="2.5" x2="16" y2="6"/><polyline points="8.5 14.5 10.8 17 15.5 12"/></svg><span>Today</span></a>
+  <a href="#plants" data-go="plants"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15c0-4.5-3.2-6.5-8-6.5 0 5 3.2 6.5 8 6.5z"/><path d="M12 15c0-4.5 3.2-6.5 8-6.5 0 5-3.2 6.5-8 6.5z"/></svg><span>Plants</span></a>
+  <a href="#calendar" data-go="calendar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><line x1="3" y1="9.5" x2="21" y2="9.5"/><line x1="8" y1="2.5" x2="8" y2="6"/><line x1="16" y1="2.5" x2="16" y2="6"/></svg><span>Calendar</span></a>
+  <a href="#yards" data-go="yards"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg><span>Yards</span></a>
+  <button id="moretoggle" type="button" aria-haspopup="dialog" aria-controls="moremenu" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg><span>More</span></button>
+</nav>
+
+<dialog id="moremenu" class="sheet" aria-labelledby="more-title">
+  <div class="dialog-head"><h2 id="more-title">More garden sections</h2><button class="dialog-close" type="button" data-close="moremenu" aria-label="Close more sections">&times;</button></div>
+  <nav class="more-links" aria-label="More garden sections">
+    <a href="#chores" data-go="chores">Monthly chores</a>
+    <a href="#guides" data-go="guides">Care guides</a>
+    <a href="#ornamentals" data-go="ornamentals">Ornamentals &amp; shrubs</a>
+    <a href="#plant-toolbar" data-go="_search">Search plants &amp; filters</a>
+  </nav>
+</dialog>
+
+<dialog id="calendar-dialog" aria-labelledby="calendar-title">
+  <div class="dialog-head"><h2 id="calendar-title">Add chore to Calendar</h2><button class="dialog-close" type="button" data-close="calendar-dialog" aria-label="Close calendar event">&times;</button></div>
+  <p id="calendar-chore"></p>
+  <form id="calendar-form" class="calendar-form">
+    <label for="event-date">Date<input id="event-date" name="date" type="date" required></label>
+    <label class="all-day"><input id="event-all-day" type="checkbox" checked>All-day event</label>
+    <label id="event-time-row" for="event-time" hidden>Time<input id="event-time" name="time" type="time" value="09:00" disabled required></label>
+    <p class="calendar-help">Download the calendar file, then open it to confirm the event in Calendar. On iPhone, use Safari; you can also share the file when supported.</p>
+    <button class="calendar-action" type="submit">Add to Calendar</button>
+    <button id="calendar-share" class="calendar-action calendar-share" type="button" hidden>Share calendar file</button>
+    <p id="calendar-status" class="calendar-status" role="status"></p>
+  </form>
+</dialog>
+
+
+<script>
+const DATA = {"plants":[{"crop":"Bottlegourd (lauki/doodhi)","varieties":"Doodhi/Lowki + Dhol (Lagenaria siceraria), 2 varieties","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Yes: seed germinates best in warm ~80-85F soil and the hard seed coat can rot in cool soil, so the heat mat is the most reliable way to start it here.","germTempF":"75-85F (target ~80F)","sowIndoor":"mid-Apr to late Apr","transplantOut":"early Jun (after soil >65F)","directSow":"n/a","daysToHarvest":"~60-80 days from sow to tender edible gourd (120+ if left to mature/dry)","harvestWindow":"Aug to early Oct","spacing":"2-3 ft apart, 1-2 plants on the arch","waterNote":"Heavy and consistent in Jul-Aug fruiting (vine is thirsty); deep drip 2-3x/week, taper as nights cool in Sep.","easeStart":2,"easeGrow":2,"careFlags":["frost-tender","needs trellis","hand-pollinate (night-blooming, low bee activity)","marginal in cool maritime summers","heavy feeder","soak/nick seed before sowing","sprawls 15ft"],"timeline":["","","","indoor","grow","transplant","grow","harvest","harvest","harvest","",""],"notes":"Hand-pollinate in the evening: bottlegourd opens white flowers at dusk and our daytime bee traffic misses them, so transfer pollen from male to female flowers by hand to get fruit set in a short cool season.","_hint":"Vigorous vine on the connecting ARCH trellis. Marginal in our cool summers - start indoors on heat mat, give the hottest spot. 1-2 plants max, they sprawl 15ft.","id":0,"category":"Gourds & cucurbits","sun":"Full sun","startTag":"Indoor start","traits":["Needs trellis","Hand-pollinate","Frost-tender"]},{"crop":"Ridgegourd (turai)","varieties":"Madhuri (Luffa acutangula)","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Essential: seeds need 85-90F soil to germinate and rot at cool PNW indoor temps without bottom heat.","germTempF":"75-90F (optimal ~85F)","sowIndoor":"late Apr to early May","transplantOut":"early Jun","directSow":"n/a","daysToHarvest":"60-75 days from transplant","harvestWindow":"late Aug to Sep (marginal; often no usable fruit)","spacing":"18-24 in apart at base of arch","waterNote":"Heavy consistent water through warm season via drip; never let dry while flowering/fruiting; taper in Oct.","easeStart":2,"easeGrow":2,"careFlags":["frost-tender","needs trellis","needs strong heat to fruit","marginal in cool maritime summers","hand-pollinate for fruit set","soil-warmth dependent"],"timeline":["","","","","indoor","transplant","grow","grow","harvest","harvest","",""],"notes":"Pre-soak seeds 24h, start on heat mat, and pre-warm soil with black plastic for 2 weeks before transplant; even then Sammamish's 75-80F summer rarely gives enough heat units for reliable ridge gourd, so treat it as an experimental crop and hand-pollinate female flowers in the morning to maximize the few fruit you get.","_hint":"Vine on arch. Heat-loving, start indoors on heat mat, transplant after soil warms.","id":1,"category":"Gourds & cucurbits","sun":"Full sun","startTag":"Indoor start","traits":["Needs trellis","Hand-pollinate","Frost-tender"]},{"crop":"Bitter gourd (karela)","varieties":"Seeds of India (generic Indian karela type)","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Heat mat is mandatory: karela needs 80-90F soil to germinate and will rot in cool PNW potting mix without bottom heat.","germTempF":"80-90F","sowIndoor":"mid Apr to late Apr","transplantOut":"early Jun to mid Jun","directSow":"n/a","daysToHarvest":"60-75 days from transplant (often longer/marginal in cool summers)","harvestWindow":"late Aug to early Oct (light, weather-dependent)","spacing":"18-24 in apart at base of arch, single vine trained up trellis","waterNote":"Consistent drip through warm season; keep evenly moist Jul-Sep, never let dry during fruit set. Taper in Oct.","easeStart":2,"easeGrow":2,"careFlags":["frost-tender","needs heat mat to germinate","hard seed coat - soak/nick before sowing","slowest gourd in PNW - marginal yield","needs warmest full-sun microclimate","hand-pollinate to ensure fruit set","needs strong trellis/arch"],"timeline":["","","","indoor","grow","transplant","grow","grow","harvest","harvest","",""],"notes":"Karela is the most marginal gourd here; maximize heat by holding seedlings indoors until soil is reliably >65F (early-mid Jun), give it the hottest front-yard spot against a south wall/arch, and hand-pollinate (transfer male to female flowers each morning) since cool dull mornings suppress bee activity and fruit set.","_hint":"Vine on 2nd arch/trellis. Hard seed coat - soak/nick, needs heat mat, slowest of the gourds in PNW.","id":2,"category":"Gourds & cucurbits","sun":"Full sun","startTag":"Indoor start","traits":["Needs trellis","Hand-pollinate","Frost-tender"]},{"crop":"Cucumber","varieties":"Raider (slicing) + Homemade Pickles (pickling)","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Heat mat helps but is not essential: cucumber germinates from ~60F up, though warm media (70-85F) speeds it and avoids rot in cool PNW spring indoor temps.","germTempF":"75-85F","sowIndoor":"late Apr to early May","transplantOut":"late May to early Jun","directSow":"early to mid Jun (soil >65F)","daysToHarvest":"50-60 days from transplant","harvestWindow":"late Jul through Sep","spacing":"12 in apart on trellis, single row","waterNote":"Heavy, even water (1-2 in/wk) once fruiting; drip daily in dry Jul-Aug. Inconsistent water causes bitter, misshapen fruit.","easeStart":4,"easeGrow":4,"careFlags":["needs trellis","frost-tender","slug-prone on seedlings","cucumber beetle watch","warm soil only","even moisture critical"],"timeline":["","","","","indoor","transplant","grow","harvest","harvest","harvest","",""],"notes":"Do not rush transplanting; wait until nights stay above 50F (late May/early Jun) since cold-stunted cucumbers sulk all season and never recover vigor.","_hint":"Vine on trellis. Easy, warm-season. Watch for slugs on seedlings and cucumber beetles.","id":3,"category":"Gourds & cucurbits","sun":"Full sun","startTag":"Indoor start","traits":["Slug-prone","Needs trellis","Pest-prone","Frost-tender"]},{"crop":"Eggplant (brinjal)","varieties":"Rhim Jhim","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Yes, the heat mat is mandatory: eggplant germinates poorly below 75F, and bottom heat at 80-85F is the difference between a good stand and rotted seed in a cool March windowsill.","germTempF":"75-90F","sowIndoor":"early-mid Mar","transplantOut":"early-mid Jun","directSow":"n/a","daysToHarvest":"70-85 days from transplant","harvestWindow":"Aug-Sep (Oct if warm)","spacing":"18-24 in apart","waterNote":"Steady, even moisture through summer via drip; deep 1-2x/wk in dry Jul-Aug. Avoid drought stress which drops blossoms; taper as nights cool in fall.","easeStart":3,"easeGrow":2,"careFlags":["frost-tender","heat-loving / marginal in cool PNW summers","flea-beetle-prone","needs black mulch or wall-o-water for heat","slow to start - sow early","drops blossoms in cool weather"],"timeline":["","","indoor","grow","grow","transplant","grow","harvest","harvest","harvest","",""],"notes":"Eggplant is the most heat-demanding crop here and a real gamble in cool maritime summers; full sun in the front yard plus black plastic mulch and an early wall-o-water to bank soil heat is the only way Rhim Jhim ripens before fall chill stalls it. Cover with floating row cover at transplant to block flea beetles.","_hint":"Start indoors early on heat mat, transplant late. Loves heat; use black mulch/wall-o-water to boost. Flea beetles common.","id":4,"category":"Fruiting (heat-lover)","sun":"Full sun","startTag":"Indoor start","traits":["Pest-prone","Frost-tender"]},{"crop":"Okra (bhindi)","varieties":"Hybrid Sheetal","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Yes, mandatory; okra needs 80-90F soil to germinate and will rot in cool damp seed flats without bottom heat.","germTempF":"80-90F","sowIndoor":"mid-Apr to late Apr","transplantOut":"early Jun (after soil >65F, nights >55F)","directSow":"n/a (soil never warm enough early enough)","daysToHarvest":"50-60 days from transplant (in heat); often 70+ here","harvestWindow":"Aug to mid-Sep (sparse, weather-dependent)","spacing":"12-18 in apart, single back row","waterNote":"Steady deep drip 1 in/wk through warm dry Jul-Aug; never let dry out while flowering. Taper in Sep.","easeStart":3,"easeGrow":2,"careFlags":["heat-loving","borderline crop in maritime PNW","needs hottest spot","frost-tender","soak seed before sowing","needs heat mat to germinate","low/erratic yield in cool summers"],"timeline":["","","","indoor","grow","transplant","grow","harvest","harvest","","",""],"notes":"Maximize heat: transplant against a south wall or use black plastic mulch plus a clear cloche/low tunnel early to bank soil warmth, or yield will be minimal.","_hint":"Start indoors on heat mat, soak seed. Borderline crop here - needs hottest spot; tall back row.","id":5,"category":"Fruiting (heat-lover)","sun":"Full sun","startTag":"Indoor start","traits":["Frost-tender"]},{"crop":"Peppers","varieties":"Bell (California Wonder 300), Italian Sweet, Jalapeno (Early), Hot Bhaji","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Essential: pepper seed germinates slowly and erratically below 75F, so the heat mat at 80-85F soil temp is the difference between 7-day and 3-week germination.","germTempF":"65-85F (80-85F = fastest)","sowIndoor":"late Feb to early Mar","transplantOut":"late May to early Jun","directSow":"n/a","daysToHarvest":"65-75 days green to first fruit from transplant; 90+ for red/ripe","harvestWindow":"Aug to Oct","spacing":"15-18 in apart, 18-24 in between rows","waterNote":"Steady, even moisture via drip through summer (~1 in/week); avoid drought stress that causes blossom drop and bitter fruit. Taper in Oct.","easeStart":2,"easeGrow":3,"careFlags":["frost-tender","slow germ - needs heat mat","blossom drop in cool nights","aphid-prone indoors","needs warmest microclimate","use black mulch/wall heat"],"timeline":["","indoor","indoor","grow","grow","transplant","grow","harvest","harvest","harvest","",""],"notes":"In cool maritime summers peppers underperform without help: plant in the hottest front-yard spot, use black plastic/landscape fabric mulch to warm soil, and prioritize the small fast varieties (Jalapeno Early, Italian Sweet) over slow big bells, which may only ripen green.","_hint":"All peppers same care. Start indoors EARLY on heat mat (slow germ), transplant after nights >55F. ~2 plants each.","id":6,"category":"Fruiting (heat-lover)","sun":"Full sun","startTag":"Indoor start","traits":["Pest-prone","Frost-tender"]},{"crop":"Tomatillo","varieties":"Miltomate","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Use the heat mat - tomatillos germinate best at 75-85F and our April-May indoor temps are too cool for reliable, fast sprouting.","germTempF":"75-85F","sowIndoor":"late Mar to early Apr","transplantOut":"late May to early Jun","directSow":"n/a","daysToHarvest":"75-90 days from transplant","harvestWindow":"Aug to Oct","spacing":"24-36 in apart","waterNote":"Consistent moisture in summer via drip (1-1.5 in/wk) during the dry Jul-Aug stretch; ease off as fall rains return.","easeStart":4,"easeGrow":4,"careFlags":["needs cage/stake","needs 2 plants for pollination (insect-pollinated)","self-incompatible","frost-tender","sprawls - cage it","vigorous/productive"],"timeline":["","","indoor","indoor","transplant","grow","grow","harvest","harvest","harvest","",""],"notes":"Plant at least 2 plants - tomatillos are self-incompatible and a lone plant sets empty husks; harvest when fruit fills and splits the papery husk.","_hint":"MUST plant 2+ for pollination (self-incompatible). Start indoors on heat mat. Sprawls - cage it. Easy and productive.","id":7,"category":"Fruiting (heat-lover)","sun":"Full sun","startTag":"Indoor start","traits":["Needs cage/support","Plant 2+ (insect-pollinated)","Frost-tender"]},{"crop":"Roselle / Gongura","varieties":"Hibiscus sabdariffa, red-stemmed","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Yes, heat mat is essential; seeds need 75-85F soil to germinate reliably and our spring soils are far too cold.","germTempF":"75-85F","sowIndoor":"late Mar to early Apr","transplantOut":"late May to early Jun","directSow":"n/a","daysToHarvest":"~60 days to leaf harvest; 120+ for calyces (rarely reached here)","harvestWindow":"Jul-Oct (leaves)","spacing":"2-3 ft apart","waterNote":"Consistent moisture in summer via drip, 1-2x/week deep; tolerates dry Jul-Aug once established but grows lusher with steady water. Reduce in fall.","easeStart":3,"easeGrow":3,"careFlags":["frost-tender","heat-lover","day-length sensitive","calyces rarely set before frost","grow for leaves","marginal in cool PNW summers"],"timeline":["","","indoor","indoor","transplant","grow","harvest","harvest","harvest","harvest","",""],"notes":"Grow this purely for the tart Gongura leaves, not calyces: roselle is short-day flowering and our first frost (~Nov 15) arrives long before the late-fall calyx set, so harvest leaves through summer instead - though cool maritime nights keep growth slow and yields modest.","_hint":"4-5ft shrub in true heat (usually stays smaller here), day-length sensitive. Start indoors on heat mat; harvest leaves through summer (slow in cool nights). Calyces may not form before frost here - grow for leaves.","id":8,"category":"Leafy greens","sun":"Full sun","startTag":"Indoor start","traits":["Frost-tender"]},{"crop":"Sunflowers","varieties":"Mixed (likely a blend of branching multi-head types like Autumn Beauty/Velvet Queen and single-stem giants like Mammoth/Russian Giant)","yard":"Front yard (full sun)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"Skip the heat mat; sunflowers are direct-sown and germinate fast once soil hits 60F+ in late May/June, so indoor starting adds no value and risks transplant-shocking their taproot.","germTempF":"70-85F (germinates down to ~55-60F)","sowIndoor":"n/a","transplantOut":"n/a","directSow":"mid May to late Jun (soil >60F)","daysToHarvest":"70-95 days (flowering); +30-45 days more for dry seed heads","harvestWindow":"Aug to Oct (blooms); Sep-Oct for mature seed heads","spacing":"6 in for cut-flower density; 12-18 in for branching types; 18-24 in for giants","waterNote":"Keep soil moist through germination and early growth; drip 1-2x/week deeply through dry Jul-Aug. Drought-tolerant once established but blooms bigger with steady water.","easeStart":5,"easeGrow":5,"careFlags":["slug-prone seedlings","tall types need staking in wind","birds raid maturing seed heads","succession-sow single-stem types every 2-3 wks; branching types rebloom on their own"],"timeline":["","","","","sow","sow","grow","harvest","harvest","harvest","",""],"notes":"Protect emerging seedlings from slugs (Sluggo/bait) the first 2 weeks—they are the only real threat in cool maritime springs; sunflowers thrive in your full-sun front border and reliably bloom by August.","_hint":"Direct sow, back border. Easy. Supports pollinators.","id":9,"category":"Flowers","sun":"Full sun","startTag":"Direct sow","traits":["Slug-prone","Succession-sow"]},{"crop":"Basil (sweet)","varieties":"Sweet Basil (Genovese-type)","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Use the heat mat; basil germinates poorly below 70F and the mat holds soil at 75-85F for fast, even sprouting.","germTempF":"70-85F","sowIndoor":"early to mid Apr","transplantOut":"early to mid Jun","directSow":"n/a","daysToHarvest":"60-75 days from seed","harvestWindow":"Jul-Sep","spacing":"8-10 in apart","waterNote":"Consistent moisture all summer; drip 2-3x/week in dry Jul-Aug, water at base to keep foliage dry and avoid downy mildew. Ease off as fall cools.","easeStart":3,"easeGrow":2,"careFlags":["frost-tender","slug-prone when small","needs soil >60F to thrive","cold-sensitive (sulks below 50F)","downy-mildew-prone in damp","pinch to prevent bolting"],"timeline":["","","","indoor","indoor","transplant","harvest","harvest","harvest","harvest","",""],"notes":"Do not rush transplanting; wait until nights stay above 50F (mid-June here) or cold-shocked plants stall and blacken. Pinch tops weekly to delay flowering and keep leaves coming.","_hint":"Frost-tender, start indoors on heat mat or sow late. Companion to peppers/eggplant. Slug-prone when small.","id":10,"category":"Herbs","sun":"Full sun","startTag":"Indoor start","traits":["Slug-prone","Bolts in heat","Frost-tender"]},{"crop":"Marigold","varieties":"Brocade Mix (French marigold, Tagetes patula)","yard":"Front yard (full sun)","startMethod":"Either (direct or transplant)","heatMat":true,"heatMatNote":"Use the heat mat for indoor starts: marigold germinates best at 70-75F soil, which an unheated PNW windowsill won't hit in March.","germTempF":"70-75F","sowIndoor":"late Mar to early Apr","transplantOut":"mid to late May","directSow":"late May to early Jun","daysToHarvest":"50-60 days to first bloom from sow","harvestWindow":"Jul through Oct (bloom/deadhead)","spacing":"8-10 in apart, tucked between heat-lovers","waterNote":"Moderate, even moisture while establishing; drought-tolerant once set. Drip 1-2x/week summer, keep foliage dry to limit fungal issues.","easeStart":5,"easeGrow":5,"careFlags":["slug-prone as seedlings","frost-tender","deadhead for continuous bloom","powdery mildew in damp shade"],"timeline":["","","indoor","indoor","transplant","grow","harvest","harvest","harvest","harvest","",""],"notes":"Don't rush them outside; marigolds sulk and rot in cold wet soil, so wait until late May when soil tops 60F, then they bloom nonstop until first frost.","_hint":"Companion/pest deterrent - interplant among heat-lovers. Easy direct sow or start indoors.","id":11,"category":"Flowers","sun":"Full sun","startTag":"Either","traits":["Slug-prone","Frost-tender"]},{"crop":"Spinach","varieties":"Olympia (slow-bolt savoy, good for spring/fall/overwinter)","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"Skip the heat mat; spinach germinates best in cool 45-65F soil and direct sows outdoors, while warm soil suppresses germination.","germTempF":"45-68F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"Spring: late Feb-early Apr; Fall: late Aug-mid Sep; Overwinter: late Aug-late Sep","daysToHarvest":"40-50 days (baby leaf ~25-30)","harvestWindow":"Apr-Jun (spring), Oct-Nov, then Feb-Mar from overwintered","spacing":"3-4 in apart, rows 8-12 in; thin seedlings to stand","waterNote":"Keep soil consistently moist on drip spring/fall; dry spells trigger bolting. Minimal water for overwintering plants.","easeStart":4,"easeGrow":4,"careFlags":["bolts in heat","cool-season","slug-prone","overwinters in 8b","shade helps in summer","leaf miner-prone"],"timeline":["","sow","grow","harvest","harvest","harvest","","sow","sow","harvest","grow","grow"],"notes":"Olympia is a slow-bolt variety, but PNW spinach still bolts fast once June heat/long days hit; sow a fall crop late Aug-Sep and an overwinter crop early Oct for the easiest, sweetest harvests and Feb-Mar regrowth.","_hint":"Direct sow. Cool-season, bolts in heat - shade helps. Spring + fall + overwinter.","id":12,"category":"Leafy greens","sun":"Partial shade","startTag":"Direct sow","traits":["Slug-prone","Pest-prone","Bolts in heat","Overwinters"]},{"crop":"Arugula","varieties":"Rocket Salad (Gourmet Greens) - standard salad/wild-type rocket","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat needed; arugula germinates fine in cool soil (40-55F) and is direct-sown outdoors, so the mat offers no benefit.","germTempF":"45-65F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"early Mar through late Apr (spring), then late Aug through late Sep (fall); skip hot Jul-early Aug","daysToHarvest":"21-40 days (baby leaf ~3 wks, full ~5-6 wks)","harvestWindow":"mid-Apr through Jun, then Oct through Nov (add 1-2 wks for backyard shade)","spacing":"1 in apart in rows 4-6 in apart; thin to 2-3 in for full leaves, or broadcast for baby-leaf cut-and-come","waterNote":"Keep evenly moist on drip; consistent water prevents bolting and bitterness. Increase frequency in dry Jul-Aug, light in cool spring/fall.","easeStart":5,"easeGrow":5,"careFlags":["flea-beetle-prone","bolts in heat","succession every 2-3 wks","cut-and-come-again","cold-hardy"],"timeline":["","","sow","sow","harvest","harvest","","sow","sow","harvest","harvest",""],"notes":"Float a row cover over seedlings at sowing to block flea beetles, which shotgun-hole the leaves in this region; the partial shade also slows bolting, letting spring sowings run later than full sun.","_hint":"Direct sow, very fast, cut-and-come. Flea beetles. Succession every 2-3 wks.","id":13,"category":"Leafy greens","sun":"Partial shade","startTag":"Direct sow","traits":["Pest-prone","Bolts in heat","Succession-sow"]},{"crop":"Lettuce","varieties":"Buttercrunch (butterhead)","yard":"Backyard (partial shade)","startMethod":"Either (direct or transplant)","heatMat":false,"heatMatNote":"Skip the heat mat; lettuce germinates fine at room temp and goes dormant above ~80F soil, so cool starts are better.","germTempF":"60-70F","sowIndoor":"early Mar - early Apr (optional for first flush)","transplantOut":"mid Apr - early May","directSow":"mid Apr - late Aug (succession every 2-3 wks)","daysToHarvest":"50-65 days (baby leaf 30-40)","harvestWindow":"late May - Oct (gaps in peak Jul-Aug heat)","spacing":"8-10 in apart for full heads; 2-4 in for cut-and-come-again","waterNote":"Even, consistent moisture year-round; never let dry out or it turns bitter/bolts. Drip 2-3x/wk spring/fall, daily in dry Jul-Aug.","easeStart":5,"easeGrow":4,"careFlags":["slug-prone","bolts in heat","succession-sow","shade extends season","frost-tolerant to ~28F (lower if hardened)"],"timeline":["","","indoor","transplant","harvest","harvest","grow","sow","harvest","harvest","",""],"notes":"The backyard partial shade is the asset here, it slows bolting through dry Jul-Aug, but slugs are the real threat here; ring seedlings with Sluggo (iron phosphate) at transplant and reapply after rain.","_hint":"Direct sow or transplant. Shade prevents bolting. SLUG MAGNET. Succession.","id":14,"category":"Leafy greens","sun":"Partial shade","startTag":"Either","traits":["Slug-prone","Bolts in heat","Succession-sow"]},{"crop":"Coriander / Cilantro","varieties":"Cruiser (slow-bolt)","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat needed; cilantro is direct-sown only (taproot resents transplant) and germinates fine in cool 50-65F maritime soil.","germTempF":"55-68F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"mid-Apr through Sep, succession every 2-3 wks","daysToHarvest":"50-75 days leaf; 100+ days seed","harvestWindow":"May-Oct (best Sep-Oct)","spacing":"2-3 in apart, rows 6 in; thin lightly","waterNote":"Steady moisture spring-fall; drip keeps soil evenly damp, which delays bolting. Never let it dry out in summer.","easeStart":5,"easeGrow":4,"careFlags":["bolts in heat","direct-sow only (taproot)","succession sow","slug-prone seedlings","shade prolongs leaf"],"timeline":["","","","sow","grow","harvest","harvest","sow","sow","harvest","",""],"notes":"In Sammamish the partial-shade backyard is ideal: shade plus the cool maritime climate and a fall sowing (Aug-Sep) give the longest leaf harvest before bolting; spring sowings bolt fast once dry July heat arrives.","_hint":"Direct sow only (tap root). Bolts in heat - shade + fall sowing best. Succession.","id":15,"category":"Herbs","sun":"Partial shade","startTag":"Direct sow","traits":["Slug-prone","Bolts in heat","Succession-sow"]},{"crop":"Dill","varieties":"Hera","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"Skip the heat mat; dill resents transplanting and is direct sown, and it germinates fine in the 60-70F soil of late spring.","germTempF":"60-70F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"April to mid-Jul (succession every 3 wks)","daysToHarvest":"40-50 days to leaf; 90+ to seed head","harvestWindow":"late Jun to Sep","spacing":"8-10 in apart, thin seedlings; rows 12 in","waterNote":"Even, moderate moisture via drip through summer; dry soil triggers early bolting. Less water needed in shaded backyard.","easeStart":5,"easeGrow":5,"careFlags":["bolts in heat","frost-hardy (mature plants to ~25F)","direct-sow only (taproot, resents transplant)","self-sows readily","beneficial-insect attractor"],"timeline":["","","","sow","sow","sow","harvest","harvest","harvest","","",""],"notes":"Sow in succession every 3 weeks (mid-May through mid-Jul) since dill bolts fast; partial shade in the backyard actually slows bolting and extends the leaf-harvest window. Let one final plant flower to feed beneficials and self-sow.","_hint":"Direct sow. Easy. Beneficial-insect attractor.","id":16,"category":"Herbs","sun":"Partial shade","startTag":"Direct sow","traits":["Bolts in heat","Frost-hardy","Succession-sow"]},{"crop":"Sorrel (red-veined)","varieties":"Red Veined","yard":"Backyard (partial shade)","startMethod":"Either (direct or transplant)","heatMat":false,"heatMatNote":"Skip the mat; sorrel germinates fine at cool room temps and is sown outdoors once frost risk passes.","germTempF":"60-70F","sowIndoor":"late Mar - early Apr","transplantOut":"late Apr - mid May","directSow":"late Apr - May","daysToHarvest":"50-60 days from sow; light cutting sooner","harvestWindow":"May through Oct (mild spells into winter)","spacing":"8-12 in apart","waterNote":"Even moisture spring-fall keeps leaves tender; drip 1-2x/week, more in dry Jul-Aug. Drought makes leaves tough and bitter.","easeStart":4,"easeGrow":5,"careFlags":["perennial","cut-and-come-again","bolts in heat - pinch flower stalks","partial shade ideal","frost-hardy"],"timeline":["","","indoor","transplant","harvest","harvest","harvest","harvest","harvest","harvest","grow",""],"notes":"Cut off flower stalks as soon as they appear to keep leaves tender and the plant productive; partial shade in the backyard actually slows bolting versus full sun.","_hint":"Perennial-ish, direct sow or transplant once. Very low maintenance, cut-and-come.","id":17,"category":"Leafy greens","sun":"Partial shade","startTag":"Either","traits":["Bolts in heat"]},{"crop":"Carrot","varieties":"Bolero (Nantes-type, sweet, stores well)","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat: carrots are direct-sown only, and the mat is irrelevant for outdoor germination.","germTempF":"45-85F (optimum ~70-80F)","sowIndoor":"n/a","transplantOut":"n/a","directSow":"late Apr - mid Jul (succession every 3 wks)","daysToHarvest":"~75 days (longer in shade/fall)","harvestWindow":"Jul - Nov (storage roots from fall sowings)","spacing":"2 in apart, rows 6 in; 1/4-1/2 in deep","waterNote":"Keep top 1 in constantly moist for 2-3 wks until germination; then steady drip 1 in/wk. Even moisture prevents splitting; avoid drought-then-soak.","easeStart":3,"easeGrow":4,"careFlags":["slow germination","needs constant surface moisture to germinate","thin to 2in or roots fork","partial shade slows growth","carrot rust fly - use row cover"],"timeline":["","","","","sow","grow","sow","grow","grow","harvest","harvest",""],"notes":"Germination is the make-or-break step: cover the seeded row with a board or burlap and keep it damp until sprouts show (10-21 days), then remove. Bolero left in ground past first frost gets sweeter; mulch and harvest into Nov.","_hint":"Direct sow only. Keep surface moist to germinate. Slow in shade but sweet. Thin to 2in.","id":18,"category":"Roots","sun":"Partial shade","startTag":"Direct sow","traits":[]},{"crop":"Beet","varieties":"Early Wonder Tall Top","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat needed; beets are direct-sown outdoors and germinate fine in cool 50-65F maritime soil.","germTempF":"50-85F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"early Apr to late Jul (succession every 3 wks)","daysToHarvest":"45-55 days roots; 30 days for tops","harvestWindow":"June through November","spacing":"3-4 in apart after thinning, rows 10-12 in","waterNote":"Consistent 1 in/wk via drip spring-fall; even moisture prevents woody, cracked roots and bolting. Less in cool wet shoulders.","easeStart":5,"easeGrow":5,"careFlags":["each seed is a cluster - thin to 1 seedling","even moisture prevents woody roots","dual-purpose: eat thinnings as greens","tolerates partial shade well"],"timeline":["","","","sow","grow","harvest","harvest","sow","grow","harvest","harvest",""],"notes":"Each \"seed\" is a multi-seed cluster, so thin ruthlessly to one seedling per spot at 2-3 in tall (eat the thinnings as baby greens) or roots will stay marble-sized. Beets thrive in the 4-5 hr dappled backyard.","_hint":"Direct sow. Eat tops + roots. Each seed = cluster, thin. Easy.","id":19,"category":"Roots","sun":"Partial shade","startTag":"Direct sow","traits":[]},{"crop":"Radish","varieties":"Easter Egg II, Cherry Belle","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat; radishes are direct-sown and germinate readily in cool 45-75F soil, so the mat is unnecessary.","germTempF":"45-75F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"mid-Mar to early May, then late Aug to mid-Sep","daysToHarvest":"25-30 days","harvestWindow":"late Apr through Jun, and late Sep through early Nov (allow ~1-2 wks extra for shade/cool)","spacing":"1 in apart, rows 4-6 in; thin promptly","waterNote":"Even, consistent moisture is critical; drip daily in dry Jul-Aug heat to prevent cracking and pithy/hot roots. Steady spring/fall moisture otherwise.","easeStart":5,"easeGrow":4,"careFlags":["flea-beetle-prone","root-maggot-prone","bolts/gets-hot in summer heat","succession sow every 2-3 wks","thin promptly or roots won't form"],"timeline":["","","sow","sow","sow","harvest","","sow","sow","harvest","",""],"notes":"Float row cover over seedlings from sowing until harvest to block flea beetles and cabbage root maggot fly; skip the heat of Jul-Aug (roots turn pithy and bolt) and resume succession sowing in late summer for a fall crop.","_hint":"Direct sow, fastest crop (25-30d). Succession. Flea beetles/root maggot.","id":20,"category":"Roots","sun":"Partial shade","startTag":"Direct sow","traits":["Pest-prone","Bolts in heat","Succession-sow"]},{"crop":"Kohlrabi","varieties":"Konan","yard":"Backyard (partial shade)","startMethod":"Either (direct or transplant)","heatMat":true,"heatMatNote":"Use the heat mat for early indoor starts in Feb-Mar to get reliable germination while soil is cold; not needed for summer/fall direct sowing.","germTempF":"60-75F","sowIndoor":"late Feb - mid Mar (spring); not needed for fall","transplantOut":"mid Apr - early May","directSow":"early May - mid Jul (best as Jul-Aug fall crop)","daysToHarvest":"~45 days (50-55 in shade/fall)","harvestWindow":"Jun-Jul (spring) and Sep-Oct (fall), +1-2 wks slower in shade","spacing":"6 in apart, rows 10-12 in","waterNote":"Even, consistent moisture via drip; dry spells cause woody, cracked bulbs. Steady water Jul-Aug critical.","easeStart":4,"easeGrow":4,"careFlags":["cabbage worm-prone (use floating row cover)","needs steady water or bulbs turn woody","harvest at tennis-ball size before bulbs split","frost-tolerant once established"],"timeline":["","indoor","indoor","transplant","grow","harvest","sow","grow","harvest","harvest","",""],"notes":"Harvest Konan at 2-3 in (tennis-ball size); leaving it longer in shade gives woody, pithy bulbs. A summer-sown fall crop is the most reliable here.","_hint":"Direct sow or transplant. Fast brassica, tolerates shade. Cabbage worms.","id":21,"category":"Brassicas","sun":"Partial shade","startTag":"Either","traits":["Pest-prone"]},{"crop":"Bunching onion / scallion","varieties":"Guardsman","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat needed; scallions are direct-sown outdoors and germinate fine in cool maritime soil without bottom heat.","germTempF":"50-75F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"mid-Apr through Aug (succession every 3-4 wks)","daysToHarvest":"55-65 days","harvestWindow":"Jun through Nov (overwinters mild years)","spacing":"1/2 in apart, rows 4-6 in; no thinning needed","waterNote":"Even moisture spring-fall; shallow roots dislike drying out. Drip 2-3x/wk in dry Jul-Aug, minimal in winter.","easeStart":4,"easeGrow":5,"careFlags":["slow germination in cold soil","shade-tolerant","overwinters in mild PNW winters","cut-and-come-again"],"timeline":["","","","sow","sow","harvest","harvest","sow","harvest","harvest","harvest","grow"],"notes":"Sow in succession every 3-4 weeks and harvest by cutting outer stalks 1 in above soil; Guardsman regrows for repeated cut-and-come-again pickings.","_hint":"Direct sow, cut as needed. Very low maintenance.","id":22,"category":"Alliums","sun":"Partial shade","startTag":"Direct sow","traits":["Overwinters","Succession-sow"]},{"crop":"Garlic","varieties":"Hardneck (German Red, Chesnok Red) — best for PNW; softneck Inchelium Red keeps longer","yard":"Front yard (full sun)","startMethod":"Plant cloves in fall (not seed)","heatMat":false,"heatMatNote":"No heat mat — garlic is grown from cloves planted directly in the soil once fall soil cools below ~60F.","germTempF":"n/a (plant cloves at soil <60F)","sowIndoor":"n/a","transplantOut":"n/a","directSow":"plant cloves Oct to early Nov, 2-3 in deep, pointed tip up, 6 in apart","daysToHarvest":"~240 days from fall planting to midsummer bulbs","harvestWindow":"Jun-Jul (scapes Jun; bulbs when lower leaves brown)","spacing":"6 in apart, rows 10-12 in","waterNote":"Winter rain is enough; water regularly Mar-Jun as bulbs swell (drip 2-3x/wk), then stop watering ~2 wks before harvest so skins dry down.","easeStart":5,"easeGrow":5,"careFlags":["plant in fall — needs winter chill","hardneck = harvest scapes in Jun","mulch 2-3 in straw over winter","rot risk in soggy soil — keep drainage open","buy disease-free seed garlic (not grocery store)"],"timeline":["","","","","","","grow","grow","harvest","harvest","sow","sow"],"notes":"Fall planting is the trick: get cloves in Oct-early Nov so they root before winter, then they need our winter chill to bulb up. Hardnecks suit the PNW best — snap off the curly scapes in June (pesto!) so the plant puts energy into the bulb. Harvest when the bottom 2-3 leaves brown (Jun-Jul), lift gently with a fork, and cure 2-3 wks in a dry airy spot out of sun. Full sun gives the biggest bulbs here. Rotate — don't follow any allium.","_hint":"Easiest crop in the garden: plant cloves on a rainy October day, mulch, ignore until June. One clove = one head.","id":29,"category":"Alliums","sun":"Full sun","startTag":"Direct sow","traits":["Overwinters","Low effort"]},{"crop":"Shallots","varieties":"Dutch Yellow / Dutch Red (fall-hardy); French hybrid Ambition or Pikant","yard":"Front yard (full sun)","startMethod":"Plant sets/cloves — fall or early spring","heatMat":false,"heatMatNote":"No heat mat — shallots go in as sets (small bulbs) either in fall with the garlic or as soon as the soil is workable in Feb-Mar.","germTempF":"n/a (sets sprout in cool soil above ~32F)","sowIndoor":"n/a","transplantOut":"n/a","directSow":"plant sets Oct-Nov (fall, like garlic) or Feb-Mar (spring); top of bulb 1 in below surface, point up","daysToHarvest":"~90 days spring planting; ~200+ fall planting","harvestWindow":"Jul-Aug (when tops brown and fall over)","spacing":"4-6 in apart, rows 15-18 in","waterNote":"Even moisture while growing (drip 2x/wk in dry spells); STOP watering as bulbs mature and pull back mulch so bulbs sit on the surface and dry down.","easeStart":5,"easeGrow":4,"careFlags":["each bulb makes a cluster of 6-10","fall OR early-spring planting","stop watering as bulbs size up","cure 2-3 wks before storing","keep weeded — shallow roots hate competition"],"timeline":["","","sow","sow","","grow","grow","harvest","harvest","","sow","sow"],"notes":"Puget Sound allows both windows: plant with the garlic in Oct-Nov for the biggest bulbs (they need the winter chill), or in Feb-Mar if you miss fall. Each set splits into a cluster of 6-10 shallots, so space them generously. Full sun = fatter bulbs. Keep the soil weed-free, stop watering as tops flop, lift when most tops have browned (Jul-Aug), then cure 2-3 weeks with tops attached before trimming to 1 in and storing cool and dry. Early finish means they're out before the ridgegourd vines fill the space.","_hint":"Plant like garlic but shallower (1 in). One set becomes a whole cluster — high value per square foot.","id":30,"category":"Alliums","sun":"Full sun","startTag":"Direct sow","traits":["Overwinters","Low effort"]},{"crop":"Peas (sugar snap)","varieties":"Super Sugar Snap","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat; peas are direct-sown outdoors and germinate fine in cool 45-55F soil.","germTempF":"45-70F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"late Feb-late Mar (spring); mid Jul-mid Aug (fall)","daysToHarvest":"60-70 days","harvestWindow":"May-Jun (spring); Sep-Oct (fall)","spacing":"2 in apart, rows 3-4 in along trellis","waterNote":"Keep evenly moist spring through harvest; drip 1 in/wk, more during dry Jul-Aug for fall crop establishment.","easeStart":5,"easeGrow":4,"careFlags":["needs tall trellis (~5-6ft)","birds eat seedlings","poor pod set in heat","powdery mildew late season"],"timeline":["","sow","sow","grow","harvest","harvest","sow","sow","harvest","harvest","",""],"notes":"Cover seedlings with netting or floating row cover until 4-6 in tall; birds will strip emerging pea sprouts in the partial-shade backyard.","_hint":"Direct sow early spring + fall. Needs a tall trellis (~5-6ft vines). Cool-season. Birds eat seedlings.","id":23,"category":"Legumes","sun":"Partial shade","startTag":"Direct sow","traits":["Needs trellis","Bolts in heat"]},{"crop":"Pole beans","varieties":"Blue Lake Pole","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No heat mat needed; pole beans are direct-sown, and seeds rot in cold soil regardless of indoor starting, so just wait for warm ground.","germTempF":"70-85F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"June (early-mid June safest; late May only in a warm year)","daysToHarvest":"60-70 days","harvestWindow":"Aug-Oct","spacing":"3-4 in apart, rows/poles 18-24 in apart","waterNote":"Consistent moisture once flowering/podding; drip 2-3x/week through dry Jul-Aug, ease off as fall rains return.","easeStart":4,"easeGrow":4,"careFlags":["slug-prone seedlings","needs tall trellis (6-8 ft)","frost-tender","wait for warm soil (>60F)","partial shade slows yield"],"timeline":["","","","","sow","sow","grow","harvest","harvest","harvest","",""],"notes":"Don't sow until soil is reliably above 60F (late May/June here) or seeds rot; protect emerging seedlings from slugs with bait or copper, as one wet night can wipe a whole row.","_hint":"Direct sow after soil warms; put at BRIGHTEST backyard end. Needs tall trellis. Slugs on seedlings.","id":24,"category":"Legumes","sun":"Partial shade","startTag":"Direct sow","traits":["Slug-prone","Needs trellis","Frost-tender"]},{"crop":"Cabbage","varieties":"Charmant F1 (savoy type)","yard":"Backyard (partial shade)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Use the heat mat briefly to hit 75-80F for fast, even germination, then remove it once sprouted so seedlings stay stocky in cool light.","germTempF":"70-85F","sowIndoor":"early-mid Jun (fall crop); Feb-early Mar (optional spring crop)","transplantOut":"mid-late Jul (fall); late Apr-early May (spring)","directSow":"n/a","daysToHarvest":"~65-75 days from transplant","harvestWindow":"late Sep-Nov (fall crop); holds in field through light frosts","spacing":"12-18 in apart, 18 in between rows","waterNote":"Consistent 1-1.5 in/week via drip all season; steady moisture prevents splitting. Dry Jul-Aug needs reliable irrigation; ease off as fall rains start.","easeStart":4,"easeGrow":3,"careFlags":["slug-prone","cabbage worm/looper magnet","needs insect netting/row cover","splits if watering uneven","heavy feeder"],"timeline":["","indoor","indoor","transplant","grow","indoor","transplant","grow","grow","harvest","harvest",""],"notes":"Cover with fine insect netting from transplant day onward; this is the single most effective control for cabbage worms/loopers and slugs, which are relentless on brassicas in the shaded maritime backyard.","_hint":"Start indoors or transplant. Cool-season, good for fall. Cabbage worms/slugs - net it.","id":25,"category":"Brassicas","sun":"Partial shade","startTag":"Indoor start","traits":["Slug-prone","Pest-prone"]},{"crop":"Cauliflower","varieties":"Snow Crown (F1, ~50-60 days from transplant, reliable and relatively heat-forgiving for a cauliflower)","yard":"Backyard (partial shade)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Use the heat mat to hit 70-75F for fast, even germination, then move seedlings off it immediately to cool, bright conditions so they don't stretch.","germTempF":"70-80F","sowIndoor":"late Jun to mid Jul (fall crop); optional early Mar for a spring crop","transplantOut":"late Jul to early Aug (fall); mid-late Apr (spring)","directSow":"n/a","daysToHarvest":"~55-65 days from transplant","harvestWindow":"late Sep to Nov (fall crop); partial shade adds ~1-2 wks","spacing":"18 in apart, 24 in between rows","waterNote":"Constant even moisture is critical; 1-1.5 in/wk on drip, more in dry Jul-Aug. Any check in moisture causes buttoning or ricey heads.","easeStart":4,"easeGrow":2,"careFlags":["fussiest brassica","needs steady moisture or buttons","cabbage worm magnet (use floating row cover)","heavy feeder","fall crop best","may need blanching for white heads"],"timeline":["","","indoor","transplant","grow","indoor","grow","transplant","grow","harvest","harvest",""],"notes":"Grow it as a fall crop timed to mature in the cooling weather of Oct-Nov: heads set in cool, moist conditions, while summer-maturing heads button or go ricey. Keep under row cover from transplant to block cabbage worms.","_hint":"Start indoors, transplant. Fussiest brassica - steady moisture, fall crop best. Cabbage worms.","id":26,"category":"Brassicas","sun":"Partial shade","startTag":"Indoor start","traits":["Pest-prone"]},{"crop":"Tomato","varieties":"'Sungold' (early indeterminate cherry, reliably ripens), 'Stupice' (cold-tolerant, ~55 days), 'Oregon Spring' or 'Legend' (early determinate slicers; Legend has late-blight resistance)","yard":"Front yard (full sun)","startMethod":"Start indoors then transplant","heatMat":true,"heatMatNote":"Tomato seed germinates fast and evenly only in warm soil (70-85F, ideally 75-85F); on a cool indoor windowsill germination stalls below 65F and seed can rot, so the heat mat is the single biggest difference-maker for strong, even starts. Pull seedlings off the mat once sprouted.","germTempF":"70-85F","sowIndoor":"Late March to mid-April (about 6-8 weeks before transplant)","transplantOut":"Mid-May to early June, once soil hits 50-60F and nights hold above ~55F (the threshold for fruit set—below 55F pollen fails and blossoms drop). Use wall-o-water or black plastic to bank heat and push 2-4 weeks earlier.","directSow":"n/a (season too short and cool to direct sow)","daysToHarvest":"55-72 days from transplant (pick early/short-season types; in our cool summers anything over ~72 days rarely ripens before fall rain/blight)","harvestWindow":"Late July through October (cherries first; bring green fruit indoors before cold/blight in Oct)","spacing":"18-24 in apart in-row, 36 in between rows; cherries/indeterminates need the wider end","waterNote":"Water deeply and consistently at the soil line (never overhead) 1+ in/week through the dry July-August stretch to prevent blossom-end rot and cracking; water early in the day and keep foliage dry to slow late blight.","easeStart":4,"easeGrow":3,"careFlags":["frost-tender","needs trellis","blossom drop in cool nights","late blight in wet weather","needs warmest microclimate"],"timeline":["","","indoor","indoor","transplant","grow","harvest","harvest","harvest","harvest","",""],"notes":"In our cool maritime summers, variety choice is make-or-break: stick to early/short-season cherry and determinate types (Sungold, Stupice, Oregon Spring, Legend) that ripen in ~72 days or less, and give them the hottest full-sun front yard with black plastic mulch or a wall-o-water to bank heat. Nights below 55F cause blossom drop, so don't rush transplants out before mid-May and protect young plants. Sungold and other cherries are indeterminate and need 6-ft+ stakes/cages; even determinate slicers should be staked. Late blight is the big killer here in our wet shoulder seasons, so water only at the soil line early in the day, prune for airflow, stake to keep foliage off the ground, and pick remaining fruit before the October rains set in.","_hint":"Pick short-season varieties (~72 days or less), bank heat in the sunniest part of the front yard, and never wet the leaves.","id":27,"category":"Fruiting (heat-lover)","sun":"Full sun","startTag":"Indoor start","traits":["Frost-tender","Needs trellis","Pest-prone"]},{"crop":"Fenugreek (methi)","varieties":"Common methi (Trigonella foenum-graecum) bulk seed sown thickly for saag; Kasuri methi for a finer, more aromatic small-leaf type. Plain culinary/spice fenugreek seed from West Coast Seeds or Territorial works fine and is far cheaper than packet quantities.","yard":"Backyard (partial shade)","startMethod":"Direct sow","heatMat":false,"heatMatNote":"No mat needed: fenugreek is a cool-tolerant legume that germinates at 50-65F soil and is direct-sown anyway, so the heat mat brings no real advantage.","germTempF":"60-75F ideal; sprouts slowly at 50-55F","sowIndoor":"n/a","transplantOut":"n/a","directSow":"Mid-Apr through mid-Sep; succession sow a fresh patch every 2-3 weeks. First sowing germinates slowly in cold maritime soil (50-55F), so the first reliable flush is late Apr-May. Spring (Apr-May) and fall (late Aug-Sep) sowings give the mildest, slowest-bolting leaves; skip mid-summer sowings or expect fast bolting and bitter foliage.","daysToHarvest":"25-40 days from sowing to first leaf cut (~25 in warm spells, 35-40 in cool spring)","harvestWindow":"May through October (peak in spring and again in fall)","spacing":"Broadcast or sow ~1/2-1 in apart in bands; thin to 2-4 in for leafy clumps, rows 4-6 in apart. For saag, grow it thick like a baby-green carpet.","waterNote":"Keep the seedbed evenly moist for fast germination and tender leaves; it needs steady water through the dry July-August stretch or it bolts and toughens early.","easeStart":5,"easeGrow":4,"careFlags":["bolts in heat","slug-prone","succession sow","direct sow only (taproot)","cut-and-come-again"],"timeline":["","","","sow","sow","harvest","harvest","sow","sow","harvest","",""],"notes":"Direct sow only and never transplant: the taproot resents disturbance, so scatter seed thickly right in the partial-shade backyard alongside spinach, coriander, and arugula. Fast and easy (leaves in ~4-5 weeks) and cool-tolerant into the 40sF and through light frost, but cold maritime soil germinates it slowly, so the first April sowing is your slowest. Bolts quickly and turns bitter in the hot, dry July-August heat, so favor spring and late-summer/fall sowings and keep succession-sowing every 2-3 weeks. The biggest threat here is slugs mowing down the tender seedlings overnight, so bait or trap from the day you sow.","_hint":"Sow it thick like a lawn, cut at 8-10 in, and bait slugs the moment seedlings break ground.","id":28,"category":"Leafy greens","sun":"Partial shade","startTag":"Direct sow","traits":["Bolts in heat","Slug-prone","Succession-sow"]},{"crop":"Amaranth (thotakura/chaulai)","varieties":"Leafy vegetable amaranth (Amaranthus tricolor), green or red-leaf types; cultivar not specified","yard":"Front yard (full sun)","startMethod":"Either (direct sow or young transplants)","heatMat":false,"heatMatNote":"Optional for indoor starts: aim for 75-80F soil if the room is cool, then remove bottom heat after emergence. No mat needed for direct sowing into warm soil.","germTempF":"70-80F ideal; wait for outdoor soil at least 65F, preferably near 70F","sowIndoor":"early to mid May, about 4-5 weeks before June planting","transplantOut":"early to mid Jun after hardening off; soil at least 65F and nights consistently above 50F","directSow":"Jun through late Jul once soil is warm; cover tiny seeds only 1/8-1/4 in deep and succession sow every 2-3 weeks","daysToHarvest":"~30 days from transplant or 40-50 days from direct sowing; slower in cool weather","harvestWindow":"Jul-Sep; early Oct only while weather stays mild, before frost","spacing":"Thin to 6 in apart for leafy harvests, rows 12-18 in apart; keep a sunny strip clear of vines and sunflower shade","waterNote":"Keep the shallow seedbed evenly moist until emergence. Water at soil level through dry summer spells; drought brings earlier flowering and fewer tender leaves, but avoid waterlogging.","easeStart":4,"easeGrow":4,"careFlags":["warm-season leafy green","frost-tender","tiny seed - sow shallowly","succession sow","cut-and-come-again","slug-prone seedlings","pinch flowering tips","can self-seed"],"timeline":["","","","","indoor","transplant","harvest","harvest","harvest","harvest","",""],"notes":"Use a sunny front-yard patch, outside the shade of the cucumber arch and sunflowers. Start with a small patch and keep it regularly cut so it does not crowd nearby crops. This is a summer green: wait for warm soil rather than following the spring spinach schedule. Pick tender leaves and shoot tips, leaving lower leaves for regrowth; pinch developing flower spikes to prolong leaf harvest and prevent unwanted self-seeding. October harvest is weather-dependent; finish before frost. Growing references: <a href=\"https://www.johnnyseeds.com/growers-library/vegetables/greens/vegetable-amaranth-key-growing-information.html\" target=\"_blank\" rel=\"noopener noreferrer\">Johnny's growing guide</a> and <a href=\"https://portal.ct.gov/-/media/caes/documents/publications/fact_sheets/forestry_and_horticulture/howtogrowvegetableamaranthinconnecticutpdf.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Connecticut growing guide</a>.","_hint":"Summer thotakura/chaulai in a sunny front-yard patch. Sow shallowly into warm soil, succession sow, and pick tender tips for repeat harvests.","id":31,"category":"Leafy greens","sun":"Full sun","startTag":"Either","traits":["Frost-tender","Slug-prone","Succession-sow"]}],"chores":[{"month":"Jan","chores":[{"category":"Soil prep / cover crop / cleanup","items":["Backyard — plan fall crop rotation (Brassicas->Legumes->Roots->Greens); order row cover, Sluggo, seeds","Front arches — inspect/repair cattle-panel arches and T-posts before spring"]},{"category":"Harvest","items":["Spinach — pick overwintered Olympia leaves on mild spells"]}]},{"month":"Feb","chores":[{"category":"Start seeds indoors (heat mat)","items":["Peppers — sow on heat mat, 80-85F (slow germ, start early)","Kohlrabi — sow spring crop on heat mat 70-75F, move off mat once sprouted"]},{"category":"Direct sow / succession sow","items":["Spinach — direct sow spring crop, cool soil 45-65F","Peas — direct sow spring Super Sugar Snap along trellis"]},{"category":"Harvest","items":["Spinach — continue picking overwintered leaves"]},{"category":"Slug & pest patrol","items":["Spinach, peas — Sluggo at emergence; net peas from birds"]}]},{"month":"Mar","chores":[{"category":"Start seeds indoors (heat mat)","items":["Peppers — continue on heat mat, 80-85F","Eggplant — sow on heat mat, 80-85F (slowest, sow early)","Tomatillo — sow on heat mat, 75-85F (plant 2+ for pollination)","Roselle — sow on heat mat, 75-85F","Marigold — sow on heat mat, 70-75F","Lettuce — optional first flush, cool room temp (no mat)","Sorrel — start indoors, cool room temp","Cabbage — optional spring crop on heat mat, off once sprouted","Cauliflower — optional spring crop on heat mat, off once sprouted","Kohlrabi — continue spring starts on heat mat","Tomato — sow on heat mat, 70-85F; pick early/short-season types (Sungold, Stupice, Oregon Spring, Legend)"]},{"category":"Direct sow / succession sow","items":["Spinach — continue spring sowings","Arugula — direct sow, float row cover for flea beetles","Radish — direct sow Cherry Belle/Easter Egg, succession every 2-3 wks","Peas — finish spring sowing late Mar"]},{"category":"Harden off & transplant out","items":["Peppers, eggplant — pot up before rootbound, fertilize lightly at true leaves"]},{"category":"Harvest","items":["Spinach — peak spring picking"]},{"category":"Slug & pest patrol","items":["Arugula, radish — row cover at sowing vs flea beetles/root maggot","Lettuce, spinach — Sluggo around seedlings, reapply after rain","Peppers — watch aphids on indoor starts, blast with water/soap"]}]},{"month":"Apr","chores":[{"category":"Start seeds indoors (heat mat)","items":["Bottlegourd — soak/nick seed, sow on heat mat 85-90F","Bitter gourd — soak/nick seed, sow on heat mat 80-90F","Okra — soak seed, sow on heat mat 80-90F","Basil — sow on heat mat 75-80F","Tomatillo — continue indoors 75-85F","Roselle — continue indoors 75-85F","Marigold — continue indoors 70-75F"]},{"category":"Direct sow / succession sow","items":["Arugula — continue spring succession","Radish — succession sow every 2-3 wks","Cilantro — direct sow only (taproot), succession every 2-3 wks","Beet — direct sow, succession every 3 wks","Scallion — direct sow Guardsman, succession","Carrot — direct sow, keep surface constantly moist; cover row with board/burlap","Fenugreek (methi) — direct sow only (taproot); sow thick for saag, succession every 2-3 wks"]},{"category":"Harden off & transplant out","items":["Lettuce — transplant out (skips slug-prone seedling stage)","Sorrel — transplant out / direct sow","Marigold — harden off for mid-late May set","Cabbage, cauliflower, kohlrabi — transplant spring crop late Apr-May","Eggplant, peppers — harden off 7-10 days (do NOT plant out yet, soil too cold)","Tomato — pot up before rootbound; harden off late Apr but do NOT plant out yet (nights too cold)"]},{"category":"Watering","items":["Front drip — light ~1x/week as soil warms, rain still falling","Backyard drip — 1-2x/week; keep carrot/beet surface moist to germinate"]},{"category":"Feed & mulch","items":["Front heavy feeders (gourds, eggplant, pepper) — work compost into the soil","Brassicas — amend with compost (heavy feeders)"]},{"category":"Slug & pest patrol","items":["Lettuce, sorrel — Sluggo at transplant, copper tape on individual cloches, reapply after rain","Arugula, radish, carrot — row cover vs flea beetles/rust fly/root maggot","Spinach, beet — remove leaf-miner-mined leaves","Fenugreek (methi) — Sluggo from the day seedlings emerge (slugs love the tender shoots)"]},{"category":"Harvest","items":["Spinach — finishing spring crop","Lettuce, sorrel — first cuttings","Radish — earliest pulls late Apr","Arugula — baby-leaf cutting"]}]},{"month":"May","chores":[{"category":"Start seeds indoors (heat mat)","items":["Ridgegourd — soak seed, sow on heat mat 85-95F","Cucumber — sow on heat mat 75-85F (peat pots, resents root disturbance)","Amaranth (thotakura/chaulai) — optional indoor start early-mid May, 75-80F soil; heat mat only if needed, off after emergence"]},{"category":"Direct sow / succession sow","items":["Sunflowers — begin direct sowing, succession every 2-3 wks","Carrot — sow, keep surface moist; succession every 3 wks","Dill — direct sow only (taproot), succession every 3 wks","Scallion — continue succession","Pole beans — direct sow late May once soil >60F","Peas — last spring sowing; cilantro, radish, beet, arugula, spinach continue succession","Fenugreek (methi) — continue spring succession sowing"]},{"category":"Harden off & transplant out","items":["Tomatillo — transplant out, cage it (2+ plants)","Roselle — transplant out late May","Marigold — transplant out among heat-lovers","Peppers, cucumber — transplant late May once nights >50F","Cabbage, cauliflower — finish spring transplants","Tomato — transplant out mid-late May once nights hold >55F; cage/stake and lay black plastic mulch to bank heat"]},{"category":"Watering","items":["Front drip — light ~1x/week, increasing as plants set","Backyard drip — 1-2x/week, even moisture for greens and roots"]},{"category":"Feed & mulch","items":["Front heat-lovers — lay black plastic/landscape fabric mulch to bank soil heat","Eggplant — deploy wall-o-water for heat"]},{"category":"Trellis / train / prune / pollinate","items":["Tomatillo — cage (not a climber)","Peas — train onto 4-6 ft net trellis on north side","Sorrel — pinch flower stalks","Tomato — set 6 ft stakes/cages at transplant (Sungold and the cherries are indeterminate)"]},{"category":"Slug & pest patrol","items":["Sunflower, cucumber, marigold seedlings — Sluggo, hand-pick at night first 2-3 wks","Pole bean seedlings — Sluggo/copper, net from birds","Eggplant — row cover at transplant vs flea beetles","Brassicas — insect netting from transplant day; Bt if worms appear"]},{"category":"Harvest","items":["Lettuce, spinach, sorrel, arugula — steady spring picking","Radish, beet — pulling","Scallion — first cuttings","Fenugreek (methi) — first leaf cuttings from the April sowing"]}]},{"month":"Jun","chores":[{"category":"Start seeds indoors (heat mat)","items":["Cabbage — sow fall crop on heat mat early-mid Jun, off mat once sprouted","Cauliflower — sow fall crop on heat mat late Jun, off mat once sprouted"]},{"category":"Direct sow / succession sow","items":["Sunflowers — continue succession sowing","Dill — succession sow every 3 wks","Pole beans — sow through mid Jun","Carrot, beet, scallion, cilantro, radish — continue succession (heat-tolerant only)","Amaranth (thotakura/chaulai) — direct sow a sunny front-yard patch once soil is at least 65F (ideally near 70F); cover seed 1/8-1/4 in and keep moist"]},{"category":"Harden off & transplant out","items":["Bottlegourd, ridgegourd, bitter gourd — transplant to front arches after soil >65F","Okra — transplant against south wall, soil >65F, nights >55F","Eggplant — transplant out with black mulch/wall-o-water","Basil — transplant out, nights >50F","Peppers, cucumber, tomatillo, roselle, marigold — finish transplanting","Tomato — finish transplanting by early Jun; mulch with black plastic and water at the soil line","Amaranth (thotakura/chaulai) — harden off May starts for 7-10 days, then transplant young plants into warm front-yard soil; thin/space to 6 in"]},{"category":"Watering","items":["Front drip — ~2x/week, 30-45 min, deeper as plants size up","Backyard drip — 1-2x/week, even moisture"]},{"category":"Feed & mulch","items":["Gourds, eggplant, pepper — finalize black plastic mulch this week before dry stretch","Cabbage — side-dress (heavy feeder)"]},{"category":"Trellis / train / prune / pollinate","items":["Gourds — train vines up arches with soft ties, lauki on strongest arch","Cucumber, ridgegourd — train up second arch","Pole beans — set 6-8 ft trellis/teepee","Basil — pinch tops weekly; sorrel — pinch flower stalks","Marigold — deadhead for continuous bloom"]},{"category":"Slug & pest patrol","items":["Pole bean, basil, marigold seedlings — Sluggo, hand-pick at night","Brassicas — keep under insect netting, Bt for cabbage worms","Cucumber — watch cucumber beetles, hand-pick","Amaranth (thotakura/chaulai) — inspect tender seedlings for slugs and leaf-chewing pests; protect from emergence"]},{"category":"Harvest","items":["Lettuce, spinach, sorrel, arugula — last before summer heat","Peas — spring pods peak","Beet, radish, scallion — pulling","Cilantro — leaf harvest","Kohlrabi — first spring bulbs at tennis-ball size","Fenugreek (methi) — cut the spring flushes before July heat bolts them"]}]},{"month":"Jul","chores":[{"category":"Direct sow / succession sow","items":["Sunflowers — finish succession through mid-Jul","Carrot — sow fall storage crop","Kohlrabi — direct sow reliable fall crop","Dill — last succession mid-Jul","Cilantro — hold for late-Jul fall sowing","Peas — sow fall crop mid-Jul-mid-Aug","Cabbage — direct/transplant timing; scallion, beet continue","Amaranth (thotakura/chaulai) — succession sow every 2-3 weeks through late Jul in warm soil; keep the seedbed evenly moist"]},{"category":"Harden off & transplant out","items":["Cabbage — transplant fall crop mid-late Jul under netting","Cauliflower — transplant fall crop late Jul"]},{"category":"Watering","items":["Front drip — CRITICAL dry stretch: 3-4x/week or daily short cycles for cucurbits, ~1.5 in/wk, early morning","Backyard drip — 2-3x/week, watch shallow-rooted greens, keep carrot/beet/brassica moisture steady"]},{"category":"Feed & mulch","items":["Gourds, eggplant, pepper, cabbage, cauliflower — feed heavy feeders; mulch heavily for moisture retention"]},{"category":"Trellis / train / prune / pollinate","items":["Gourds — hand-pollinate female flowers (lauki at dusk, karela/turai AM); pinch growing tips at arch top","Cucumber — hand-pollinate if bee activity low","Basil — pinch to prevent bolting; sorrel — pinch flower stalks","Marigold — deadhead; pole beans — keep training up trellis","Tomato — tie up weekly, remove lower leaves and suckers for airflow (late-blight defense)"]},{"category":"Slug & pest patrol","items":["Fall brassica transplants — insect netting from day one, Bt for worms","Eggplant — flea beetle watch under cover","Cucumber — cucumber beetle and aphid watch","New seedlings — Sluggo, reapply after watering","Tomato — water at the soil line only; scout for late blight in damp spells and strip affected leaves"]},{"category":"Harvest","items":["Cucumber — first slicers/picklers","Eggplant, peppers — first fruit","Roselle — Gongura leaf harvest begins","Basil — pinch-harvesting","Dill, cilantro — leaf/seed harvest","Scallion, carrot — pulling","Sunflowers — earliest blooms","Tomato — first cherries (Sungold) ripen late Jul","Fenugreek (methi) — last spring leaves; let a patch bolt for seed if wanted, then pause sowing through midsummer","Garlic scapes — snap curly scapes so heads size up (pesto!)","Amaranth (thotakura/chaulai) — begin picking tender leaves and shoot tips; leave lower leaves to regrow"]}]},{"month":"Aug","chores":[{"category":"Direct sow / succession sow","items":["Spinach — sow fall crop late Aug","Arugula — sow fall crop late Aug","Cilantro — sow fall crop (longest leaf window)","Lettuce — final succession sowing","Beet — sow fall crop","Radish — sow fall crop late Aug","Scallion — last succession sow","Peas — finish fall sowing mid-Aug","Fenugreek (methi) — resume sowing late Aug for mild fall saag"]},{"category":"Watering","items":["Front drip — peak dry stretch: 3-4x/week or daily for cucurbits, ~1.5 in/wk, early morning","Backyard drip — 2-3x/week; keep fall-sown greens surface moist"]},{"category":"Feed & mulch","items":["Gourds, peppers, eggplant — continue feeding heavy feeders; maintain mulch"]},{"category":"Trellis / train / prune / pollinate","items":["Gourds — keep hand-pollinating, support heavy lauki fruit with slings","Cucumber — hand-pollinate, keep picking to extend set","Basil — pinch to delay bolting; marigold — deadhead","Sunflowers — stake tall types in wind"]},{"category":"Slug & pest patrol","items":["Fall greens seedlings — Sluggo at sowing, hand-pick at night, copper tape on individual cloches","Arugula, radish — row cover vs flea beetles","Brassicas — netting on, Bt for worms; net pea/bean seedlings from birds","Basil, peas — watch downy/powdery mildew, remove affected leaves"]},{"category":"Harvest","items":["Bottlegourd, ridgegourd, bitter gourd — first gourds late Aug","Cucumber, eggplant, peppers, tomatillo — full production","Okra — sparse picking","Roselle — Gongura leaves","Pole beans — first beans","Sunflowers — blooms","Basil — harvest","Spinach, lettuce, arugula, beet, scallion, carrot — earlier sowings","Tomato — full production (cherries and early slicers)","Shallots — lift when tops brown & flop; cure 2-3 wks before storing","Amaranth (thotakura/chaulai) — repeat leaf/tip harvests, pinch flower spikes, and keep watered for tender regrowth"]}]},{"month":"Sep","chores":[{"category":"Direct sow / succession sow","items":["Spinach — sow fall + overwinter crop","Arugula — finish fall sowing","Cilantro — finish fall sowing","Fenugreek (methi) — finish fall sowing early-mid Sep"]},{"category":"Watering","items":["Front drip — taper to 2x/week as nights cool and rain returns","Backyard drip — ~1x/week as cool season resumes"]},{"category":"Trellis / train / prune / pollinate","items":["Gourds — last hand-pollinations; pinch tips to push remaining female flowers","Cucumber — keep picking","Marigold — deadhead; sunflowers — net heads as seeds fill vs birds"]},{"category":"Slug & pest patrol","items":["Fall greens — Sluggo, reapply after rain, hand-pick at night","Brassicas — keep netting on, Bt as needed","Sunflower heads — net/paper-bag vs birds"]},{"category":"Harvest","items":["Bottlegourd, ridgegourd, bitter gourd — peak gourd harvest","Cucumber, eggplant, peppers, tomatillo — continuing","Okra — last sparse picking","Roselle — Gongura leaves","Sunflowers — blooms and maturing seed heads","Pole beans — picking","Basil, lettuce, arugula, scallion — picking","Kohlrabi, cabbage, cauliflower — first fall heads/bulbs","Carrot, beet — pulling","Tomato — keep picking; pinch growing tips to push ripening before cold","Amaranth (thotakura/chaulai) — continue picking tender leaves while warm; remove flower spikes before seed sets"]}]},{"month":"Oct","chores":[{"category":"Direct sow / succession sow","items":["Garlic & shallots — plant cloves/sets Oct to early Nov (soil <60F), tip up, mulch 2-3 in straw"]},{"category":"Direct sow / succession sow","items":["Spinach — finish overwinter sowing early Oct"]},{"category":"Watering","items":["Front drip — OFF, rely on rain","Backyard drip — taper to off as fall rains take over"]},{"category":"Trellis / train / prune / pollinate","items":["Sunflowers — net/bag maturing seed heads vs birds","Dill — let a final plant flower to feed beneficials and self-sow"]},{"category":"Slug & pest patrol","items":["Fall greens and brassicas — continue Sluggo and netting through harvest"]},{"category":"Harvest","items":["Eggplant, peppers, tomatillo — last warm fruit if mild","Roselle — final Gongura leaves before frost","Sunflowers — mature seed heads","Pole beans — last beans","Spinach, arugula, lettuce, scallion — fall greens","Cilantro — fall leaf","Carrot, beet — storage roots; radish — fall pulls","Cabbage, cauliflower — fall heads","Kohlrabi — fall bulbs","Tomato — pick all fruit (ripe and green) before the October rains/blight; ripen green ones indoors","Fenugreek (methi) — fall leaf harvest before hard frost","Amaranth (thotakura/chaulai) — take final tender leaves in mild early-Oct weather, before frost"]},{"category":"Soil prep / cover crop / cleanup","items":["Front-yard cucurbits/nightshades — pull spent frost-tender vines after first frost, rotate cucurbits<->nightshades for next year","Carrot — mulch to hold in ground for sweeter Nov roots","Amaranth (thotakura/chaulai) — remove spent plants after cold weather ends growth; collect seed heads before they shed"]}]},{"month":"Nov","chores":[{"category":"Watering","items":["Both yards — drip off, rely on rain"]},{"category":"Harvest","items":["Carrot — sweetened storage roots into Nov","Cabbage, cauliflower — holding in field through light frosts","Scallion — picking","Beet — last roots","Spinach — overwinter crop establishing (light picks)","Sorrel — last tender leaves on mild spells"]},{"category":"Soil prep / cover crop / cleanup","items":["Backyard — clean spent crops, plan 3-year family rotation","Overwinter crops — cloche spinach/scallions/sorrel for winter harvest"]}]},{"month":"Dec","chores":[{"category":"Harvest","items":["Spinach — overwintered Olympia under cloche on mild spells","Scallion — overwintering, light cuts"]},{"category":"Soil prep / cover crop / cleanup","items":["Both yards — winter rest; tidy debris (cuts slug habitat), order next-year seeds and plan rotations"]}]}],"synth":{"rightNowJune":["Reality check: it is mid-June, so the warm-season indoor starts on the heat mat (gourds, eggplant, peppers, tomato, okra, cucumber, basil, tomatillo, roselle) needed to be sown back in late Mar-Apr. Starting them from seed now will not give mature fruit before the ~Nov 15 frost. For tomato, peppers, eggplant, tomatillo, cucumber, and basil: BUY established nursery starts this week and transplant immediately into the warm front-yard soil (it is finally >60F).","Gourds (lauki, turai, karela): these are already marginal in cool Sammamish summers and now very late. Buy the largest gourd/cucurbit starts you can find, or accept lauki/cucumber as the only realistic croppers; treat ridgegourd and karela as an experiment. Get them onto the front arches NOW so vines have maximum July-Aug heat. Use black plastic mulch or a wall-o-water at the base to bank heat.","Direct-sow the fast warm crops that still have time: sunflowers (start your 2-3 week succession now through mid-July), bush/pole beans (soil is warm enough), and more cucumber if you cannot find starts. Okra and roselle are honestly not worth sowing this late in 8b; skip or buy a start as a novelty.","Backyard cool-season crops: skip a midsummer spinach/cilantro/methi/arugula sowing (they will bolt in July) and instead plant heat-tolerant lettuce, beets, carrots, scallions, and chard-like greens now in the shade. Hold the bulk of brassicas (cabbage, cauliflower, kohlrabi) and a big arugula/spinach/cilantro/methi succession for the late-July/August FALL sowing window, which is the better PNW slot anyway.","Sow peas only if you missed the spring crop and want a fall crop - hold until late July; in midsummer heat they set pods poorly (peas do not bolt). Plant pole beans now in the backyard if not already in (partial shade slows them but they will produce).","Get drip and mulch finalized this week: the dry July-Aug stretch is coming and the front-yard heat-lovers need even moisture from day one to avoid blossom drop and bitter cucumbers.","Hand-pollination prep: once gourds flower (lauki opens at night), plan to hand-pollinate every evening/morning - bee activity is too low here for reliable set. Mark this on the calendar now."],"heatMatGuide":"\"Heat mat is for GERMINATION ONLY, not for growing on. All the front-yard heat-lovers flagged heatMat=true belong on it at seeding: bottlegourd, ridgegourd, bitter gourd, cucumber, eggplant, okra, peppers, tomatillo, roselle, basil, marigold, plus backyard kohlrabi/cabbage/cauliflower if you start those indoors. Target 75-90F at the soil surface (use the mat's probe or a soil thermometer): okra and the gourds (lauki/turai/karela) want it warmest (85-90F), peppers/eggplant 80-85F, cucumber and basil 75-85F, brassicas 70-75F. The instant 50-75% of a tray has emerged, take that tray OFF the mat and put it under bright light at cooler room temp - leaving sprouted seedlings on heat makes them leggy. Bitter gourd, okra, and the gourds also need their hard seed coats soaked 24h (and nicked for karela/lauki) before they go on the mat. For summer sowing, use the heat mat for cabbage/cauliflower starts in late June-July for the fall crop, or for a late basil tray. Amaranth can be direct-sown into warm June soil; its optional May indoor starts benefit from 75-80F soil, with a heat mat only if the room is cool.\"","slugStrategy":"\"Maritime Sammamish is prime slug country, worst in the wet shaded backyard and on any soft seedling. Highest-risk crops: cucumber/basil/marigold/sunflower seedlings in front; lettuce, spinach, cilantro, dill, cabbage, pole-bean seedlings, and all young brassicas in the shaded backyard. Strategy: (1) Set out iron-phosphate bait (Sluggo/Sluggo Plus) - safe around pets/wildlife - the moment any direct-sown or transplanted seedling goes in, and re-bait after rain. (2) Hand-pick at night with a flashlight during the first 2-3 weeks after sowing, which is when slugs do the real damage. (3) Use copper tape rings on individual cloches for the most vulnerable backyard greens. (4) Keep drip emitters from over-wetting the soil surface and clear mulch/debris a few inches back from seedling stems to remove daytime hiding spots. (5) Start slug-prone crops as transplants where allowed (lettuce, basil, marigold) so they skip the most vulnerable seedling stage in open ground.\"","companionAndPests":"\"Basil and marigold are your interplanting workhorses in the full-sun front yard: tuck basil among peppers, eggplant, and tomatillo (shared heat needs, basil may deter some pests and uses the space), and ring the gourd arches and nightshades with marigold to help suppress root-knot nematodes and pull in pollinators/beneficials - important here given low bee activity. Deadhead marigolds and pinch basil to keep both productive. Pest groups and organic controls: (1) Brassicas (cabbage, cauliflower, kohlrabi) = cabbage worm/looper magnets - cover with floating row cover/insect netting from transplant day and spray Bt (Bacillus thuringiensis) if caterpillars appear. (2) Flea beetles hit arugula, radish, and eggplant - same row cover, plus the cover doubles for carrot rust fly on carrots and root maggot on radish. (3) Cucumber beetles on cucumber and aphids on indoor pepper starts - inspect early, blast aphids with water or insecticidal soap, hand-pick beetles. (4) Leaf miner on spinach/beet greens - remove and destroy mined leaves, use row cover. (5) Slugs everywhere (see slug plan). Net sunflower heads as seeds mature to beat the birds, and net pea/bean seedlings from birds too. Dill left to flower is a deliberate beneficial-insect attractor - let some bolt at season's end to feed predators of aphids and worms.\"","trellisGuide":"\"Front yard, two arch tunnels: dedicate the strongest, tallest arch to bitter gourd and bottlegourd (lauki sprawls 15 ft and lauki/karela want to hang fruit down through the arch where it grows straight) and the second arch to ridgegourd plus cucumber. Build/anchor arches as sturdy cattle-panel or heavy-gauge welded-wire hoops on driven T-posts or rebar - a heavy gourd vine in an August wind will flatten anything flimsy. Train vines up with soft ties for the first few feet, then let tendrils take over; use slings (old t-shirt/netting cradles) to support heavy lauki fruit so the vine does not tear. Tomatillo is NOT a climber - cage it (it sprawls and needs support, and remember you must grow at least 2 plants for pollination/fruit set). Backyard trellises: give sugar-snap peas a 4-6 ft net/pea-netting trellis on the north side of the planting area so they do not shade everything, and pole beans a tall 6-8 ft trellis or teepee - both fix nothing if they flop. Orient all trellises/arches N-S or put tall structures on the north edge so they do not cast shade onto shorter front-yard heat-lovers that can least afford lost sun.\"","wateringSummary":"\"Both yards are on drip - tune by zone and month. FRONT (full sun, heat-lovers): cucumbers and gourds demand EVEN moisture (uneven water = bitter cukes and dropped/aborted gourd fruit), eggplant/pepper drop blossoms if stressed. Apr-May: light, ~1x/week as soil warms and rain still falls. June: ~2x/week, 30-45 min, deeper as plants size up. Jul-Aug (the dry stretch, no rain): the critical period - 3-4x/week or daily short cycles for cucurbits, aiming for ~1.5 in/week total, early-morning runs; mulch heavily (black plastic for the heat-lovers doubles as moisture retention). Sep: taper to 2x/week as nights cool and rain returns. Oct: off, rely on rain. BACKYARD (partial shade, cool-season): needs noticeably LESS than the front - shade plus cooler soil holds moisture. But carrots and beets need constant surface moisture to germinate and even moisture to avoid woody/forked roots, and cabbage/cauliflower/kohlrabi split or button without steady water. Apr-June: 1-2x/week. Jul-Aug: 2-3x/week, watch the shallow-rooted greens. Sep-Oct: 1x/week then off. Run drip in early morning everywhere to cut slug-friendly overnight surface wetness and downy/powdery mildew on basil and peas.\"","rotationPlan":"Track crop families across years in both yards to avoid soilborne disease and pest buildup, and to balance heavy feeders. FRONT YARD (full sun) families: Cucurbits (lauki, turai, karela, cucumber), Nightshades (eggplant, pepper, tomatillo), Alliums (garlic, shallots), plus basil, marigold, roselle, and sunflower. BACKYARD families: Brassicas (cabbage, cauliflower, kohlrabi, arugula, radish), Greens (spinach, beet, chard, sorrel), Umbellifers (carrot, cilantro, dill), Legumes (peas, pole beans), Alliums (scallion), and Asteraceae (lettuce). Move each family to a different planting spot each year, aiming for at least 3 years before returning it to the same soil. Follow heavy-feeding brassicas with peas or beans, then light-feeding roots. In the front yard, alternate cucurbits and nightshades between planting spots; move marigold with them as a companion. Use roselle, sunflower, and basil as rotation buffers. Amend heavy feeders with compost each spring. Amaranth in the front yard is in the spinach/beet family (Amaranthaceae), so include that family when rotating its sunny patch.","seedStartingBasics":"\"Back-count from the ~Apr 15 last frost using each crop's lead time, then add ~2 weeks because Sammamish soil is not reliably >60F until late May/June - so transplant dates for heat-lovers are really late-May/early-June, not mid-April. Typical indoor sow dates (count weeks BEFORE the late-May/June transplant): peppers, eggplant, okra, bitter gourd 8-10 wks (sow late Feb-early Mar - the slow germinators); tomatillo, roselle 6-8 wks; bottlegourd, ridgegourd, cucumber, basil 3-4 wks (cucurbits resent root disturbance - use peat/paper pots and sow early-to-mid May, NOT February). Workflow: sow in cells, on the heat mat at the target temp above, under bright light (shop LED) once up, pot up before rootbound, and fertilize lightly once true leaves appear. HARDENING OFF is mandatory and skipped at your peril here: 7-10 days before transplant, set plants outside 1-2 hrs in shade and increase exposure/sun/wind daily; never transplant heat-lovers until both nights are reliably above ~50F AND soil is >60F. Direct-sow crops (sunflower, beans, peas, carrots, beets, radish, spinach, arugula, cilantro, dill, scallion) skip all this - cilantro and dill MUST be direct-sown because their taproots resent transplanting. Brassicas (cabbage, cauliflower) start indoors 5-6 wks before transplant, and in 8b the FALL crop (sow indoors late June-July, transplant Aug) is more reliable than spring. Amaranth is a warm-season leafy green: optionally start indoors in early-mid May, harden off for June planting, or direct sow June-late July once soil is at least 65F (ideally near 70F); sow only 1/8-1/4 in deep.\"","topTips":["Use the maritime calendar honestly: your real heat-lover transplant window is late-May through mid-June, not the textbook 'after last frost' April date - cold soil stalls peppers/eggplant/gourds even when frost has passed.","Create a warm microclimate for the marginal heat-lovers (okra, karela, ridgegourd, eggplant, peppers): plant against a south/west-facing wall or fence, use black plastic mulch, and deploy wall-o-waters early. This banked heat is the single biggest yield lever in cool Sammamish summers.","Plan now for the fall garden - in 8b the late-July/August sowing of brassicas, spinach, arugula, cilantro, lettuce, scallions, and overwintering crops is often MORE productive than spring. Reserve space in the backyard for it.","Overwinter what you can: spinach, scallions, and sorrel overwinter in 8b; lettuce is frost-tolerant to ~25F; sow a fall batch and harvest into winter under simple cloches.","Hand-pollinate every gourd and the cucumber if bee activity is low - transfer pollen from male to female flowers (the one with the tiny fruit behind it) with a small brush. Lauki opens at night, so pollinate it in the evening or very early morning.","Succession-sow the fast crops every 2-3 weeks - radish, arugula, cilantro, lettuce, and sunflowers - rather than one big planting, to spread harvest and dodge simultaneous bolting.","Row cover is a multi-tool here: same floating cover defeats cabbage worms on brassicas, flea beetles on arugula/radish/eggplant, carrot rust fly on carrots, and root maggot on radish. Buy a roll and reuse it across the garden (remove from insect-pollinated crops at flowering).","Pinch and deadhead religiously: pinch basil and sorrel flower stalks to delay bolting, deadhead marigolds and succession sunflowers for continuous bloom, and pinch gourd growing tips once they reach the arch top to push side branching and female flowers.","Net it or lose it: birds eat pea and bean seedlings and raid maturing sunflower heads - use netting or paper bags on sunflower heads as seeds fill.","Watch downy/powdery mildew in the damp PNW - space basil and peas for airflow, water at the soil in the morning via drip (never overhead), and remove affected leaves promptly; it shows up reliably on basil in late summer and peas late-season."]}};
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const CODE={indoor:["#8b5cf6","Indoor start"],sow:["#4a9d4a","Direct sow"],transplant:["#3b82f6","Transplant"],grow:["#bcdcab","Growing"],harvest:["#d97534","Harvest"]};
+const P=DATA.plants;
+// ---- ornamentals data ----
+const OCODE={bloom:["#d56aa0","In bloom / fruit"],prune:["#9c6b3f","Prune"],plant:["#4a9d4a","Plant bulb"],feed:["#3b82f6","Feed"]};
+const ODATA={
+ zones:[
+  {id:"O1",icon:"&#127795;",name:"Woodland Shade",sunClass:"shade",tag:"Part shade &middot; acidic soil",site:"Morning sun / afternoon shade, acidic organic soil, even moisture, mulched. North or east side of the house, or under tree canopy. Evergreen camellia &amp; rhododendron anchor it; hydrangea in the middle; hosta at the shady edge."},
+  {id:"O2",icon:"&#127800;",name:"Sunny Cottage Border",sunClass:"sun",tag:"Full sun &middot; rich, well-drained",site:"Full sun 6+ hrs with good airflow (PNW disease pressure). Hollyhock at the back (tall), roses + peony in the middle, shasta daisy at the front. Stake peony &amp; hollyhock."},
+  {id:"O3",icon:"&#127799;",name:"Spring Bulbs",sunClass:"sun",tag:"Full sun &middot; sharp drainage",site:"Plant in fall (Oct&ndash;Nov), bloom Mar&ndash;May. Tuck into the cottage border or pots. Hyacinth perennializes here; tulips are often short-lived in our wet summers."},
+  {id:"O4",icon:"&#129744;",name:"Edible &amp; Foliage Accents",sunClass:"sun",tag:"Full sun",site:"Blueberry wants the same acidic soil as the rhodies but needs sun &mdash; plant 2+ varieties for cross-pollination. Barberry is a tough, thorny, colorful, low-care hedge/accent."}
+ ],
+ ornamentals:[
+  {name:"Rhododendron",type:"Broadleaf evergreen shrub",zone:"O1",zoneName:"Woodland Shade",sun:"Part shade",soilPH:"Acidic 4.5–6.0, organic, well-drained",water:"Even moisture; deep-water in summer dry spells (shallow roots); mulch 2–3 in",size:"3–8 ft",bloomTime:"Apr–May",prune:"Right after bloom (May–Jun); deadhead spent trusses",feed:"Light, after bloom, with acid (rhododendron) fertilizer; stop by mid-July",ease:"Easy in PNW",careFlags:["acid-loving","shallow roots — don't plant deep","even moisture","watch root weevil"],note:"Don't plant too deep — keep the root ball at or slightly above grade. Shallow roots hate drying out and heavy clay, so mulch and water deeply in summer. Deadhead spent flower trusses by snapping them off above the new buds.",timeline:["","","","bloom","bloom","prune","","","","","",""]},
+  {name:"Azalea",type:"Shrub (a small Rhododendron)",zone:"O1",zoneName:"Woodland Shade",sun:"Part shade",soilPH:"Acidic, organic, well-drained",water:"Even moisture; mulch",size:"2–4 ft (evergreen); deciduous types 4–8 ft",bloomTime:"Apr–May",prune:"Lightly right after bloom",feed:"After bloom, acid fertilizer; stop by mid-July",ease:"Easy",careFlags:["acid-loving","shallow roots","watch lacebug & petal blight"],note:"Care is the same as rhododendron, just smaller. Deciduous types add fall color. Prune lightly right after flowering, before it sets next year's buds.",timeline:["","","","bloom","bloom","prune","","","","","",""]},
+  {name:"Camellia",type:"Broadleaf evergreen shrub",zone:"O1",zoneName:"Woodland Shade",sun:"Part shade (sasanqua takes more sun)",soilPH:"Acidic, rich, well-drained",water:"Even moisture; mulch. Buds set in summer — water through the dry summer or buds drop next spring",size:"6–12 ft (can be hedged)",bloomTime:"Japonica Feb–Apr; Sasanqua Oct–Dec",prune:"After bloom",feed:"After bloom, acid (ericaceous) fertilizer — stop by the end of July to avoid bud drop",ease:"Easy",careFlags:["acid-loving","rake fallen blooms (petal blight)","bud drop if dry"],note:"Two types extend the season — japonica blooms late winter to spring, sasanqua blooms in fall. Rake up and bin fallen flowers (don't compost) to prevent petal blight. Keep it watered through our dry summers, when next year's buds form, or buds drop the following spring.",timeline:["","bloom","bloom","bloom","prune","","","","","bloom","bloom","bloom"]},
+  {name:"Hydrangea",type:"Deciduous shrub",zone:"O1",zoneName:"Woodland Shade",sun:"Morning sun / afternoon shade",soilPH:"Rich, moist; bigleaf color shifts with pH (acidic = blue)",water:"Thirsty — deep-water in summer; wilts midday in heat",size:"3–6 ft",bloomTime:"Jul–Sep (bigleaf peaks midsummer)",prune:"Bigleaf/oakleaf: right after bloom (old wood). Panicle/smooth: late winter (new wood)",feed:"Light, early spring; low-nitrogen",ease:"Easy",careFlags:["thirsty","prune-timing is critical","blooms on old vs new wood"],note:"The #1 mistake is spring-pruning a bigleaf (mophead/lacecap) and cutting off all the flower buds. Know your type: mophead/lacecap = prune just after summer bloom; panicle/Annabelle = prune in late winter. Soil pH tints bigleaf flowers — acidic soil = blue.",timeline:["","prune","","","","","bloom","bloom","bloom","","",""]},
+  {name:"Hosta",type:"Herbaceous perennial (foliage)",zone:"O1",zoneName:"Woodland Shade",sun:"Shade / part shade",soilPH:"Rich, moist",water:"Consistent moisture",size:"1–3 ft mounds",bloomTime:"Jul–Aug (grown mainly for foliage)",prune:"Cut back dead foliage in late fall; divide spring or fall",feed:"Spring",ease:"Easy (if slugs controlled)",careFlags:["SLUG MAGNET — use the slug strategy","dies back in winter","divide to propagate"],note:"Slugs love hosta — start Sluggo at the very first spring shoots (the same slug strategy you use on the vegetables). It dies back fully in winter and returns in spring. Divide clumps in spring or fall to make more.",timeline:["","","","feed","","","bloom","bloom","","","prune",""]},
+  {name:"Roses",type:"Shrub (repeat-blooming)",zone:"O2",zoneName:"Cottage Border",sun:"Full sun 6+ hrs",soilPH:"Rich, well-drained",water:"Deep, at the base — not overhead",size:"3–6 ft",bloomTime:"Jun–Oct (repeat)",prune:"Main prune late winter (Feb–Mar); deadhead through the season",feed:"Spring + early summer (stop by late Aug)",ease:"Moderate (disease management)",careFlags:["blackspot & powdery mildew in damp PNW","prune late winter","deadhead","water at the base"],note:"Our damp climate brings blackspot and powdery mildew pressure. Give full sun and air circulation, water at the base (not the leaves), clean up fallen leaves, and deadhead spent blooms to keep flowers coming. Main prune in late winter.",timeline:["","prune","","feed","","bloom","bloom","bloom","bloom","bloom","",""]},
+  {name:"Peony",type:"Herbaceous perennial (long-lived)",zone:"O2",zoneName:"Cottage Border",sun:"Full sun 6+ hrs",soilPH:"Rich, well-drained, near-neutral to slightly alkaline (lime acidic PNW soil)",water:"Moderate, even",size:"2–3 ft",bloomTime:"May–Jun",prune:"Cut stems to the ground in fall",feed:"Spring (low-nitrogen)",ease:"Easy once established; resents being moved",careFlags:["don't plant eyes too deep (1–2 in max)","support heavy blooms","cut back in fall","ants are harmless"],note:"Plant the buds (\"eyes\") only 1–2 inches deep — planting too deep is the classic reason peonies never bloom. Support the heavy flowers with a peony ring. Cut the foliage to the ground in fall to prevent botrytis. Ants on the buds are harmless. Don't move it once it's settled.",timeline:["","","","feed","bloom","bloom","","","","prune","",""]},
+  {name:"Shasta daisy",type:"Perennial",zone:"O2",zoneName:"Cottage Border",sun:"Full sun",soilPH:"Average, well-drained",water:"Moderate",size:"2–3 ft",bloomTime:"Jun–Sep (with deadheading)",prune:"Deadhead; cut back in fall; divide every 2–3 yrs",feed:"Light, spring",ease:"Easy",careFlags:["deadhead for rebloom","tall types flop — support","divide to keep vigorous"],note:"Deadhead spent flowers for more blooms. Tall types flop, so give support or grow compact varieties. Divide every 2–3 years to keep the clump vigorous.",timeline:["","","","feed","","bloom","bloom","bloom","bloom","prune","",""]},
+  {name:"Hollyhock",type:"Biennial / short-lived perennial",zone:"O2",zoneName:"Cottage Border (back row)",sun:"Full sun",soilPH:"Rich, well-drained",water:"Moderate; water at the base",size:"5–8 ft (back of border)",bloomTime:"Jun–Sep (often year 2 from seed)",prune:"Cut spent spikes; let some self-seed",feed:"Spring",ease:"Easy but rust-prone",careFlags:["rust-prone in damp PNW","stake only in wind-exposed sites","self-seeds","biennial"],note:"Hollyhock rust is common in our damp climate — space plants for airflow, water at the base, and strip infected lower leaves. Clear away old foliage in fall (rust overwinters in debris). Stake only in windy, exposed spots. It self-seeds, so expect volunteers. Often blooms in its second year from seed.",timeline:["","","","feed","","bloom","bloom","bloom","prune","","",""]},
+  {name:"Tulips",type:"Spring bulb",zone:"O3",zoneName:"Spring Bulbs",sun:"Full sun",soilPH:"Sharp drainage; prefers neutral–slightly alkaline (~pH 6–7)",water:"Natural rainfall; needs sharp drainage",size:"1–2 ft",bloomTime:"Apr–May",prune:"Deadhead after bloom; let foliage die back naturally",feed:"Bulb food at planting; light feed in early spring as shoots emerge",ease:"Easy but often short-lived here",careFlags:["plant in fall, 6–8 in deep","hybrid types naturally short-lived","rots in soggy winter soil — needs sharp drainage","squirrels may dig bulbs"],note:"Plant bulbs in October–November, 6–8 inches deep, in the sharpest-draining, sunniest spot. Hybrid tulips rarely rebloom well after their first spring, so many gardeners treat them as annuals or replant fresh bulbs each fall. The real risk here is wet, cold winter soil rotting the bulbs — our dry summers are ideal for their dormancy. Species/botanical tulips perennialize more reliably. Let the foliage yellow before removing it.",timeline:["","","","bloom","bloom","","","","","plant","plant",""]},
+  {name:"Hyacinth",type:"Spring bulb (fragrant)",zone:"O3",zoneName:"Spring Bulbs",sun:"Full / part sun",soilPH:"Well-drained",water:"Natural rainfall; good drainage",size:"8–12 in",bloomTime:"Mar–Apr (very fragrant)",prune:"Deadhead; let foliage die back",feed:"At planting, plus a feed as shoots emerge in spring",ease:"Easy; bulbs persist but the first-year spike shrinks over time",careFlags:["plant in fall, 4–6 in deep","fragrant","first-year spike loosens later (replace every 2–3 yrs)","wear gloves (bulbs irritate skin)"],note:"Plant in fall, 4–6 inches deep, in full sun and well-drained soil. It blooms very early (March–April) and is intensely fragrant. The bulb persists for several years, but the big first-year spike gets smaller and looser over time, so plan to replace bulbs every few years for the best show. Wear gloves — the bulbs contain calcium oxalate that can irritate skin.",timeline:["","","bloom","bloom","","","","","","plant","plant",""]},
+  {name:"Blueberry",type:"Edible deciduous shrub (great fall color)",zone:"O4",zoneName:"Edible Accent",sun:"Full sun 6+ hrs (for fruit)",soilPH:"Very acidic 4.5–5.5 (the key requirement)",water:"Consistent, especially while fruiting; shallow roots — mulch",size:"5–8 ft (highbush; ~4–7 ft if pruned). Half-high types ~3–4 ft",bloomTime:"Apr–May bloom; mid-Jul–Sep fruit",prune:"Late winter, from year 3 — remove old/weak canes",feed:"Acidic (rhododendron/azalea) fertilizer in spring",ease:"Easy in PNW (ideal climate)",careFlags:["self-fertile; 2+ varieties boost yield & berry size","very acidic soil","net from birds","shallow roots — mulch"],note:"The PNW is prime blueberry country. Give very acidic soil; blueberries are self-fertile, but planting two or more varieties (early + mid + late) gives bigger, earlier crops and a longer harvest — roughly mid-July into September. Net the bushes from birds. Mulch to protect the shallow roots; prune lightly in late winter from about year 3.",timeline:["","prune","feed","bloom","bloom","","bloom","bloom","bloom","","",""]},
+  {name:"Japanese barberry",type:"Deciduous shrub (colorful, thorny foliage)",zone:"O4",zoneName:"Foliage Accent",sun:"Full sun (best color) to part shade",soilPH:"Adaptable, well-drained; drought-tolerant once established",water:"Low once established",size:"2–6 ft (dwarf to full)",bloomTime:"Minor yellow flowers Apr; grown for red/gold foliage",prune:"Anytime; shears well as a hedge (wear gloves — thorns)",feed:"Minimal",ease:"Very easy / low-maintenance",careFlags:["thorny — good barrier hedge","invasive in some states (not WA)","drought-tolerant","best color in full sun"],note:"Extremely low-maintenance — tough, drought-tolerant, and thorny (makes a good barrier hedge). Note it's considered invasive in parts of the US (banned in some eastern states; not in Washington) because birds spread the berries — choose a low-seed / near-sterile cultivar (none is fully sterile) and remove berries if that's a concern. Best foliage color in full sun.",timeline:["","","","bloom","","","prune","","","","",""]}
+ ],
+ tasks:[
+  {season:"Late winter (Feb–Mar)",months:[1,2],items:["Prune roses, and prune panicle/smooth hydrangeas &amp; blueberries.","Cut back any remaining dead perennial foliage.","Feed the acid-lovers (rhododendron, azalea, camellia, blueberry) as growth resumes.","Camellia japonica is blooming."]},
+  {season:"Early spring (Mar–Apr)",months:[2,3],items:["Hyacinth and camellia japonica bloom.","Start Sluggo at hosta &amp; peony emergence.","Mulch around plants in both yards.","Put peony rings and hollyhock stakes in early."]},
+  {season:"Spring (Apr–May)",months:[3,4],items:["Rhododendron, azalea, tulips, and peony bloom.","Deadhead spent bulbs but leave the foliage to die back.","Feed roses."]},
+  {season:"After bloom (May–Jun)",months:[4,5],items:["Prune rhododendron, azalea, camellia, and bigleaf hydrangea right after flowering.","Deadhead spent rhododendron trusses and roses."]},
+  {season:"Summer (Jun–Aug)",months:[5,6,7],items:["Roses, hydrangea, shasta daisy, and hollyhock bloom; blueberries fruit (net from birds).","Deep-water hydrangea and blueberry; deadhead roses and shasta.","Watch for blackspot, rust, and mildew — keep airflow. Stop feeding roses by late August."]},
+  {season:"Fall (Sep–Nov)",months:[8,9,10],items:["Plant tulip and hyacinth bulbs.","Cut peony and shasta foliage to the ground; divide hosta and shasta.","Best time to plant or move shrubs in the PNW — then mulch.","Camellia sasanqua blooms."]},
+  {season:"Winter (Dec–Jan)",months:[11,0],items:["Mostly dormant; camellia buds forming.","Plan and order. Protect containers in hard freezes."]}
+ ],
+ monthChores:[
+  ["Plan &amp; order roses, shrubs &amp; bulbs for the year; protect container ornamentals during hard freezes."],
+  ["Prune roses (the main prune), and prune panicle/smooth hydrangeas &amp; blueberries while dormant. (Timing varies &mdash; late Feb into Mar, often around President's Day; wait out hard frosts.)","Cut back any remaining dead perennial foliage."],
+  ["Feed the acid-lovers &mdash; rhododendron, azalea, camellia &amp; blueberry &mdash; as new growth starts.","Start Sluggo at the first hosta &amp; peony shoots.","Mulch around ornamentals."],
+  ["Feed roses.","Put peony rings &amp; hollyhock stakes in early, before the plants get tall."],
+  ["Deadhead spent tulip &amp; hyacinth flowers, but leave the foliage to die back naturally."],
+  ["Right after each one finishes blooming, prune rhododendron, azalea, camellia &amp; bigleaf hydrangea, and deadhead spent rhododendron trusses &amp; roses. (Timing varies &mdash; prune each shrub as soon as its own flowers fade, anywhere from May into Jun.)"],
+  ["Summer care: deep-water hydrangea &amp; blueberry, deadhead roses &amp; shasta daisy, and net blueberries from birds. Watch for blackspot, rust &amp; mildew &mdash; keep good airflow."],
+  ["Stop feeding roses by late August so new growth hardens off before winter."],
+  ["Divide overgrown hosta &amp; shasta daisy clumps. (Timing varies &mdash; Sep into Oct both work.)"],
+  ["Plant tulip &amp; hyacinth bulbs. (Timing varies &mdash; Oct into Nov, once the soil cools.)","Cut peony &amp; shasta daisy foliage to the ground to head off disease.","Best window to plant or move shrubs in the PNW &mdash; then mulch."],
+  ["Finish planting spring bulbs and any new shrubs before the ground turns cold and soggy."],
+  ["Ornamentals are mostly dormant &mdash; camellia (sasanqua) may still be blooming and japonica buds are forming. Little to do."]
+ ]
+};
+
+// ---- filter definitions ----
+const uniq=(a)=>[...new Set(a)];
+const FILTERS=[
+  {key:"yard",label:"Yard & sun",vals:["Front yard (full sun)","Backyard (partial shade)"]},
+  {key:"category",label:"Veg type",vals:uniq(P.map(p=>p.category)).sort()},
+  {key:"startTag",label:"Start method",vals:["Indoor start","Direct sow","Either"]},
+  {key:"heat",label:"Heat mat",vals:["Needs heat mat","No mat"]},
+  {key:"ease",label:"Ease to grow",vals:["Easy (4-5)","Medium (3)","Tricky (1-2)"]},
+  {key:"traits",label:"Care traits",vals:uniq(P.flatMap(p=>p.traits)).sort()},
+  {key:"month",label:"Active month",vals:MONTHS},
+];
+const state={q:""}; FILTERS.forEach(f=>state[f.key]=new Set());
+
+function plantHeat(p){return p.heatMat?"Needs heat mat":"No mat";}
+function plantEase(p){const e=p.easeGrow; return e>=4?"Easy (4-5)":(e==3?"Medium (3)":"Tricky (1-2)");}
+
+function match(p){
+  if(state.q){const blob=(p.crop+" "+p.varieties+" "+p.category+" "+p.notes+" "+p.careFlags.join(" ")+" "+p.yard).toLowerCase(); if(!blob.includes(state.q.toLowerCase()))return false;}
+  for(const f of FILTERS){const s=state[f.key]; if(!s.size)continue;
+    if(f.key==="month"){ if(![...s].some(m=>p.timeline[MONTHS.indexOf(m)]!==""))return false; }
+    else if(f.key==="heat"){ if(!s.has(plantHeat(p)))return false; }
+    else if(f.key==="ease"){ if(!s.has(plantEase(p)))return false; }
+    else if(f.key==="traits"){ if(![...s].some(t=>p.traits.includes(t)))return false; }
+    else { if(!s.has(p[f.key]))return false; }
+  }
+  return true;
+}
+
+function omatch(p){
+  if(state.q){const blob=(p.name+" "+p.type+" "+p.zoneName+" "+p.sun+" "+p.soilPH+" "+p.note+" "+p.careFlags.join(" ")).toLowerCase(); if(!blob.includes(state.q.toLowerCase()))return false;}
+  const ms=[...state.month];
+  if(ms.length){ if(!ms.some(m=>{const c=p.timeline[MONTHS.indexOf(m)];return !!c;}))return false;}
+  return true;
+}
+
+// ---- build filter panel ----
+function buildPanel(){
+  const panel=document.getElementById("panel"); panel.innerHTML="";
+  FILTERS.forEach(f=>{
+    const g=document.createElement("div");g.className="fgroup"+(f.key==="month"?" closed":"");
+    g.dataset.k=f.key;
+    const head=document.createElement("button");head.type="button";head.className="flbl";
+    head.setAttribute("aria-expanded",f.key==="month"?"false":"true");
+    head.innerHTML=`<span>${f.label}</span><span style="display:flex;align-items:center;gap:6px"><span class="fcnt"></span><i class="fa">&#9654;</i></span>`;
+    head.onclick=()=>{const cl=g.classList.toggle("closed");head.setAttribute("aria-expanded",String(!cl));};
+    const chips=document.createElement("div");chips.className="chips";
+    f.vals.forEach(v=>{
+      const c=document.createElement("button");c.type="button";c.className="chip"+(f.key==="month"?" mon":"");
+      c.setAttribute("aria-pressed","false");
+      c.textContent = v.replace(" (full sun)"," · sun").replace(" (partial shade)"," · shade");
+      c.onclick=()=>{const s=state[f.key]; const on=s.has(v); on?s.delete(v):s.add(v); c.classList.toggle("on"); c.setAttribute("aria-pressed",String(!on)); render();};
+      c.dataset.k=f.key;c.dataset.v=v; chips.appendChild(c);
+    });
+    g.appendChild(head);g.appendChild(chips);panel.appendChild(g);
+  });
+}
+function updateGroupCounts(){
+  document.querySelectorAll("#panel .fgroup").forEach(g=>{
+    const n=state[g.dataset.k]?state[g.dataset.k].size:0;
+    g.classList.toggle("has-sel",n>0);
+    const b=g.querySelector(".fcnt");if(b)b.textContent=n;
+  });
+  const selected=FILTERS.reduce((total,filter)=>total+state[filter.key].size,0);
+  document.getElementById("ftoggle").textContent=selected?`Filters (${selected})`:"Filters";
+}
+
+// ---- render cards ----
+function strip(tl){return '<div class="strip">'+tl.map(c=>`<span style="background:${CODE[c]?CODE[c][0]:'#f0ecdd'}"></span>`).join("")+'</div>'+
+  '<div class="mlabels">'+MONTHS.map(m=>`<span>${m[0]}</span>`).join("")+'</div>';}
+function difficulty(n){const l=n>=4?"easy":n===3?"medium":"hard";return `<span class="elbl ${l}">${l}</span>`;}
+function card(p){
+  const tr=p.traits.map(t=>`<span class="flag">${t}</span>`).join("");
+  return `<div class="pc" role="button" tabindex="0" aria-expanded="false" aria-label="${p.crop} — show care details" data-id="${p.id}">
+    <div class="top">
+      <h3>${p.crop}</h3><div class="var">${p.varieties}</div>
+      <div class="badges">
+        <span class="b yard">${p.yard==="Front yard (full sun)"?"&#9728; Front yard":"&#9681; Backyard"}</span>
+        <span class="b cat">${p.category}</span>
+        <span class="b start">${p.startTag}</span>
+        ${p.heatMat?'<span class="b heat">&#128293; heat mat</span>':''}
+      </div>
+      <div class="ease"><span class="edim">grow</span>${difficulty(p.easeGrow)}<span class="edim">&middot; start</span>${difficulty(p.easeStart)}</div>
+      ${strip(p.timeline)}
+    </div>
+    <div class="detail">
+      <table>
+        <tr><td>Germ temp</td><td>${p.germTempF}</td></tr>
+        <tr><td>Sow indoors</td><td>${p.sowIndoor}</td></tr>
+        <tr><td>Transplant</td><td>${p.transplantOut}</td></tr>
+        <tr><td>Direct sow</td><td>${p.directSow}</td></tr>
+        <tr><td>Harvest</td><td>${p.daysToHarvest} &middot; ${p.harvestWindow}</td></tr>
+        <tr><td>Spacing</td><td>${p.spacing}</td></tr>
+        <tr><td>Heat mat</td><td>${p.heatMatNote}</td></tr>
+        <tr><td>Water</td><td>${p.waterNote}</td></tr>
+      </table>
+      <div class="flags">${tr}</div>
+      <div class="note">${p.notes}</div>
+    </div>
+    <div class="tip">${excerpt(p.notes,110)}</div>
+  </div>`;
+}
+function wireCards(sel){
+  document.querySelectorAll(sel).forEach(el=>{
+    const toggle=()=>{const x=el.classList.toggle("exp");el.setAttribute("aria-expanded",String(x));};
+    el.onclick=toggle;
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}};
+  });
+}
+function excerpt(t,n){const d=document.createElement("textarea");d.innerHTML=t;const s=d.value;return s.length>n?s.slice(0,n-1)+"\u2026":s;}
+function render(){
+  const list=P.filter(match), olist=ODATA.ornamentals.filter(omatch);
+  updateGroupCounts();
+  document.getElementById("gallery").innerHTML=list.map(card).join("");
+  document.getElementById("orngallery").innerHTML=olist.map(ocard).join("");
+  document.getElementById("count").textContent=`${list.length} of ${P.length} plants · ${olist.length} of ${ODATA.ornamentals.length} ornamentals`;
+  document.getElementById("empty").style.display=list.length?"none":"block";
+  wireCards("#gallery .pc");
+  wireCards("#orngallery .pc");
+  highlightCalendar();
+}
+function highlightCalendar(){
+  document.querySelectorAll(".cal td.cell, .cal th").forEach(td=>td.classList.remove("mhi"));
+  document.querySelectorAll(`.cal [data-mi="${agendaMonth}"]`).forEach(td=>td.classList.add("mhi"));
+}
+
+// ---- plants by yard ----
+function yardMap(){
+  const yards=[
+    {value:"Front yard (full sun)",name:"Front yard",sunClass:"sun",sun:"Full sun · 8+ hrs",icon:"&#9728;"},
+    {value:"Backyard (partial shade)",name:"Backyard",sunClass:"shade",sun:"Partial shade · 4–5 hrs",icon:"&#9681;"}
+  ];
+  document.getElementById("yardmap").innerHTML=yards.map(yard=>
+    `<div class="zone-card"><h3>${yard.icon} ${yard.name}</h3><span class="z ${yard.sunClass}">${yard.sun}</span><div class="zone-row"><small>${P.filter(p=>p.yard===yard.value).map(p=>escapeHTML(p.crop)).join(" &middot; ")}</small></div></div>`
+  ).join("");
+}
+
+// ---- planting calendar ----
+function calendar(){
+  document.getElementById("legend").innerHTML=Object.values(CODE).map(([c,l])=>`<span><span class="sw" style="background:${c}"></span>${l}</span>`).join("");
+  let h='<caption class="calendar-help">Vegetable activities by month; scroll sideways for the full year.</caption><thead><tr><th scope="col">Plant</th>'+MONTHS.map((m,i)=>`<th scope="col" data-mi="${i}">${m}</th>`).join("")+"</tr></thead><tbody>";
+  P.forEach(p=>{ h+=`<tr><th scope="row" class="cn">${p.crop}</th>`+p.timeline.map((c,i)=>calendarCell(p.crop,c,i,CODE)).join("")+"</tr>";});
+  h+='</tbody>';
+  document.getElementById("caltable").innerHTML=h;
+}
+
+const FULL_MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+let agendaMonth=new Date().getMonth();
+function calendarCell(name,code,month,codes){
+  const activity=codes[code]?codes[code][1]:"No scheduled activity";
+  const text={indoor:"Indoors",sow:"Sow",transplant:"Transplant",grow:"Grow",harvest:"Harvest",bloom:"Bloom",prune:"Prune",plant:"Plant",feed:"Feed"}[code]||"—";
+  return `<td class="cell${code==='prune'?' dark':''}" data-mi="${month}" style="background:${codes[code]?codes[code][0]:'#fff'}" aria-label="${escapeHTML(name)}, ${FULL_MONTHS[month]}: ${escapeHTML(activity)}">${text}</td>`;
+}
+function monthlyAgenda(){
+  const month=agendaMonth;
+  document.getElementById("agenda-month").value=String(month);
+  document.getElementById("month-prev").disabled=month===0;
+  document.getElementById("month-next").disabled=month===11;
+  document.getElementById("agenda-tasks").innerHTML=`<div class="cm open"><div class="h" role="button" tabindex="0" aria-expanded="true"><span>${FULL_MONTHS[month]} chores</span><span class="hr"><span class="cnt"></span><span class="ar">&#9656;</span></span></div><div class="body">${choreBody(month)}</div></div>`;
+  const vegetables=P.filter(p=>p.timeline[month]);
+  const ornamentals=ODATA.ornamentals.filter(p=>p.timeline[month]);
+  const group=(title,plants,codes,nameKey)=>`<div class="guide"><h3>${title}</h3>${plants.length?'<ul>'+plants.map(p=>`<li><span class="activity">${codes[p.timeline[month]][1]}</span>${escapeHTML(p[nameKey])}</li>`).join("")+'</ul>':'<p>No scheduled plant activities this month.</p>'}</div>`;
+  document.getElementById("agenda-plants").innerHTML=group("Vegetables & herbs",vegetables,CODE,"crop")+group("Ornamentals & shrubs",ornamentals,OCODE,"name");
+  const total=choreCategories(month).reduce((n,c)=>n+c.items.length,0);
+  document.getElementById("agenda-summary").textContent=`${FULL_MONTHS[month]}: ${total} chores, ${vegetables.length} vegetables and ${ornamentals.length} ornamentals active.`;
+  highlightCalendar();wireChores();applyChecks();
+}
+function initAgenda(){
+  const select=document.getElementById("agenda-month");
+  select.innerHTML=FULL_MONTHS.map((m,i)=>`<option value="${i}">${m}</option>`).join("");
+  select.onchange=()=>{agendaMonth=Number(select.value);monthlyAgenda();};
+  document.getElementById("month-prev").onclick=()=>{if(agendaMonth>0){agendaMonth--;monthlyAgenda();}};
+  document.getElementById("month-next").onclick=()=>{if(agendaMonth<11){agendaMonth++;monthlyAgenda();}};
+  monthlyAgenda();
+}
+
+// ---- chores ----
+const CHORE_IC={"Start seeds indoors (heat mat)":"&#127793;","Direct sow / succession sow":"&#127807;","Harden off & transplant out":"&#129716;","Watering":"&#128167;","Feed & mulch":"&#127806;","Trellis / train / prune / pollinate":"&#9986;","Slug & pest patrol":"&#128012;","Harvest":"&#129482;","Soil prep / cover crop / cleanup":"&#128296;","Ornamental & shrub care":"&#127795;"};
+function choreCategories(idx){
+  const m=DATA.chores[idx];
+  const oc=(ODATA.monthChores&&ODATA.monthChores[idx])||[];
+  return oc.length?m.chores.concat([{category:"Ornamental & shrub care",items:oc}]):m.chores;
+}
+function calendarButton(cid){
+  const label=escapeHTML(`Add ${calendarChore(cid).title} to Calendar`);
+  return `<button class="addcal" type="button" data-calid="${cid}" aria-label="${label}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>Calendar</button>`;
+}
+function choreBody(idx){
+  const cats=choreCategories(idx);
+  const actions=`<div class="chore-actions"><span class="reset-status" data-reset-status="${idx}" role="status"></span><button class="calendar-action" type="button" data-reset-month="${idx}" aria-label="Uncheck all ${FULL_MONTHS[idx]} tasks">Uncheck all tasks</button></div>`;
+  return cats.length?actions+cats.map((c,ci)=>`<div class="chore-group"><div class="chcat">${CHORE_IC[c.category]||"&bull;"} ${c.category}</div><ul>${c.items.map((i,ii)=>{const cid=`mc:${idx}:${ci}:${ii}`;return `<li class="chk${CHK.has(cid)?' done':''}"><label><input type="checkbox" data-cid="${cid}"${CHK.has(cid)?' checked':''}><span>${i}</span></label>${calendarButton(cid)}</li>`;}).join("")}</ul></div>`).join(""):'<p>Quiet month &mdash; rest &amp; plan.</p>';
+}
+function choreCard(idx,open){
+  const m=DATA.chores[idx];
+  return `<div class="cm${open?' open':''}"><div class="h" role="button" tabindex="0" aria-expanded="${open}"><span>${m.month}</span><span class="hr"><span class="cnt"></span><span class="ar">&#9656;</span></span></div><div class="body">${choreBody(idx)}</div></div>`;
+}
+function choreGrid(){
+  document.getElementById("choregrid").innerHTML=DATA.chores.map((m,idx)=>choreCard(idx,idx>=2&&idx<=9)).join("");
+}
+function thisMonth(){
+  const mi=new Date().getMonth();
+  document.getElementById("tmname").textContent=DATA.chores[mi].month;
+  document.getElementById("tmcard").innerHTML=`<div class="h" role="button" tabindex="0" aria-expanded="true"><span>${DATA.chores[mi].month}</span><span class="hr"><span class="cnt"></span><span class="ar">&#9656;</span></span></div><div class="body">${choreBody(mi)}</div>`;
+}
+function wireChores(){
+  document.querySelectorAll(".cm .h").forEach(h=>{
+    const toggle=()=>{const o=h.parentElement.classList.toggle("open");h.setAttribute("aria-expanded",String(o));};
+    h.onclick=toggle;
+    h.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}};
+  });
+}
+
+// ---- guides ----
+// turn a run-on paragraph into scannable bullets: one per sentence,
+// "Lead-in:" phrases and ALL-CAPS emphasis bolded
+function fmtGuide(t){
+  const sents=t.replace(/([.!?])\s+(?=["(]?(?:[A-Z0-9]))/g,"$1\u0001").split("\u0001");
+  const items=sents.map(sn=>{
+    sn=sn.trim(); if(!sn)return "";
+    let s=sn.replace(/\b([A-Z][A-Z\/&-]{2,}[A-Z])\b/g,"<b>$1</b>");
+    const m=s.match(/^([A-Z][\w'& -]{2,38}):\s+([\s\S]*)$/);
+    if(m&&m[1].toUpperCase()!==m[1]) s=`<b>${m[1]}:</b> ${m[2]}`;
+    return `<li>${s}</li>`;
+  }).filter(Boolean).join("");
+  return `<ul>${items}</ul>`;
+}
+function guides(){
+  const s=DATA.synth;
+  const g=[["&#128293; Heat Mat Guide",s.heatMatGuide],["&#127793; Seed-Starting Basics",s.seedStartingBasics],["&#128012; Slug Strategy",s.slugStrategy],["&#127804; Companions & Pests",s.companionAndPests],["&#129704; Trellis & Arch Setup",s.trellisGuide],["&#128167; Watering by Month",s.wateringSummary],["&#128260; Crop Rotation",s.rotationPlan]];
+  let h=g.map(([t,b])=>`<div class="guide"><h3>${t}</h3>${fmtGuide(b)}</div>`).join("");
+  h+=`<div class="guide" style="grid-column:1/-1"><h3>&#11088; Top Tips</h3><ul>${s.topTips.map(t=>`<li>${t}</li>`).join("")}</ul></div>`;
+  document.getElementById("guidewrap").innerHTML=h;
+}
+
+// ---- ornamentals: zone map ----
+function ornZones(){
+  const byZone={};
+  ODATA.ornamentals.forEach(p=>{(byZone[p.zone]=byZone[p.zone]||[]).push(p.name);});
+  document.getElementById("ornzonemap").innerHTML=ODATA.zones.map(z=>
+    `<div class="zone-card"><span class="z ${z.sunClass}">${z.icon} ${z.name}</span>`+
+    `<div class="zone-row"><span class="zone-tag">${z.id}</span><div><b>${z.tag}</b><br><small>${(byZone[z.id]||[]).join(" &middot; ")}</small></div></div>`+
+    `<div class="zone-row"><small>${z.site}</small></div></div>`
+  ).join("");
+}
+
+// ---- ornamentals: cards ----
+function ocard(p){
+  const ML=["J","F","M","A","M","J","J","A","S","O","N","D"];
+  const strip=p.timeline.map(c=>`<span style="background:${c&&OCODE[c]?OCODE[c][0]:'#e7e0c8'}"></span>`).join("");
+  const mlab=ML.map(m=>`<span>${m}</span>`).join("");
+  const flags=p.careFlags.map(f=>`<span class="flag">${f}</span>`).join("");
+  return `<div class="pc" tabindex="0" role="button" aria-expanded="false">
+    <div class="top">
+      <h3>${p.name}</h3>
+      <div class="var">${p.type}</div>
+      <div class="badges"><span class="b yard">${p.zoneName}</span><span class="b cat">${p.sun}</span><span class="b start">${p.ease}</span></div>
+      <div class="strip">${strip}</div>
+      <div class="mlabels">${mlab}</div>
+    </div>
+    <div class="detail">
+      <table>
+        <tr><td>Sun</td><td>${p.sun}</td></tr>
+        <tr><td>Soil/pH</td><td>${p.soilPH}</td></tr>
+        <tr><td>Water</td><td>${p.water}</td></tr>
+        <tr><td>Size</td><td>${p.size}</td></tr>
+        <tr><td>Bloom</td><td>${p.bloomTime}</td></tr>
+        <tr><td>Prune</td><td>${p.prune}</td></tr>
+        <tr><td>Feed</td><td>${p.feed}</td></tr>
+      </table>
+      <div class="flags">${flags}</div>
+      <div class="note">${p.note}</div>
+    </div>
+    <div class="tip">${excerpt(p.note,110)}</div>
+  </div>`;
+}
+
+// ---- ornamentals: bloom & care calendar ----
+function ornCalendar(){
+  document.getElementById("ornlegend").innerHTML=Object.values(OCODE).map(([c,l])=>`<span><span class="sw" style="background:${c}"></span>${l}</span>`).join("");
+  let h='<caption class="calendar-help">Ornamental activities by month; scroll sideways for the full year.</caption><thead><tr><th scope="col">Plant</th>'+MONTHS.map((m,i)=>`<th scope="col" data-mi="${i}">${m}</th>`).join("")+"</tr></thead><tbody>";
+  ODATA.ornamentals.forEach(p=>{ h+=`<tr><th scope="row" class="cn">${p.name}</th>`+p.timeline.map((c,i)=>calendarCell(p.name,c,i,OCODE)).join("")+"</tr>";});
+  h+='</tbody>';
+  document.getElementById("orncaltable").innerHTML=h;
+}
+
+// ---- ornamentals: seasonal care tasks ----
+function ornTasks(){
+  document.getElementById("orntasks").innerHTML=ODATA.tasks.map(seasonalTaskCard).join("");
+}
+function seasonalTaskCard(task,index){
+  return `<div class="guide"><h3>${task.season}<span class="cnt"></span></h3><ul>${task.items.map((item,itemIndex)=>{const cid=`gt:${index}:${itemIndex}`;return `<li class="chk${CHK.has(cid)?' done':''}"><label><input type="checkbox" data-cid="${cid}"${CHK.has(cid)?' checked':''}><span>${item}</span></label>${calendarButton(cid)}</li>`;}).join("")}</ul><a class="clearchk" data-clear="guide" href="#" role="button">clear checked</a></div>`;
+}
+function seasonalTasksForMonth(month){
+  return ODATA.tasks.map((task,index)=>({task,index})).filter(({task})=>task.months.includes(month));
+}
+function thisSeason(){
+  const month=new Date().getMonth();
+  document.getElementById("tsname").textContent=["Winter","Spring","Summer","Fall"][Math.floor(((month+1)%12)/3)];
+  document.getElementById("tssummary").textContent=`Seasonal care for ${FULL_MONTHS[month]}. Check off a task or add it to your calendar.`;
+  document.getElementById("tstasks").innerHTML=seasonalTasksForMonth(month).map(({task,index})=>seasonalTaskCard(task,index)).join("");
+}
+
+// ---- checks (persist + sync + yearly reset) ----
+const SB_URL = "https://bwbefczdqtwwujgcsklu.supabase.co"; // gardengenie project
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3YmVmY3pkcXR3d3VqZ2Nza2x1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU2NDg4NTUsImV4cCI6MjA2MTIyNDg1NX0.Os3GbDMmGKxm8MYYQzknN8sPkXDvciEhxJ85YF9v1do"; // anon/public key (safe to expose; RLS-gated, world-writable garden_checks only)
+const SB_TABLE = "garden_checks";
+const YEAR = new Date().getFullYear();
+const SB_ON = !SB_URL.startsWith("__");  // false while placeholders are present -> local-only, no network
+const CHK = new Set();                    // checked cids for current YEAR
+const LS_KEY = "gardenChecks:"+YEAR;
+const pendingChecks = new Set();
+let resettingMonth = null, checkRevision = 0;
+function loadCache(){try{const a=JSON.parse(localStorage.getItem(LS_KEY)||"[]");CHK.clear();a.forEach(c=>CHK.add(c));}catch(e){}}
+function saveCache(){try{localStorage.setItem(LS_KEY,JSON.stringify([...CHK]));}catch(e){}}
+function sbHeaders(extra){return Object.assign({apikey:SB_KEY,Authorization:"Bearer "+SB_KEY},extra||{});}
+async function fetchRemote(){
+  if(!SB_ON||resettingMonth!==null)return;
+  const revision=checkRevision;
+  try{
+    const res=await fetch(`${SB_URL}/rest/v1/${SB_TABLE}?year=eq.${YEAR}&select=cid`,{headers:sbHeaders()});
+    if(!res.ok)return;
+    const rows=await res.json();
+    if(resettingMonth!==null||revision!==checkRevision)return;
+    CHK.clear();rows.forEach(r=>CHK.add(r.cid));
+    saveCache();applyChecks();
+  }catch(e){/* offline -> keep cached state */}
+}
+async function pushCheck(cid,on){
+  if(!SB_ON)return true;
+  try{
+    if(on){
+      const res=await fetch(`${SB_URL}/rest/v1/${SB_TABLE}`,{method:"POST",headers:sbHeaders({"Content-Type":"application/json",Prefer:"resolution=merge-duplicates,return=minimal"}),body:JSON.stringify([{cid,year:YEAR}])});
+      return res.ok;
+    }else{
+      const res=await fetch(`${SB_URL}/rest/v1/${SB_TABLE}?cid=eq.${encodeURIComponent(cid)}&year=eq.${YEAR}`,{method:"DELETE",headers:sbHeaders({Prefer:"return=minimal"})});
+      return res.ok;
+    }
+  }catch(e){return false;}
+}
+function applyChecks(){
+  document.querySelectorAll("input[data-cid]").forEach(el=>{
+    const on=CHK.has(el.dataset.cid);
+    el.checked=on;
+    el.disabled=isResettingCheck(el.dataset.cid);
+    const li=el.closest("li");if(li)li.classList.toggle("done",on);
+  });
+  updateCounts();
+}
+function updateCounts(){
+  document.querySelectorAll("button[data-reset-month]").forEach(button=>{
+    const prefix=`mc:${button.dataset.resetMonth}:`;
+    button.disabled=resettingMonth!==null||![...CHK].some(cid=>cid.startsWith(prefix));
+  });
+  document.querySelectorAll("#choregrid .cm, #thismonth .cm, #agenda-tasks .cm").forEach(card=>{
+    const ins=card.querySelectorAll("input[data-cid]"),tot=ins.length;
+    let done=0;ins.forEach(i=>{if(i.checked)done++;});
+    let b=card.querySelector(".h .cnt");
+    if(b)b.textContent=tot?`${done}/${tot}`:"";
+  });
+  const currentInputs=[...document.querySelectorAll("#tmcard input[data-cid]")];
+  const completed=currentInputs.filter(input=>input.checked).length;
+  document.getElementById("tmprogress").max=Math.max(1,currentInputs.length);
+  document.getElementById("tmprogress").value=completed;
+  document.getElementById("tmprogresslabel").textContent=`${completed} of ${currentInputs.length} chores done`;
+  const seasonalInputs=[...document.querySelectorAll("#tstasks input[data-cid]")];
+  const seasonalCompleted=seasonalInputs.filter(input=>input.checked).length;
+  document.getElementById("tsprogress").max=Math.max(1,seasonalInputs.length);
+  document.getElementById("tsprogress").value=seasonalCompleted;
+  document.getElementById("tsprogresslabel").textContent=`${seasonalCompleted} of ${seasonalInputs.length} seasonal tasks done`;
+  document.querySelectorAll("#orntasks .guide, #tstasks .guide").forEach(card=>{
+    const ins=card.querySelectorAll("input[data-cid]"),tot=ins.length;
+    let done=0;ins.forEach(i=>{if(i.checked)done++;});
+    let b=card.querySelector("h3 .cnt");
+    if(b)b.textContent=tot?`${done}/${tot}`:"";
+  });
+}
+async function toggle(cid,on){
+  if(isResettingCheck(cid)){applyChecks();return;}
+  checkRevision++;
+  if(cid.startsWith("mc:"))setResetStatus(Number(cid.split(":")[1]),"");
+  if(on)CHK.add(cid);else CHK.delete(cid);
+  saveCache();applyChecks();
+  const request=pushCheck(cid,on);pendingChecks.add(request);
+  const ok=await request;pendingChecks.delete(request);
+  if(!ok){
+    if(on)CHK.delete(cid);else CHK.add(cid);
+    saveCache();applyChecks();
+    const inp=document.querySelector(`input[data-cid="${CSS.escape(cid)}"]`);
+    const li=inp&&inp.closest("li");
+    if(li){li.classList.add("syncerr");setTimeout(()=>li.classList.remove("syncerr"),1800);}
+  }
+}
+function isResettingCheck(cid){
+  return resettingMonth!==null&&cid.startsWith(`mc:${resettingMonth}:`);
+}
+function setResetStatus(month,message){
+  document.querySelectorAll(`[data-reset-status="${month}"]`).forEach(status=>status.textContent=message);
+}
+async function resetMonthChecks(month){
+  if(!Number.isInteger(month)||month<0||month>11||resettingMonth!==null)return;
+  const prefix=`mc:${month}:`;
+  if(![...CHK].some(cid=>cid.startsWith(prefix)))return;
+  resettingMonth=month;checkRevision++;
+  setResetStatus(month,`Unchecking ${FULL_MONTHS[month]} tasks…`);
+  applyChecks();
+  try{
+    // Finish earlier saves before clearing their remote rows.
+    await Promise.allSettled([...pendingChecks]);
+    if(SB_ON){
+      const res=await fetch(`${SB_URL}/rest/v1/${SB_TABLE}?year=eq.${YEAR}&cid=like.${encodeURIComponent(prefix+"*")}`,{method:"DELETE",headers:sbHeaders({Prefer:"return=minimal"})});
+      if(!res.ok)throw new Error("Reset failed");
+    }
+    [...CHK].filter(cid=>cid.startsWith(prefix)).forEach(cid=>CHK.delete(cid));saveCache();
+    setResetStatus(month,`All ${FULL_MONTHS[month]} tasks are unchecked.`);
+  }catch(e){
+    setResetStatus(month,`Could not uncheck ${FULL_MONTHS[month]} tasks. Please try again.`);
+  }finally{
+    resettingMonth=null;applyChecks();
+  }
+}
+document.addEventListener("change",e=>{const el=e.target.closest("input[data-cid]");if(el)toggle(el.dataset.cid,el.checked);});
+document.addEventListener("click",e=>{
+  const button=e.target.closest("button[data-reset-month]");
+  if(button){resetMonthChecks(Number(button.dataset.resetMonth));return;}
+  const a=e.target.closest(".clearchk");if(!a)return;
+  e.preventDefault();
+  const card=a.closest(".cm,.guide");if(!card)return;
+  card.querySelectorAll("input[data-cid]:checked").forEach(i=>toggle(i.dataset.cid,false));
+});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")fetchRemote();});
+window.addEventListener("focus",fetchRemote);
+
+// ---- calendar event export ----
+function escapeHTML(value){
+  return String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+}
+function plainText(value){
+  const element=document.createElement("div");element.innerHTML=value;
+  return element.textContent.trim();
+}
+function calendarChore(cid){
+  const parts=cid.split(":").map((part,index)=>index?Number(part):part);
+  if(parts[0]==="mc"){
+    const category=choreCategories(parts[1])[parts[2]];
+    return {cid,title:plainText(category.items[parts[3]]),category:category.category,month:parts[1]};
+  }
+  const task=ODATA.tasks[parts[1]];
+  return {cid,title:plainText(task.items[parts[2]]),category:plainText(task.season),month:new Date().getMonth()};
+}
+function suggestedChoreDate(chore){
+  const today=new Date(), day=chore.month===today.getMonth()?today.getDate():1;
+  return `${YEAR}-${String(chore.month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+}
+function escapeICal(value){
+  return String(value).replace(/\\/g,"\\\\").replace(/\r\n|\r|\n/g,"\\n").replace(/;/g,"\\;").replace(/,/g,"\\,");
+}
+// iCalendar lines are limited to 75 octets, including the continuation space.
+function foldICal(line){
+  const encoder=new TextEncoder();let current="",bytes=0;const lines=[];
+  for(const char of line){
+    const length=encoder.encode(char).length;
+    if(bytes+length>75){lines.push(current);current=" ";bytes=1;}
+    current+=char;bytes+=length;
+  }
+  lines.push(current);return lines.join("\r\n");
+}
+function createCalendarEvent(chore,date,time=""){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw new Error("Choose a valid date.");
+  const [year,month,day]=date.split("-").map(Number);
+  const start=new Date(Date.UTC(year,month-1,day));
+  if(year<1000||start.getUTCFullYear()!==year||start.getUTCMonth()!==month-1||start.getUTCDate()!==day)throw new Error("Choose a valid date.");
+  const dateValue=d=>`${d.getUTCFullYear()}${String(d.getUTCMonth()+1).padStart(2,"0")}${String(d.getUTCDate()).padStart(2,"0")}`;
+  const timeValue=d=>`${dateValue(d)}T${String(d.getUTCHours()).padStart(2,"0")}${String(d.getUTCMinutes()).padStart(2,"0")}00`;
+  let dates;
+  if(time){
+    if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(time))throw new Error("Choose a valid time.");
+    const [hour,minute]=time.split(":").map(Number);start.setUTCHours(hour,minute);
+    const end=new Date(start.getTime()+30*60*1000);
+    // Floating local times preserve the chosen wall-clock time in iPhone Calendar.
+    dates=[`DTSTART:${timeValue(start)}`,`DTEND:${timeValue(end)}`];
+  }else{
+    const end=new Date(start.getTime()+24*60*60*1000);
+    dates=[`DTSTART;VALUE=DATE:${dateValue(start)}`,`DTEND;VALUE=DATE:${dateValue(end)}`];
+  }
+  const stamp=new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d{3}Z$/,"Z");
+  const uid=`garden-${chore.cid.replace(/[^a-zA-Z0-9-]/g,"-")}-${date}-${time||"all-day"}@sandeepgangarapu.com`;
+  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Gangarapu Garden//Garden chores//EN","CALSCALE:GREGORIAN","BEGIN:VEVENT",`UID:${uid}`,`DTSTAMP:${stamp}`,...dates,`SUMMARY:${escapeICal(chore.title)}`,`DESCRIPTION:${escapeICal(chore.category+"\n"+chore.title+"\nGarden care plan: https://sandeepgangarapu.com/garden/")}`,"LOCATION:Gangarapu Garden\\, Sammamish","URL:https://sandeepgangarapu.com/garden/#chores","END:VEVENT","END:VCALENDAR"];
+  return lines.map(foldICal).join("\r\n")+"\r\n";
+}
+let selectedCalendarChore=null;
+function selectedCalendarFile(){
+  const date=document.getElementById("event-date").value;
+  const time=document.getElementById("event-all-day").checked?"":document.getElementById("event-time").value;
+  const content=createCalendarEvent(selectedCalendarChore,date,time);
+  return new File([content],`garden-chore-${date}.ics`,{type:"text/calendar"});
+}
+function openCalendarChore(cid){
+  selectedCalendarChore=calendarChore(cid);
+  document.getElementById("calendar-chore").textContent=selectedCalendarChore.title;
+  document.getElementById("event-date").value=suggestedChoreDate(selectedCalendarChore);
+  document.getElementById("event-all-day").checked=true;
+  document.getElementById("event-time-row").hidden=true;
+  document.getElementById("event-time").disabled=true;
+  document.getElementById("event-time").value="09:00";
+  document.getElementById("calendar-status").textContent="";
+  let canShare=false;
+  try{canShare=!!navigator.share&&!!navigator.canShare&&navigator.canShare({files:[selectedCalendarFile()]});}catch(e){}
+  document.getElementById("calendar-share").hidden=!canShare;
+  document.getElementById("calendar-dialog").showModal();
+}
+document.addEventListener("click",event=>{
+  const button=event.target.closest("button[data-calid]");
+  if(button)openCalendarChore(button.dataset.calid);
+  const close=event.target.closest("button[data-close]");
+  if(close)document.getElementById(close.dataset.close).close();
+});
+document.getElementById("event-all-day").onchange=event=>{
+  document.getElementById("event-time-row").hidden=event.target.checked;
+  document.getElementById("event-time").disabled=event.target.checked;
+};
+document.getElementById("calendar-form").onsubmit=event=>{
+  event.preventDefault();
+  try{
+    const file=selectedCalendarFile(),url=URL.createObjectURL(file);
+    const link=document.createElement("a");link.href=url;link.download=file.name;
+    document.body.appendChild(link);link.click();link.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),60000);
+    document.getElementById("calendar-status").textContent="Calendar file ready. Open it to confirm the event in Calendar.";
+  }catch(error){document.getElementById("calendar-status").textContent=error.message;}
+};
+document.getElementById("calendar-share").onclick=async()=>{
+  if(!document.getElementById("calendar-form").reportValidity())return;
+  try{
+    await navigator.share({files:[selectedCalendarFile()],title:"Garden chore"});
+    document.getElementById("calendar-status").textContent="Calendar file shared. Open it to confirm the event in Calendar.";
+  }catch(error){if(error.name!=="AbortError")document.getElementById("calendar-status").textContent="Sharing is unavailable. Use Add to Calendar to download the file.";}
+};
+document.querySelectorAll("dialog").forEach(dialog=>dialog.addEventListener("click",event=>{
+  if(event.target!==dialog)return;
+  const rect=dialog.getBoundingClientRect();
+  if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();
+}));
+
+// ---- wire up ----
+document.getElementById("q").oninput=e=>{state.q=e.target.value;render();};
+document.getElementById("ftoggle").onclick=function(){const p=document.getElementById("panel");const o=p.classList.toggle("open");this.setAttribute("aria-expanded",String(o));if(o)p.scrollIntoView({behavior:"instant",block:"start"});};
+function clearAll(){state.q="";document.getElementById("q").value="";FILTERS.forEach(f=>state[f.key].clear());document.querySelectorAll(".chip.on").forEach(c=>{c.classList.remove("on");c.setAttribute("aria-pressed","false");});render();}
+document.getElementById("clear").onclick=clearAll;
+document.getElementById("resetlink").onclick=e=>{e.preventDefault();clearAll();};
+
+loadCache();
+buildPanel();yardMap();calendar();choreGrid();guides();ornZones();ornCalendar();ornTasks();thisMonth();thisSeason();wireChores();render();
+initAgenda();applyChecks();fetchRemote();
+// In-page navigation keeps the standalone garden file usable on iPhone.
+const moreMenu=document.getElementById("moremenu");
+const moreToggle=document.getElementById("moretoggle");
+moreToggle.onclick=()=>{
+  moreMenu.showModal();moreToggle.setAttribute("aria-expanded","true");
+};
+moreMenu.addEventListener("close",()=>moreToggle.setAttribute("aria-expanded","false"));
+function navigateGarden(section){
+  moreMenu.close();
+  const behavior=matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth";
+  if(section==="_search"){
+    document.getElementById("plants").scrollIntoView({behavior,block:"start"});
+    const input=document.getElementById("q");input.focus({preventScroll:true});input.select();
+    return;
+  }
+  const target=document.getElementById(section);
+  if(target)target.scrollIntoView({behavior,block:"start"});
+}
+document.querySelectorAll(".nav a[data-go],.tabbar a[data-go],.more-links a[data-go]").forEach(link=>{
+  link.addEventListener("click",event=>{event.preventDefault();navigateGarden(link.dataset.go);});
+  if(!link.hasAttribute("href"))link.addEventListener("keydown",event=>{
+    if(event.key==="Enter"||event.key===" "){event.preventDefault();navigateGarden(link.dataset.go);}
+  });
+});
+const toolbar=document.getElementById("plant-toolbar");
+if("ResizeObserver" in window)new ResizeObserver(()=>{
+  document.documentElement.style.setProperty("--bar-height",`${toolbar.getBoundingClientRect().height}px`);
+}).observe(toolbar);
+// Follow document order so Yards and Calendar highlight the correct destination.
+(function(){
+  const tabs=[...document.querySelectorAll(".tabbar a[data-go]")];
+  const sections=[...document.querySelectorAll("section[id]")];
+  function spy(){
+    const offset=toolbar.getBoundingClientRect().height+24;
+    let current=sections[0].id;
+    for(const section of sections){if(section.offsetTop-offset<=scrollY)current=section.id;}
+    if(innerHeight+scrollY>=document.documentElement.scrollHeight-60)current=sections[sections.length-1].id;
+    tabs.forEach(tab=>{
+      const active=tab.dataset.go===(current==="thisseason"?"thismonth":current);tab.classList.toggle("on",active);
+      if(active)tab.setAttribute("aria-current","location");else tab.removeAttribute("aria-current");
+    });
+    moreToggle.classList.toggle("on",!tabs.some(tab=>tab.classList.contains("on")));
+  }
+  window.addEventListener("scroll",spy,{passive:true});window.addEventListener("resize",spy);spy();
+})();
+</script>
+</body></html>
