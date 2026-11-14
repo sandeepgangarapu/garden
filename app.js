@@ -25,7 +25,8 @@ function mentions(n) { const m=matcher();let c=mentionCache.get(n);if(!c||c.m!==
 // A plant's notes: ones filed under it, plus any note that names it.
 function plantNotes(id) { return notes().filter(n=>n.plant_id===id||mentions(n).has(id)); }
 // Escapes text and turns plant names into links to that plant's page.
-function linkify(text,except='') { return splitMentions(text,matcher()).map(s=>s.id&&s.id!==except?`<button type="button" class="plink" data-plant="${esc(s.id)}">${esc(s.text)}</button>`:esc(s.text)).join(''); }
+// Inline links, not buttons, so the tap area is just the word and names can wrap.
+function linkify(text,except='') { return splitMentions(text,matcher()).map(s=>s.id&&s.id!==except?`<a class="plink" href="#plant-${encodeURIComponent(s.id)}" data-plant="${esc(s.id)}">${esc(s.text)}</a>`:esc(s.text)).join(''); }
 function checked(id) { return store.state.checks.some(r=>r.year===year&&r.task_id===id&&!r.deleted); }
 function byName(a,b) { return a.name.localeCompare(b.name); }
 function label(s) { return s.charAt(0).toUpperCase()+s.slice(1); }
@@ -206,6 +207,7 @@ function exportData(format) {
 function refreshAfterChange() { render();if($('#sheet').open&&sheetType==='plant')renderPlant(); }
 let armedDelete=null,deleteTimer;
 document.addEventListener('click',async e=>{
+  const link=e.target.closest('a.plink');if(link){e.preventDefault();openPlant(link.dataset.plant);return;}
   const t=e.target.closest('button');if(!t)return;
   if(t.hasAttribute('data-close')) { t.closest('dialog').close();return; }
   if(t.dataset.tab) { $('#sheet').close();route(t.dataset.tab);return; }
