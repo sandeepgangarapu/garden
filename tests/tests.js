@@ -35,7 +35,7 @@ await test('ICS rejects invalid calendar date/time',()=>{for(const [d,t] of [['2
 await test('ICS folds Unicode within 75 UTF-8 octets',()=>{const lines=foldICal('SUMMARY:'+('🌱 garden '.repeat(40))).split('\r\n');ok(lines.length>1);ok(lines.every(l=>new TextEncoder().encode(l).length<=75));equal(escapeICal('a,b;c\nd'),'a\\,b\\;c\\nd');});
 try{
   const lib=await (await fetch('../data/plants.json')).json();
-  await test('library has 45 plants, 266 jobs, unique ids, and valid references',()=>{equal(lib.plants.length,45);equal(lib.tasks.length,266);equal(new Set(lib.tasks.map(t=>t.id)).size,266);ok(lib.tasks.every(t=>t.plants.length&&t.plants.every(id=>id.startsWith('area:')||lib.plants.some(p=>p.id===id))));});
+  await test('library has 45 plants, 267 jobs, unique ids, and valid references',()=>{equal(lib.plants.length,45);equal(lib.tasks.length,267);equal(new Set(lib.tasks.map(t=>t.id)).size,267);ok(lib.plants.every(p=>p.timeline.length===12&&new Set(p.traits.map(t=>t.toLowerCase())).size===p.traits.length));ok(lib.tasks.every(t=>t.plants.length&&t.plants.every(id=>id.startsWith('area:')||lib.plants.some(p=>p.id===id))));});
 }catch(e){failed++;output.push('FAIL library fetch: '+e.message);}
 try { await clientTests(test,ok,equal); await workerTests(test,ok,equal); await serviceWorkerTests(test,ok,equal); } catch(error) { failed++;output.push('FAIL sync harness: '+error.message); }
 document.querySelector('#results').textContent=output.join('\n');
