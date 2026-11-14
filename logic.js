@@ -31,12 +31,48 @@ export function carryOver(plants, plantings, fromYear) {
   const eligible = new Set(plants.filter(p => p.life !== 'annual').map(p => p.id));
   return plantings.filter(r => r.year === fromYear && !r.deleted && !r._deleted && r.status !== 'skipped' && eligible.has(r.plant_id)).map(r => r.plant_id);
 }
-export function defaultStatus(life, year, now = new Date()) {
-  if (life !== 'annual') return 'growing';
-  if (year < now.getFullYear()) return 'done';
-  if (year > now.getFullYear()) return 'planned';
-  return now.getMonth() < 10 ? 'growing' : 'done';
+// Plant names, local names and simple plurals that should link to a plant page.
+// Local names that are only descriptions ("sweet" basil) are not names.
+const NOT_NAMES=new Set(['sweet','red-veined']);
+function nameForms(name) {
+  const base=String(name).trim().toLowerCase().replace(/\s+/g,' ');
+  if(base.length<3)return [];
+  const forms=new Set([base]),gourd=base.match(/^(\S+)gourd$/);
+  if(gourd)forms.add(`${gourd[1]} gourd`);
+  for(const f of [...forms]) {
+    if(/ies$/.test(f))forms.add(f.slice(0,-3)+'y');
+    else if(/[^s]s$/.test(f))forms.add(f.slice(0,-1));
+    else if(/[^aeiou]y$/.test(f))forms.add(f.slice(0,-1)+'ies');
+    else forms.add(f+(/(o|sh|ch|x)$/.test(f)?'es':'s'));
+  }
+  return [...forms].filter(f=>f.length>=3);
 }
+export function plantMatcher(plants) {
+  const ids=new Map();
+  for(const p of plants) {
+    const names=[...String(p.name||'').split('/'),...String(p.localName||'').split('/').filter(n=>!NOT_NAMES.has(n.trim().toLowerCase()))];
+    for(const name of names)for(const form of nameForms(name))if(!ids.has(form))ids.set(form,p.id);
+  }
+  if(!ids.size)return {re:null,ids};
+  const alt=[...ids.keys()].sort((a,b)=>b.length-a.length).map(a=>a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ /g,'\\s+')).join('|');
+  let re;
+  try { re=new RegExp(`(?<![\\p{L}\\p{N}])(?:${alt})(?![\\p{L}\\p{N}])`,'giu'); }
+  catch { re=new RegExp(`\\b(?:${alt})\\b`,'gi'); } // Browsers without lookbehind.
+  return {re,ids};
+}
+// Splits text into plain pieces and pieces that name a plant ({text, id}).
+export function splitMentions(text,matcher) {
+  const s=String(text??''),parts=[];let last=0;
+  if(!matcher?.re)return s?[{text:s}]:[];
+  for(const m of s.matchAll(matcher.re)) {
+    if(m.index>last)parts.push({text:s.slice(last,m.index)});
+    parts.push({text:m[0],id:matcher.ids.get(m[0].toLowerCase().replace(/\s+/g,' '))});
+    last=m.index+m[0].length;
+  }
+  if(last<s.length)parts.push({text:s.slice(last)});
+  return parts;
+}
+export function mentionedIds(text,matcher) { return new Set(splitMentions(text,matcher).filter(p=>p.id).map(p=>p.id)); }
 export const TABLES = ['years','plantings','custom','notes','checks'];
 export const EPOCH = '1970-01-01T00:00:00.000Z';
 export function seedRows(library) {
@@ -44,7 +80,7 @@ export function seedRows(library) {
   for(const year of [2026,2027]) {
     state.years.push({year,created_at:EPOCH,updated_at:EPOCH,deleted:0});
     for(const p of library.filter(p=>year===2026||p.life!=='annual'))
-      state.plantings.push({year,plant_id:p.id,status:defaultStatus(p.life,year),variety:'',location:'',updated_at:EPOCH,deleted:0});
+      state.plantings.push({year,plant_id:p.id,status:'planned',variety:'',location:'',updated_at:EPOCH,deleted:0});
   }
   return state;
 }
