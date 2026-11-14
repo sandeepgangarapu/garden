@@ -1,7 +1,7 @@
 import {clientTests} from './client-tests.js';
 import {workerTests} from './worker-tests.js';
 import {serviceWorkerTests} from './sw-tests.js';
-import {taskVisible,taskLead,activePlants,carryOver,defaultStatus,mergeRows,createCalendarEvent,foldICal,escapeICal} from '../logic.js';
+import {taskVisible,taskLead,activePlants,carryOver,mergeRows,plantMatcher,splitMentions,mentionedIds,seedRows,createCalendarEvent,foldICal,escapeICal} from '../logic.js';
 // Headless Chrome's virtual clock can exhaust its budget while WebCrypto is
 // still working on a real thread. Local network I/O holds virtual time until
 // these asynchronous tests settle; this never contacts an external service.
@@ -19,10 +19,12 @@ await test('full multi-plant lead stays intact',()=>equal(taskLead({plants:['tom
 await test('area keys match front, vegetables, and ornamentals',()=>{ok(taskVisible({plants:['area:front']},[ps[0]]));ok(taskVisible({plants:['area:vegetables']},[ps[0]]));ok(taskVisible({plants:['area:ornamental']},[ps[2]]));ok(!taskVisible({plants:['area:back']},[ps[0]]));ok(!taskVisible({plants:['area:vegetables']},[ps[2]]));});
 await test('skipped plants and removed rows are excluded',()=>{const g=activePlants(ps,[...planting,{year:2026,plant_id:'x',_deleted:true}],2026);equal(g.map(p=>p.id),['tomato','garlic','rose']);ok(!taskVisible({plants:['hosta']},g));});
 await test('carry-over keeps overwinter and perennial, excludes skipped and annual',()=>equal(carryOver(ps,planting,2026),['garlic','rose']));
-await test('default status: past annual is done',()=>equal(defaultStatus('annual',2025,new Date(2026,5,1)),'done'));
-await test('default status: annual grows through October',()=>equal(defaultStatus('annual',2026,new Date(2026,9,31)),'growing'));
-await test('default status: annual done in November',()=>equal(defaultStatus('annual',2026,new Date(2026,10,1)),'done'));
-await test('default status: future annual planned; carry-over growing',()=>{equal(defaultStatus('annual',2027,new Date(2026,5,1)),'planned');equal(defaultStatus('perennial',2027,new Date(2026,5,1)),'growing');equal(defaultStatus('overwinter',2025,new Date(2026,5,1)),'growing');});
+await test('first-run plantings are all planned',()=>ok(seedRows(ps).plantings.every(r=>r.status==='planned')));
+const named=[...ps,{id:'peppers',name:'Peppers',localName:''},{id:'basil',name:'Basil',localName:'sweet'},{id:'bottlegourd',name:'Bottlegourd',localName:'lauki/doodhi'},{id:'coriander',name:'Coriander / Cilantro',localName:''},{id:'custom-1',name:'Tomato Sungold',localName:''}];
+const m=plantMatcher(named);
+await test('plant names, plurals and local names link to their plant',()=>{equal([...mentionedIds('Tomatoes split; the pepper and peppers were fine. Lauki and bottle gourds too, plus cilantro.',m)],['tomato','peppers','bottlegourd','coriander']);});
+await test('descriptive local names and partial words do not link',()=>{equal([...mentionedIds('Sweet corn, rosemary, garlicky dill, and a peppermint.',m)],[]);});
+await test('longest name wins and text round-trips',()=>{const text='Tomato Sungold beat the tomato/basil bed.',parts=splitMentions(text,m);equal(parts.map(x=>x.text).join(''),text);equal(parts.filter(x=>x.id).map(x=>[x.text,x.id]),[['Tomato Sungold','custom-1'],['tomato','tomato'],['basil','basil']]);});
 const older={id:'a',body:'old',updated_at:'2026-01-01T00:00:00Z',deleted:false},newer={...older,body:'new',updated_at:'2026-01-02T00:00:00Z'};
 await test('note merge unions ids and newer wins',()=>{equal(mergeRows([older],[newer,{...older,id:'b'}]).length,2);equal(mergeRows([newer],[older])[0].body,'new');});
 await test('newer note soft delete survives stale copy',()=>{const deleted={...newer,deleted:true};ok(mergeRows([older],[deleted])[0].deleted);ok(mergeRows([deleted],[older])[0].deleted);});

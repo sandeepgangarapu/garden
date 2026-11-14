@@ -1,6 +1,6 @@
 # Gangarapu Garden
 
-A mobile garden planner for Sandeep in Sammamish (Zone 8b). Pick plants by year, check seasonal jobs, and keep plant notes and lessons for later seasons. Plain HTML/CSS/ES2020 modules; no build step or dependencies. Install from Safari’s Share → Add to Home Screen for offline use.
+A mobile garden planner for Sandeep in Sammamish (Zone 8b). Pick plants by year (planned or skipped), check seasonal jobs, and dictate garden notes saved by year. Plant names in notes, jobs and care text link to that plant’s page. Plain HTML/CSS/ES2020 modules; no build step or dependencies. Install from Safari’s Share → Add to Home Screen for offline use.
 
 ## Run and test
 
